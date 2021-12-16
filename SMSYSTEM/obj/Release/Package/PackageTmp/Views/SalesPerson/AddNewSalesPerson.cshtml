@@ -1,0 +1,106 @@
+﻿@model SSS.Property.Setups.SalesPerson_Property
+@{
+    ViewBag.Title = "AddNewSalesPerson";
+    Layout = null;
+}
+
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Sales Person Name:</label>
+                @Html.EditorFor(model => model.SalesPersonName, new { htmlAttributes = new { @placeholder = "Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.SalesPersonName, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Contact#*:</label>
+                @Html.EditorFor(model => model.contact, new { htmlAttributes = new { @placeholder = "Contact", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.contact, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Address*:</label>
+                @Html.EditorFor(model => model.address, new { htmlAttributes = new { @placeholder = "Address", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+        </div>
+        
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Is Active:</label>
+                @Html.CheckBoxFor(model => model.IsActive, new { @class = "text-danger" })
+            </div>
+           
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- text input -->
+            <div class="form-group">
+                <label> Branch*:</label>
+                @Html.DropDownListFor(model => model.branchIdx, new SelectList(Model.BranchList, "idx", "branchName"), "Select Branch", new { @Class = "form-control font-weight-bold branchIdx" })
+            </div>
+            @Html.ValidationMessageFor(model => model.branchIdx, "", new { @class = "text-danger" })
+        </div>
+      @*  <div class="col-sm-6">*@
+            <!-- text input -->
+            @*<div class="form-group">*@
+                @*<label>WareHouse*:</label>
+                @Html.DropDownListFor(model => model.warehouseIdx, new SelectList(Model.WareHouseList, "idx", "WareHouseName"), "Select Ware House", new { @Class = "form-control font-weight-bold" })*@
+
+                @*<select id="warehouseIdx" class="form-control font-weight-bold">
+                    @{
+                        <option value="0" data-hscode="0">Select WareHouse</option>
+
+                        foreach (var item in Model.WareHouseList)
+                        {
+                            <option value="@item.Idx" data-val="@item.BranchIdx">@item.WareHouseName</option>
+                        }
+
+                    }
+                </select>*@
+            @*</div>
+            @Html.ValidationMessageFor(model => model.warehouseIdx, "", new { @class = "text-danger" })*@
+        @*</div>*@
+    </div>
+
+
+</form>
+
+@*@section MyScripts {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.branchIdx').change(function () {
+                alert("Done");
+
+                $('#warehouseIdx').attr('display', 'block')
+                // get optios of second dropdown and cache it
+                var $options = $('#warehouseIdx')
+                    // update the dropdown value if necessary
+                    .val('')
+                    // get options
+                    .find('option')
+                    // show all of the initially
+                    .show();
+                console.log($options);
+                // check current value is not 0
+                if (this.value != '0')
+                    $options
+                        // filter out options which is not corresponds to the first option
+                        .not('[data-val="' + this.value + '"],[data-val=""]')
+                        // hide them
+                        .hide();
+            })
+        });
+        
+    </script>
+
+}*@
+

@@ -1,0 +1,215 @@
+﻿@model SSS.Property.Setups.Reports.LP_Report_Property
+@{
+    ViewBag.Title = "ViewReports";
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Reports</h4>
+        <form id="addnewform">
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>Report Name</label>
+
+                        
+
+                        @Html.DropDownListFor(model=>model.ReportID, new List<SelectListItem>
+                   {
+                       new SelectListItem {Text="Select Report",Value="0" },
+                         new SelectListItem {Text="Purchase",Value="1" },
+                       new SelectListItem {Text = "Imported Purchase", Value = "2"}
+
+                   },new {@class= "select2 form-control" })
+
+                        
+                    </div>
+                    @Html.ValidationMessageFor(model => model.ReportName, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>From Date</label>
+                        @Html.EditorFor(model => model.FromDate, new { htmlAttributes = new { @placeholder = "Contact Number", @class = "form-control" } })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>To Date</label>
+                        @Html.EditorFor(model => model.ToDate, new { htmlAttributes = new { @placeholder = "Contact Number", @class = "form-control" } })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.ToDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <input type="button" class="btn btn-primary" value="Generate Report" id="btnsubmit" />
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section MyScripts {
+    <script type="text/javascript">
+        $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true });
+
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "/Branch/GetAllBranches",
+                success: function (data) {
+                    bindCustomersInDataTable(data);
+                }
+            });
+
+            //show popup
+            $("#btnaddnew").click(function () {
+                //$.post("/Customer/AddCustomer", function (data) {
+                //    $("#modal-default").html(data);
+                //});
+
+                $("#modelbody").load("/Branch/AddNewBranch", function (e) {
+                    $("#modal-default").modal("show");
+
+
+                });
+
+            })
+
+            //add customer button event
+            
+
+            function bindCustomersInDataTable(data) {
+                console.log(data);
+                console.log(JSON.parse(data.data));
+                var status = "Blocked".toString();
+                var table = $('#example1').DataTable({
+                    data: JSON.parse(data.data),
+                    columns: [
+
+                        { data: 'companyName' },
+                        { data: 'branchName' },
+                        { data: 'address' },
+                        { data: 'contactNumber' },
+
+                        { data: 'userName' },
+                        //or { data: 'MONTH', title: 'Month' }`
+
+                        {
+                            //"data": function (data, type, dataToSet) {
+
+                            //    if (data.Is_Active) {
+
+                            //        return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + data.ID + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + data.ID + ')"><i class="fa fa-trash"></i></a>'
+                            //    }
+                            //    else {
+                            //        return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + data.ID + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + data.ID + ')"><i class="fa fa-trash-o">&#xf014;</i></a>'
+
+                            //    }
+
+                            //  return data.Status + "<br/>" + data.Name;
+                            "data": "idx",
+                            "render": function (idx, type, full, meta) {
+
+                                return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + idx + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + idx + ')"><i class="fa fa-trash"></i></a>'
+                                //<a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + ID + ')"><i class="fa fa-trash"></i></a>
+
+                            },
+                            "orderable": true,
+                            "searchable": true,
+
+
+                        }
+                    ]
+                });
+
+            }
+
+
+        });
+
+        $("#btnsubmit").click(function (e) {
+            console.log("here");
+            e.preventDefault();
+            var form = $("#addnewform");
+
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Reporting/AddUpdate",
+                    data: $(form).serialize(),
+                    success: function (res) {
+                        console.log(res);
+                        if (res.success) {
+                            Command: toastr["success"]("", "Added Successfuly")
+
+                            toastr.options = {
+                                "closeButton": false,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": true,
+                                "positionClass": "toast-top-center",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "5000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                            }
+                            window.location.href = res.data;
+                        }
+                        else if (res.success == false && res.msg == 'Failed') {
+                            Command: toastr["error"]("Invalid ", " Failed")
+
+                            toastr.options = {
+                                "closeButton": false,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": true,
+                                "positionClass": "toast-top-center",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "5000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                            }
+                        }
+                    },
+                    failure: function (res) {
+                        console.log(res);
+                    },
+                    err: function (res) {
+                        console.log(res);
+                    }
+
+                })
+            }
+            else {
+                return false;
+            }
+
+        });
+
+    </script>
+}
+

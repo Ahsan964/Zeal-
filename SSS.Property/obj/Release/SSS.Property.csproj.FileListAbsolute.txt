@@ -1,0 +1,132 @@
+D:\SSS\Release8\SSS.Property\bin\Release\SSS.Property.dll
+D:\SSS\Release8\SSS.Property\bin\Release\SSS.Property.pdb
+D:\SSS\Release8\SSS.Property\bin\Release\FluentValidation.dll
+D:\SSS\Release8\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\SSS\Release8\SSS.Property\obj\Release\SSS.Property.dll
+D:\SSS\Release8\SSS.Property\obj\Release\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\bin\Release\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\bin\Release\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\bin\Release\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\obj\Release\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\obj\Release\SSS.Property.pdb
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\SSS.Property.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\SSS.Property.pdb
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\FluentValidation.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.pdb
+D:\SSS\SSS.Property\bin\Release\SSS.Property.dll
+D:\SSS\SSS.Property\bin\Release\SSS.Property.pdb
+D:\SSS\SSS.Property\bin\Release\FluentValidation.dll
+D:\SSS\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\SSS\SSS.Property\obj\Release\SSS.Property.dll
+D:\SSS\SSS.Property\obj\Release\SSS.Property.pdb
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\SSS.Property.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\SSS.Property.pdb
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\FluentValidation.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.pdb
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\SSS.Property.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\SSS.Property.pdb
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Release\FluentValidation.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Release\SSS.Property.pdb
+D:\Projects\Latest Update Release\Release9\SSS.Property\bin\Release\SSS.Property.dll
+D:\Projects\Latest Update Release\Release9\SSS.Property\bin\Release\SSS.Property.pdb
+D:\Projects\Latest Update Release\Release9\SSS.Property\bin\Release\FluentValidation.dll
+D:\Projects\Latest Update Release\Release9\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Projects\Latest Update Release\Release9\SSS.Property\obj\Release\SSS.Property.dll
+D:\Projects\Latest Update Release\Release9\SSS.Property\obj\Release\SSS.Property.pdb
+E:\C Drive\Projects\Release9\SSS.Property\bin\Release\SSS.Property.dll
+E:\C Drive\Projects\Release9\SSS.Property\bin\Release\SSS.Property.pdb
+E:\C Drive\Projects\Release9\SSS.Property\bin\Release\FluentValidation.dll
+E:\C Drive\Projects\Release9\SSS.Property\obj\Release\SSS.Property.dll
+E:\C Drive\Projects\Release9\SSS.Property\obj\Release\SSS.Property.pdb
+E:\C Drive\Projects\Release9\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\bin\Release\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\bin\Release\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\bin\Release\FluentValidation.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\obj\Release\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\obj\Release\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\bin\Release\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\bin\Release\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\bin\Release\FluentValidation.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\obj\Release\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\obj\Release\SSS.Property.pdb
+E:\C Drive\Projects\Live Projects\SSS.Property\bin\Release\SSS.Property.dll
+E:\C Drive\Projects\Live Projects\SSS.Property\bin\Release\SSS.Property.pdb
+E:\C Drive\Projects\Live Projects\SSS.Property\bin\Release\FluentValidation.dll
+E:\C Drive\Projects\Live Projects\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+E:\C Drive\Projects\Live Projects\SSS.Property\obj\Release\SSS.Property.dll
+E:\C Drive\Projects\Live Projects\SSS.Property\obj\Release\SSS.Property.pdb
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\bin\Release\SSS.Property.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\bin\Release\SSS.Property.pdb
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\bin\Release\FluentValidation.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Release\SSS.Property.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Release\SSS.Property.pdb
+E:\Umer\OSDA E\Live Projects\SSS.Property\bin\Release\SSS.Property.dll
+E:\Umer\OSDA E\Live Projects\SSS.Property\bin\Release\SSS.Property.pdb
+E:\Umer\OSDA E\Live Projects\SSS.Property\bin\Release\FluentValidation.dll
+E:\Umer\OSDA E\Live Projects\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Umer\OSDA E\Live Projects\SSS.Property\obj\Release\SSS.Property.dll
+E:\Umer\OSDA E\Live Projects\SSS.Property\obj\Release\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\bin\Release\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\bin\Release\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\bin\Release\FluentValidation.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\obj\Release\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\obj\Release\SSS.Property.pdb
+D:\WajidUpdated\Updated\SSS.Property\bin\Release\SSS.Property.dll
+D:\WajidUpdated\Updated\SSS.Property\bin\Release\SSS.Property.pdb
+D:\WajidUpdated\Updated\SSS.Property\bin\Release\FluentValidation.dll
+D:\WajidUpdated\Updated\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\WajidUpdated\Updated\SSS.Property\obj\Release\SSS.Property.dll
+D:\WajidUpdated\Updated\SSS.Property\obj\Release\SSS.Property.pdb
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\bin\Release\SSS.Property.dll
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\bin\Release\SSS.Property.pdb
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\bin\Release\FluentValidation.dll
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\obj\Release\SSS.Property.dll
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\obj\Release\SSS.Property.pdb
+D:\UmerUpdatedPerception\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.dll
+D:\UmerUpdatedPerception\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.pdb
+D:\UmerUpdatedPerception\WajidPerception-master\SSS.Property\bin\Release\FluentValidation.dll
+D:\UmerUpdatedPerception\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\UmerUpdatedPerception\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.dll
+D:\UmerUpdatedPerception\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.pdb
+D:\Ahsan\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.dll
+D:\Ahsan\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.pdb
+D:\Ahsan\WajidPerception-master\SSS.Property\bin\Release\FluentValidation.dll
+D:\Ahsan\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Ahsan\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.dll
+D:\Ahsan\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.pdb
+E:\Perception BP\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.dll
+E:\Perception BP\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.pdb
+E:\Perception BP\WajidPerception-master\SSS.Property\bin\Release\FluentValidation.dll
+E:\Perception BP\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Perception BP\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.dll
+E:\Perception BP\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\bin\Release\FluentValidation.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\bin\Release\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\bin\Release\FluentValidation.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\obj\Release\SSS.Property.pdb
+H:\office\Zeal\Zeal Master\SSS.Property\bin\Release\SSS.Property.dll
+H:\office\Zeal\Zeal Master\SSS.Property\bin\Release\SSS.Property.pdb
+H:\office\Zeal\Zeal Master\SSS.Property\bin\Release\FluentValidation.dll
+H:\office\Zeal\Zeal Master\SSS.Property\obj\Release\SSS.Property.csprojResolveAssemblyReference.cache
+H:\office\Zeal\Zeal Master\SSS.Property\obj\Release\SSS.Property.dll
+H:\office\Zeal\Zeal Master\SSS.Property\obj\Release\SSS.Property.pdb

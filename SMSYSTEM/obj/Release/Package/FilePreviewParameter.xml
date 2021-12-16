@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="demo.pbcaccoutingsoftware.com" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\Visual\ Studio\ Projects\\MangoTechProjects\\ABDUL\ GHAFOOR\\Project\\wetransfer-017c3f\ \(1\)\\Updated\\SMSYSTEM\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\Visual\ Studio\ Projects\\MangoTechProjects\\ABDUL\ GHAFOOR\\Project\\wetransfer-017c3f\ \(1\)\\Updated\\SMSYSTEM\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

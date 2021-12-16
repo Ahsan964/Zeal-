@@ -1,0 +1,579 @@
+﻿@model SSS.Property.Setups.GDN.LP_GDN_VM
+@{
+    ViewBag.Title = "AddNewGDN";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card-body">
+    <h3>Good Delivery Note</h3>
+    <br />
+    <form role="form" id="purchaseform">
+        @Html.HiddenFor(model => model.ID, new { id = "ID", value = 0 })
+        <div class="row">
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>SO#*:</label>
+                    @Html.DropDownListFor(model => model.Parent_DocID, new SelectList(Model.SalesOrderList, "idx", "soNumber"), "Select SO", new { @Class = "select2 form-control font-weight-bold" })
+                </div>
+                @Html.ValidationMessageFor(model => model.Parent_DocID, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>GDN#*:</label>
+                    @Html.EditorFor(model => model.Doc_No, new { htmlAttributes = new { @placeholder = "GRN Number*:", @class = "form-control", @readonly = true } })
+                </div>
+                @Html.ValidationMessageFor(model => model.Doc_No, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Date*:</label>
+                    @Html.EditorFor(model => model.Date_Created, new { htmlAttributes = new { @placeholder = "Purchase Date*:", @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(model => model.Date_Created, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Driver Name*:</label>
+                    @Html.EditorFor(model => model.DriverName, new { htmlAttributes = new { @placeholder = "Driver Name *:", @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(model => model.DriverName, "", new { @class = "text-danger" })
+            </div>
+            
+            <div class="col-sm-4">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>VECH #*:</label>
+                    @Html.EditorFor(model => model.DriverCnic, new { htmlAttributes = new { @placeholder = "VECH #*:", @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(model => model.DriverCnic, "", new { @class = "text-danger" })
+            </div>
+            
+            <div class="col-sm-4">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Order By Sales Person*:</label>
+                    @Html.EditorFor(model => model.DriverAddress, new { htmlAttributes = new { @placeholder = "Order By Sales Person*:", @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(model => model.DriverAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="row">
+        <div class="col-sm-12">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Memo*:</label>
+                @Html.EditorFor(model => model.memo, new { htmlAttributes = new { @placeholder = "Memo *:", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.memo, "", new { @class = "text-danger" })
+        </div>
+        </div>
+        <hr />
+        <div class="row" id="PurchaseDetails">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h5>GDN Details</h5>
+                        <div class="card-tools">
+                        </div>
+                    </div>
+                    <div class="">
+                        <table id="example2" class="table table-striped table-bordered table-condensed table-hover table-active">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>QTY</th>
+                                    <th>Unit Price</th>
+                                    <th>Sub Amount</th>
+                                    <th>Delivering Qty</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    if (ViewBag.DetailData != null)
+                                    {
+
+
+
+                                        foreach (var items in ViewBag.DetailData)
+                                        {
+                                            <tr>
+                                                <td style="display:none">@items.Product_Id</td>
+                                                <td>@items.itemName</td>
+                                                <td>@items.POQTY</td>
+                                                <td>@items.POUNITPRICE</td>
+                                                <td>@items.POAMOUNT</td>
+                                                <td><input type="text" placeholder="Enter Recieved Qty" value="@items.Quantity" onkeyup="recieveitemqty(this)" id="qtyrcvd" class="rcvqty form-control" /></td>
+                                            </tr>
+
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="inputName">Narration</label>
+                    @Html.EditorFor(model => model.Narration, new { htmlAttributes = new { @placeholder = "Narration", @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="inputName">Total Amount</label>
+                    @Html.EditorFor(model => model.Total_Amount, new { htmlAttributes = new { @placeholder = "Total Amount", @class = "form-control", @readonly = true } })
+                </div>
+                @Html.ValidationMessageFor(model => model.Total_Amount, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="inputName"></label>
+                    @*  <input type="button" class="btn btn-primary form-control" id="calculate" value="Calculate Total" />*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btnsubmit">Submit</button>
+                <button type="button" class="btn btn-light" id="btncancel" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section MyScripts {
+    <script type="text/javascript">
+        $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true });
+
+        // Add To grid
+        $("#Parent_DocID").on('change', function () {
+            var ddvaue = $("#Parent_DocID option:selected").val();
+            GetPODataSet(ddvaue)
+
+        });
+        function GetPODataSet(poid) {
+            $.ajax({
+                url: "/SalesOrder/SelectSOById",
+                data:{id:poid},
+                success: function (data) {
+                    var POData =JSON.parse(data.data);
+                    console.log(POData);
+                    $('#DriverName').val(POData[0].DriverName);
+                    $('#DriverCnic').val(POData[0].DriverCnic);
+                    $("#example2 tbody").empty();
+                    $('#milestones').show();
+                    var markup;
+                    for (var i = 0; i < POData.length; i++) {
+
+                        console.log(data[i]);
+                        var closebutton = '<input type="button" value="x" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="fa fa-window-close close" />';
+                        var recvqtytxtbox = '<input type="text" placeholder="Enter Recieved Qty" value="0" onkeyup="recieveitemqty(this)" id="qtyrcvd" class="rcvqty form-control" />';
+
+                        //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+                        //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+                        // '</button>'
+
+                        var productname = POData[i].itemName; //$("#itemIdx option:selected").text();
+                        var ProductID = POData[i].itemIdx;// $("#itemIdx option:selected").val();
+                        var Qty = POData[i].openItem;// $("#qty").val();
+                        var unitprice = POData[i].salePrice;// $("#unitPrice").val();
+                        var totalamount = POData[i].qty * POData[i].salePrice;
+                        //var duedate = $("#DueDate").val();
+                        markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + Qty + "</td><td>" + unitprice + "</td><td class='tamnt'>" + totalamount + "</td><td>" + recvqtytxtbox + "</td></tr>";
+                        //if (milestone == "") {
+                        //    alert("Enter milestone");
+                        //    return;
+                        //} else {
+                        $("#example2 tbody").append(markup);
+                    }
+
+                    var tamount = 0;
+                    //var labourcost = $("#tax").val();
+                    //var transportcost = $("#taxAount").val();
+                    var tamount = POData[0].totalAmount; //parseFloat($("#totalAmount").val());
+                    //tamount = parseFloat(tamount) + parseFloat(totalamount);//+ parseFloat(labourcost) + parseFloat(transportcost);
+                    $("#Total_Amount").val(tamount);
+
+                }
+            });
+        }
+        var errmsg;
+        //Add Project Button Event start
+        $("#qty").keyup(function () {
+            var qtyval = $(this).val();
+            var unitpriceval = $("#unitPrice").val();
+            var totalamount = qtyval * unitpriceval;
+
+            $("#amount").val(totalamount);
+        });
+        $("#unitPrice").keyup(function () {
+            var unitpriceval = $(this).val();
+            var qtyval = $("#qty").val();
+            var totalamount = qtyval * unitpriceval;
+            $("#amount").val(totalamount);
+        });
+
+
+        $("#calculate").click(function (e) {
+
+
+
+
+
+
+
+
+
+        });
+        $("#btnaddtogrid").click(function (e) {
+            if (!(gridValidation($("#itemIdx option:selected").val()))) {
+                // alert("Product Alreaty Exist")
+                displayerror();
+                return;
+            }
+
+
+            // alert("hello");
+            $('#milestones').show();
+            var closebutton = '<input type="button" value="x" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="fa fa-window-close close" />';
+            //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+            //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+            // '</button>'
+            var productname = $("#itemIdx option:selected").text();
+            var ProductID = $("#itemIdx option:selected").val();
+            var Qty = $("#qty").val();
+            var unitprice = $("#unitPrice").val();
+            var totalamount = $("#amount").val();
+            //var duedate = $("#DueDate").val();
+            var markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + Qty + "</td><td>" + unitprice + "</td><td class='tamnt'>" + totalamount + "</td><td>" + closebutton + "</td></tr>";
+            //if (milestone == "") {
+            //    alert("Enter milestone");
+            //    return;
+            //} else {
+
+            $("#example2 tbody").append(markup);
+            var tamount = 0;
+            //var labourcost = $("#tax").val();
+            //var transportcost = $("#taxAount").val();
+            var tamount =parseFloat( $("#totalAmount").val());
+            tamount = parseFloat(tamount) + parseFloat(totalamount);//+ parseFloat(labourcost) + parseFloat(transportcost);
+            $("#totalAmount").val(tamount);
+            //  var pamnt = $("#paidAmount").val();
+            //  if (pamnt == '') {
+            //      pamnt = 0;
+            //  }
+            //$("#balanceAmount").val(tamount - pamnt);
+            // }
+            //$("#example1").dataTable();
+
+
+        });
+        $('#purchaseDate').change(function () {
+            var date = $(this).val();
+            console.log(date, 'change')
+            var GivenDate = date;
+            var CurrentDate = new Date();
+            GivenDate = new Date(GivenDate);
+
+            if (GivenDate > CurrentDate) {
+                alert('Given date is greater than the current date.');
+                var today = moment().format('YYYY-MM-DD');
+                $('#purchaseDate').val(today);
+            } else {
+                // alert('Given date is not greater than the current date.');
+            }
+        });
+
+        // cancel button
+        $("#btncancel").click(function() {
+            window.location.href = "/GDN/ViewGDN"
+        });
+        //add customer button event
+        $("#btnsubmit").click(function (e) {
+            console.log("here");
+            e.preventDefault();
+            var datatosend = {
+                objGDN: {
+                    ID: $('#ID').val(),
+                    Parent_DocID: $('#Parent_DocID').val(),
+                    Doc_No: $('#Doc_No').val(),
+                    Date_Created: $('#Date_Created').val(),
+                    Narration: $('#Narration').val(),
+                    Total_Amount: $('#Total_Amount').val(),
+                    DriverName: $('#DriverName').val(),
+                    DriverCnic: $('#DriverCnic').val(),
+                    DriverAddress: $('#DriverAddress').val(),
+                    memo: $('#memo').val(),
+                    //PageList:[{ID:1},{ID:2},{ID:3}]
+                    GDNDetailList: []
+                }
+
+            }
+            var table = $("#example2 tbody");
+
+            var milestonearray = [];
+            var milestonedetails = {
+            };
+            var pomasternetamount = 0;
+            table.find('tr').each(function (i) {
+                //alert(1);
+                //console.log($(this).find('td').eq(5).find('.rcvqty').val());
+                var $tds = $(this).find('td'),
+                    productid = $tds.eq(0).text(),
+                    itemamount = $tds.eq(4).text(),
+                    unitprice = $tds.eq(3).text(),
+                    qty = $(this).find('td').eq(5).find('.rcvqty').val();
+
+                datatosend.objGDN.GDNDetailList.push({
+                    Product_Id: productid,
+                    Quantity: qty,
+                    Rate: unitprice,
+                    TotalAmount: qty * unitprice
+                })
+
+
+            });
+
+            var form = $("#purchaseform");
+            console.log(datatosend)
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/GDN/AddUpdate",
+                    data: JSON.stringify(datatosend),// JSON.stringify(milestonearray),// $(form).serialize(),
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (res) {
+                        console.log(res);
+                        if (res.success) {
+                            //Command: toastr["success"]("", "Added Successfuly")
+
+                            //toastr.options = {
+                            //    "closeButton": false,
+                            //    "debug": false,
+                            //    "newestOnTop": false,
+                            //    "progressBar": true,
+                            //    "positionClass": "toast-top-center",
+                            //    "preventDuplicates": false,
+                            //    "onclick": null,
+                            //    "showDuration": "300",
+                            //    "hideDuration": "1000",
+                            //    "timeOut": "5000",
+                            //    "extendedTimeOut": "1000",
+                            //    "showEasing": "swing",
+                            //    "hideEasing": "linear",
+                            //    "showMethod": "fadeIn",
+                            //    "hideMethod": "fadeOut"
+                            //}
+                            window.location.href = "/GDN/ViewGDN"
+                        }
+                        else if (res.success == false && res.msg == 'Failed') {
+                            //    Command: toastr["error"]("Invalid ", " Failed")
+
+                            //toastr.options = {
+                            //    "closeButton": false,
+                            //    "debug": false,
+                            //    "newestOnTop": false,
+                            //    "progressBar": true,
+                            //    "positionClass": "toast-top-center",
+                            //    "preventDuplicates": false,
+                            //    "onclick": null,
+                            //    "showDuration": "300",
+                            //    "hideDuration": "1000",
+                            //    "timeOut": "5000",
+                            //    "extendedTimeOut": "1000",
+                            //    "showEasing": "swing",
+                            //    "hideEasing": "linear",
+                            //    "showMethod": "fadeIn",
+                            //    "hideMethod": "fadeOut"
+                            //}
+                        }
+                    },
+                    failure: function (res) {
+                        console.log(res);
+                    },
+                    err: function (res) {
+                        console.log(res);
+                    }
+
+                })
+            }
+            else {
+                return false;
+            }
+
+        });
+        function SomeDeleteRowFunction(o) {
+            //alert(id);
+            var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            //console.log($tds);
+
+            $.each($tds, function () {                // Visits every single <td> element
+                // console.log($(this).text());         // Prints out the text within the <td>
+            });
+            var itmmant = o.parentNode.parentNode.children[4].innerText;
+            var tmnt = $('#totalAmount').val();
+
+            tmnt = tmnt - itmmant;
+            $('#totalAmount').val(tmnt);
+
+            // $('#balanceAmount').val(tmnt);
+            var p = o.parentNode.parentNode;
+
+            p.parentNode.removeChild(p);
+            $(this).closest('tr').remove();
+
+
+        };
+        function recieveitemqty(o) {
+            //alert("y");
+            var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            console.log($tds);
+
+
+            var itmqty = o.parentNode.parentNode.children[2].innerText;
+            var itmup = o.parentNode.parentNode.children[3].innerText;
+            var itmtotalprice = o.parentNode.parentNode.children[4].innerText;
+            var rcvqty = o.parentNode.parentNode.children[5].children[0].value;//Number(itmqty);
+            // itmup = Number(itmup);
+            //console.log(itmqty);
+            //console.log(rcvqty);
+            if (Number(rcvqty) > Number(itmqty)) {
+                alert("RECV QTY MUST BE LESS THAN/EQUAL TO ORDERED"); Total_Amount
+                o.parentNode.parentNode.children[5].children[0].value = 0;
+
+            }
+            else {
+                var tmnt = $('#Total_Amount').val();
+                tmnt = Number(tmnt) + (Number(rcvqty) * Number(itmup))
+                $('#Total_Amount').val(tmnt);
+            }
+
+            calculate();
+            //console.log("ITEM COST" + );
+
+            //var tmnt = $('#totalAmount').val();
+
+            //tmnt = tmnt - itmmant;
+            //$('#totalAmount').val(tmnt);
+
+            //// $('#balanceAmount').val(tmnt);
+            //var p = o.parentNode.parentNode;
+
+            //p.parentNode.removeChild(p);
+            //$(this).closest('tr').remove();
+
+
+        };
+        function gridValidation(Id) {
+            errmsg = [];
+            var myTab = $("#example2 tbody");
+            var rtrn = true;
+
+            // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+            myTab.find('tr').each(function (i) {
+                var $tds = $(this).find('td'),
+                    productid = $tds.eq(0).text();
+
+                if(Id==productid){
+                    rtrn = false;
+                    errmsg.push("Product Already exist");
+                }
+            })
+            if ($('#itemIdx option:selected').val() =='') {
+                rtrn = false;
+                errmsg.push("Select Product");
+            }
+            if ($('#qty').val() <= 0) {
+                rtrn = false;
+                errmsg.push("Qty value is zero");
+            }
+            if ($('#unitPrice').val() <= 0) {
+                rtrn = false;
+                errmsg.push("unit value is zero");
+            }
+            //if ($('#DueDate').val() < 0) {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is Invalid");
+            //}
+            //var dat = $('#DueDate').val()
+            //console.log(moment((new Date())).format("DD-MM-YYYY"));
+            //var today = moment((new Date())).format("DD-MM-YYYY");
+            //var slctddte = moment(dat).format("DD-MM-YYYY");
+
+            //if ((new Date($('#DueDate').val())) == 'Invalid Date') {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is invalid ");
+            //    // alert(errorarray.length);
+            //}
+            //if (slctddte < today) {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is INVALID /Should be greater than current date");
+            //    // alert(errorarray.length);
+            //}
+            return rtrn;
+        }
+
+        function displayerror() {
+            for (var i = 0; i < errmsg.length; i++) {
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                Command: toastr["error"](errmsg[i], "")
+            }
+        }
+
+        function calculate() {
+            var tmnt = $('#Total_Amount').val('0');
+            var table = $("#example2 tbody");
+            table.find('tr').each(function (i) {
+                var $tds = $(this).find('td'),
+                    itemamount = $tds.eq(3).text();
+                rcvngqty = $tds.eq(5).find('#qtyrcvd').val();
+                console.log(itemamount * rcvngqty);
+                // itemamount = itemamount + itemamount;
+
+                var tamnt = $('#Total_Amount').val();
+                tamnt = Number(tamnt) + (Number(itemamount * rcvngqty))
+                $('#Total_Amount').val(tamnt)
+            });
+        }
+
+
+    </script>
+}
+
+

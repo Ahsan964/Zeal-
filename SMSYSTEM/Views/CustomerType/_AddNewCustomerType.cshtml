@@ -1,0 +1,26 @@
+﻿
+
+
+
+@model SSS.Property.Setups.CustomerType_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Customer Type</label>
+                @Html.EditorFor(model => model.customerType, new { htmlAttributes = new { @placeholder = "Customer Type", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.customerType, "", new { @class = "text-danger" })
+        </div>
+     
+    </div>
+  
+
+</form>

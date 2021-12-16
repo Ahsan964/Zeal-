@@ -1,0 +1,218 @@
+﻿
+
+@{
+    ViewBag.Title = "GRN";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row float-right">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" id="btnaddnew" onclick="@("window.location.href='" + @Url.Action("AddNewGRN", "GRN") + "'");">Add new GRN<i class="mdi mdi-play-circle ml-1"></i></button>
+        </div>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">GRN List</h4>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="example1" class="table table-striped table-bordered table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>GRN NUMBER</th>
+                                
+                                <th>Description</th>
+                                
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal starts -->
+@*<div class="text-center">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Click for demo<i class="mdi mdi-play-circle ml-1"></i></button>
+    </div>*@
+
+<!-- Modal Ends -->
+
+
+@section MyScripts {
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+  <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "/GRN/GetAllGRN",
+                success: function (data) {
+                    bindCustomersInDataTable(data);
+                }
+            });
+
+          
+
+           
+
+            function bindCustomersInDataTable(data) {
+                console.log(data);
+                console.log(JSON.parse(data.data));
+                var status = "Blocked".toString();
+                var table = $('#example1').DataTable({
+                    data: JSON.parse(data.data),
+                    columns: [
+
+                        { data: 'ID' },
+                        { data: 'grnNumber' },
+
+
+                         { data: 'Narration' },
+                         //{ data: 'ID' },
+                         //{ data: 'ID' },
+                         //{ data: 'ID' },
+                         //{ data: 'ID' },
+                   {
+                       "data": "ID",
+                       "render": function (idx, type, full, meta) {
+
+                           return '<a href="#" class="btn btn-primary" onclick="ProcessGRN(' + idx + ')"><i class="fa fa-lock"></i></a> <a href="#" class="btn btn-info" onclick="ShowCustomer(' + idx + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + idx + ')"><i class="fa fa-trash"></i></a>'
+                           //<a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + ID + ')"><i class="fa fa-trash"></i></a>
+
+                       },
+                       "orderable": true,
+                       "searchable": true,
+
+
+                   }
+                    ]
+                });
+
+            }
+
+
+        });
+
+        function ShowCustomer(CustomerID) {
+
+            console.log(CustomerID);
+            //$("#isMainBranch").attr("disabled", true);
+
+            var url = "/GRN/AddNewGRN?Id=" + CustomerID;
+            window.location.href = url;
+            //$("#modelbody").load(url, function (e) {
+            //    var id = $('#CustomerID').val();
+            //    if (id > 0) {
+            //        $('#btnaddnewclient').html("update ");
+
+            //    }
+            //    $("#exampleModal").modal("show");
+            //});
+            // window.location.href = url;
+
+
+        }
+
+
+        function ProcessGRN(CustomerID) {
+
+            console.log(CustomerID);
+            //$("#isMainBranch").attr("disabled", true);
+
+            var url = "/GRN/ProcessGRN?Id=" + CustomerID;
+            $.ajax({
+                url: url,
+                success: function (data) {
+                    if (data.success) {
+                        swal(
+               'Good job!',
+               'Completed!',
+               'success'
+           )
+                    } else {
+                        swal(
+              'Failed job!',
+              'Some Thing Went Wrong',
+              'error'
+          )
+                    }
+                    //bindCustomersInDataTable(data);
+                }
+            });
+            // window.location.href = url;
+
+
+        }
+        function ConfirmDelete(CustomerID) {
+            //swal.fire({
+            //    title: 'Are you sure?',
+            //    text: "You won't be able to revert this!",
+            //    icon: 'warning',
+            //    showCancelButton: true,
+            //    confirmButtonColor: '#3085d6',
+            //    cancelButtonColor: '#d33',
+            //    confirmButtonText: 'Yes, delete it!'
+            //}).then((result) => {
+            //    if (result.isConfirmed) {
+            //        Swal.fire(
+            //          'Deleted!',
+            //          'Your file has been deleted.',
+            //          'success'
+            //        )
+            //    }
+            //})
+            //$.ajax({
+            //    type: 'GET',
+            //    url: '/Vendor/Delete?id=' + CustomerID,
+            //    dataType: 'JSON',
+            //    success: function (res) {
+            //        if (res.success) {
+            //            swal.fire(
+            //                'Done!',
+            //                'Blocked',
+            //                'success'
+            //                )
+            //            window.location.href = "/Client/ViewClient"
+            //        }
+            //        else {
+            //            swal.fire(
+            //                'Error!',
+            //                'Failes',
+            //                'success'
+            //                )
+            //        }
+            //    },
+            //    failure: function (res) {
+            //        console.log(res);
+            //    },
+            //    err: function (res) {
+            //        console.log(res);
+            //    }
+            //})
+
+            swal({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Delete '
+            }).then(function () {
+                swal(
+                  'Deleted!',
+                  'Your file has been deleted.',
+                  'success'
+                )
+            })
+
+        }
+
+
+
+</script>
+}

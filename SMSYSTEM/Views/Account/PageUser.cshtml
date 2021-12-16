@@ -1,0 +1,290 @@
+﻿@model SSS.Property.Setups.LP_PageUser_Property
+@{
+    ViewBag.Title = "Add New MRN";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card-body">
+    <h1>Page Management</h1>
+    <br />
+    <form role="form" id="formadddemptype">
+        
+        <div class="row">
+
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Select User</label>
+                    @Html.DropDownListFor(model => model.UserID, new SelectList(Model.UserList, "idx", "firstName"), "Select User", new { @Class = "form-control font-weight-bold" })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- text input -->
+                <div class="form-group">
+                    <h2>pages</h2>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="checkboxdiv" class="row">
+            @*<div class="col-sm-2">
+                    <!-- text input -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <label class="form-check-label">Checkbox checked</label>
+                    </div>
+
+                </div>
+                <div class="col-sm-2">
+                    <!-- text input -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <label class="form-check-label">Checkbox </label>
+                    </div>
+                </div>*@
+
+        </div>
+
+    </form> 
+        
+        <hr />
+        
+
+        
+
+        
+        <div class="row">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="AddPageUser">Submit</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
+
+@section MyScripts {
+   <script type="text/javascript">
+        var dataTable;
+        var searchdata;
+        var pagelist;
+        $(document).ready(function () {
+            pagelist=@Html.Raw(Json.Encode(ViewBag.Pagelist));
+            console.log(pagelist);
+            CreateAndbindCheckBox(pagelist)
+           // bindDataToTable();
+        });
+        function CreateAndbindCheckBox(pagelistdata){
+            for(var i=0;i<pagelistdata.length;i++){
+                var divopen='<div class="col-sm-2"><div class="form-check">';
+                var createcheckbox='<input class="form-check-input" data-Id='+pagelistdata[i].ID+' type="checkbox">';
+                var checkboxlabel='<label class="form-check-label">'+pagelistdata[i].PageName+'</label>';
+                var divclose='</div></div>';
+                var dictoappend=divopen+createcheckbox+checkboxlabel+divclose;
+                $('#checkboxdiv').append(dictoappend)
+
+            }
+
+
+        }
+
+        function CreateAndbindUserPAges(pagelistdata){
+            console.log(pagelistdata);
+            $('#checkboxdiv').empty();
+            for(var i=0;i<pagelistdata.length;i++){
+                var createcheckbox;
+                var divopen='<div class="col-sm-2"><div class="form-check">';
+                if(pagelistdata[i].status==1){
+                     createcheckbox='<input class="form-check-input" data-Id='+pagelistdata[i].ID+' checked type="checkbox">';
+                }
+                else{
+                     createcheckbox='<input class="form-check-input" data-Id='+pagelistdata[i].ID+' type="checkbox">';
+                }
+                var checkboxlabel='<label class="form-check-label">'+pagelistdata[i].PageName+'</label>';
+                var divclose='</div></div>';
+                var dictoappend=divopen+createcheckbox+checkboxlabel+divclose;
+                console.log(dictoappend);
+                $('#checkboxdiv').append(dictoappend)
+
+            }
+
+
+        }
+
+    
+
+        $("#UserID").on('change', function () {
+            var UserID = $('#UserID').val();
+            $.ajax({
+                type: "GET",
+                url: "/Account/GetUserAccesspages",
+                data: {id:UserID},//datatosend,//$(form).serialize(),
+                //cache : false,
+                //processData: false,
+                success: function (res) {
+                    //alert("afd");
+                    // bindCustomersInDataTable(res.data);
+                    if (res.success && res.statuscode == 200) {
+
+                        CreateAndbindUserPAges(JSON.parse(res.data));
+                    }
+                    else if (res.success == true && res.statuscode == 300) {
+                            Command: toastr["error"]("Error", res.msg)
+
+                        toastr.options = {
+                            "closeButton": false,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": true,
+                            "positionClass": "toast-top-center",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "5000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+                    }
+                },
+                failure: function (res) {
+                    console.log(res);
+                },
+                err: function (res) {
+                    console.log(res);
+                }
+
+            })
+
+        });
+        $('#AddPageUser').click(function (e) {
+            e.preventDefault();
+
+            var form = $("#formadddemptype");
+            //var datatosend={
+
+            //    UserID:1,
+            //    PageList:[{ID:1},{ID:2},{ID:3}]
+            //}
+            var datatosend={
+                objpageuser:{
+                    UserID:$('#UserID').val(),
+                    //PageList:[{ID:1},{ID:2},{ID:3}]
+                    PageList:[]
+                }
+
+            }
+
+
+            //console.log(datatosend1)
+            $("#formadddemptype input:checkbox:checked").each(function()
+            {
+                if($(this).val()=='on'){
+
+                    var pgid=$(this).attr('data-id');
+                    datatosend.objpageuser.PageList.push({ID:pgid})
+
+                }
+
+                // add $(this).val() to your array
+            });
+
+            //var formdata = new FormData(form[0]);
+            // var ch = false;
+            // if ($('#remember').is(":checked")) {
+            //     // it is checked
+            //     ch = true;
+            // }
+            // else {
+            //     ch = false;
+            // }
+
+            //console.log(ch);
+            //formdata.append("RemeberMe", ch);
+            console.log(datatosend);
+            //    debugger;
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Account/AddUpdatePageUser",
+                    data: datatosend,//$(form).serialize(),
+                    //cache : false,
+                    //processData: false,
+                    success: function (res) {
+                        //alert("afd");
+                       // bindCustomersInDataTable(res.data);
+                        if (res.success && res.statuscode == 200) {
+                            Command: toastr["success"]("success", res.msg)
+
+                            toastr.options = {
+                                "closeButton": false,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": true,
+                                "positionClass": "toast-top-center",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "5000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                         }
+                            window.location.href = "/Account/PageUser";
+                        }
+                        else if (res.success == true && res.statuscode == 300) {
+                                Command: toastr["error"]("Error", res.msg)
+
+                            toastr.options = {
+                                "closeButton": false,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": true,
+                                "positionClass": "toast-top-center",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "5000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                            }
+                         }
+                    },
+                    failure: function (res) {
+                        console.log(res);
+                    },
+                    err: function (res) {
+                        console.log(res);
+                    }
+
+                })
+            }
+            else {
+                return false;
+            }
+
+
+
+        });
+
+</script>
+}

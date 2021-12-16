@@ -1,0 +1,197 @@
+﻿@model SSS.Property.Setups.User_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LOGIN</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/node_module/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/node_module/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/node_module/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/node_module/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/Dist/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="~/Dist/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper">
+            <div class="row">
+                <div class="content-wrapper full-page-wrapper d-flex align-items-center auth">
+                    <div class="row w-100">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="row">
+                                <div class="col-lg-6 bg-white">
+                                    <div class="auth-form-light text-left p-5">
+                                        <h2>Login</h2>
+                                        <h4 class="font-weight-light">Hello! let's get started</h4>
+                                        <form id="signinform" class="pt-5">
+
+                                            <div class="form-group">
+                                                <label for="loginId">Username</label>
+                                                @Html.EditorFor(model => model.loginId, new { htmlAttributes = new { @placeholder = "Login Id", @class = "form-control" } })
+                                                <i class="mdi mdi-account"></i>
+                                                @Html.ValidationMessageFor(model => model.loginId, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @placeholder = "Password", @class = "form-control" } })
+                                                <i class="mdi mdi-eye"></i>
+                                                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="mt-5">
+                                                <input type="button" id="btnsubmit" class="btn btn-block btn-success btn-lg font-weight-medium" value="Login" />
+                                                @* <a class="btn btn-block btn-success btn-lg font-weight-medium" href="../../index.html">Login</a>*@
+                                            </div>
+                                            <div class="mt-3 text-center">
+                                                <a href="#" class="auth-link text-black">Forgot password?</a>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 login-half-bg d-flex flex-row">
+                                    <p class="text-white font-weight-medium text-center flex-grow align-self-end">Copyright &copy; 2018  All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+            </div>
+            <!-- row ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/node_module/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_module/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/node_module/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/node_module/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!-- endinject -->
+    <script src="~/Dist/js/jquery.validate.min.js"></script>
+    <script src="~/Dist/js/jquery.validate.unobtrusive.min.js"></script>
+  
+    <!-- inject:js -->
+    <script src="~/Dist/js/off-canvas.js"></script>
+    <script src="~/Dist/js/hoverable-collapse.js"></script>
+    <script src="~/Dist/js/misc.js"></script>
+    <script src="~/Dist/js/settings.js"></script>
+    <script src="~/Dist/js/todolist.js"></script>
+    <!-- endinject -->
+    <link href="~/node_module/toastr/toastr.min.css" rel="stylesheet" />
+    <script src="~/node_module/toastr/toastr.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           
+        })
+
+        $(document).on('keypress', function (e) {
+            if (e.which == 13) {
+                $("#btnsubmit").click();
+            }
+        });
+
+        $('#btnsubmit').click(function (e) {
+            e.preventDefault();
+            var form = $("#signinform");
+            //var formdata = new FormData(form[0]);
+            // var ch = false;
+            // if ($('#remember').is(":checked")) {
+            //     // it is checked
+            //     ch = true;
+            // }
+            // else {
+            //     ch = false;
+            // }
+
+            //console.log(ch);
+            //formdata.append("RemeberMe", ch);
+            //console.log(formdata);
+            //    debugger;
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Account/Login",
+                    data: $(form).serialize(),
+                    //cache : false,
+                    //processData: false,
+                    success: function (res) {
+                        if (res.success && res.statuscode == 200 && res.count>0) {
+                            Command: toastr["success"]("success", res.msg)
+
+                            toastr.options = {
+                                "closeButton": false,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": true,
+                                "positionClass": "toast-top-center",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "5000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                            }
+                            window.location.href = "/dashboard/Dashboard";
+                        }
+                        else if (res.success == true && res.statuscode == 400) {
+                                Command: toastr["error"]("Invalid Credentials", res.msg)
+
+                            toastr.options = {
+                                "closeButton": false,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": true,
+                                "positionClass": "toast-top-center",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "5000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                            }
+                        }
+                    },
+                    failure: function (res) {
+                        console.log(res);
+                    },
+                    err: function (res) {
+                        console.log(res);
+                    }
+
+                })
+            }
+            else {
+                return false;
+            }
+
+
+
+        });
+    </script>
+</body>
+</html>

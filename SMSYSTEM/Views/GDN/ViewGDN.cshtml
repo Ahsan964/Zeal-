@@ -1,0 +1,288 @@
+﻿
+@{
+    ViewBag.Title = "ViewGDN";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row float-right">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" id="btnaddnew" onclick="@("window.location.href='" + @Url.Action("AddNewGDN", "GdN") + "'");">Add new GDN<i class="mdi mdi-play-circle ml-1"></i></button>
+        </div>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">GDN List</h4>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="example1" class="table table-striped table-bordered table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>GRN NUMBER</th>
+
+                                <th>Description</th>
+                                <th>Print GDN</th>
+                                <th>Action</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal starts -->
+@*<div class="text-center">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Click for demo<i class="mdi mdi-play-circle ml-1"></i></button>
+    </div>*@
+
+<!-- Modal Ends -->
+
+
+@section MyScripts {
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "/GDN/GetAllGDN",
+                success: function (data) {
+                    bindCustomersInDataTable(data);
+                }
+            });
+
+
+
+
+
+            function bindCustomersInDataTable(data) {
+                console.log(data);
+                console.log(JSON.parse(data.data));
+                var status = "Blocked".toString();
+                var table = $('#example1').DataTable({
+                    data: JSON.parse(data.data),
+                    columns: [
+
+                        { data: 'ID' },
+                        { data: 'Doc_No' },
+
+
+                         { data: 'Narration' },
+                         //{ data: 'Parent_DocID' },
+                         //{ data: 'ID' },
+                         //{ data: 'ID' },
+                         //{ data: 'ID' },
+                         {
+                             "data": "Parent_DocID",
+                             "render": function (idx, type, full, meta) {
+
+                                 return '<a href="#" class="btn btn-danger" onclick="GenerateGDN(' + idx + ')"><i class="fa fa-car"></i></a>';
+                                 //<a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + ID + ')"><i class="fa fa-trash"></i></a>
+
+                             },
+                             "orderable": true,
+                             "searchable": true,
+
+
+                         },
+                   {
+                       "data": "ID",
+                       "render": function (idx, type, full, meta) {
+
+                           return '<a href="#" class="btn btn-primary" onclick="ProcessGRN(' + idx + ')"><i class="fa fa-lock"></i></a> <a href="#" class="btn btn-info" onclick="ShowCustomer(' + idx + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + idx + ')"><i class="fa fa-trash"></i></a> <a href="#" class="btn btn-secondary" onclick="GenerateReport(' + idx + ')"><i class="fa fa-file"></i></a>';
+                           //<a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + ID + ')"><i class="fa fa-trash"></i></a>
+
+                       },
+                       "orderable": true,
+                       "searchable": true,
+
+
+                   }
+                    ]
+                });
+
+            }
+
+
+        });
+
+        function ShowCustomer(CustomerID) {
+
+            console.log(CustomerID);
+            //$("#isMainBranch").attr("disabled", true);
+
+            var url = "/GDN/AddNewGDN?Id=" + CustomerID;
+            window.location.href = url;
+            //$("#modelbody").load(url, function (e) {
+            //    var id = $('#CustomerID').val();
+            //    if (id > 0) {
+            //        $('#btnaddnewclient').html("update ");
+
+            //    }
+            //    $("#exampleModal").modal("show");
+            //});
+            // window.location.href = url;
+
+
+        }
+
+
+        function ProcessGRN(CustomerID) {
+
+            console.log(CustomerID);
+            //$("#isMainBranch").attr("disabled", true);
+
+            var url = "/GDN/ProcessGDN?Id=" + CustomerID;
+            $.ajax({
+                url: url,
+                success: function (data) {
+                    if (data.success) {
+                        swal(
+               'Good job!',
+               'Completed!',
+               'success'
+           )
+                    } else {
+                        swal(
+              'Failed job!',
+              'Some Thing Went Wrong',
+              'error'
+          )
+                    }
+                    //bindCustomersInDataTable(data);
+                }
+            });
+            // window.location.href = url;
+
+
+        }
+        
+        function ConfirmDelete(CustomerID) {
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+            })
+
+
+            swalWithBootstrapButtons.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/GDN/Delete?id=' + CustomerID,
+
+                        dataType: 'JSON',
+                        success: function (res) {
+                            if (res.success) {
+                                swalWithBootstrapButtons.fire(
+                                    'Done!',
+                                    'Blocked',
+                                    'success'
+                                )
+                                window.location.href = "/fourthTier/ViewfourthTiers"
+                            }
+                        }
+                    })
+
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire(
+                        'Cancelled',
+                        'Your imaginary file is safe :)',
+                        'error'
+                    )
+                }
+            })
+        }
+
+
+        function GenerateReport(CustomerID) {
+
+            console.log(CustomerID);
+            var reportname = "GRNReport";
+            // window.location.href = '/MRN/AddNewMRN?id=' + CustomerID;
+            $.ajax({
+                url: "/Base/GenerateReport?id=" + CustomerID + '&query=' + 5 + '&ReportName=' + reportname,
+                success: function (res) {
+                    window.location.href = res.data;
+                }
+            });
+        }
+
+        function GenerateGDN(CustomerID) {
+            var driver, numberplate;
+            swal.mixin({
+                input: 'text',
+                confirmButtonText: 'Next &rarr;',
+                showCancelButton: true,
+                progressSteps: ['1', '2']
+            }).queue([
+   {
+       title: 'Question 1',
+       text: 'Enter Driver Name'
+   },
+     {
+         title: 'Question 2',
+         text: 'Enter Vehicle Number'
+     }
+            ]).then((result) => {
+                if (result.value) {
+                    console.log(result);
+                    driver = result.value[0];
+                    numberplate = result.value[1];
+                    //const answers = JSON.stringify(result.value)
+                    console.log(driver);
+                    console.log(numberplate);
+                    //ans = answers;
+                    Swal.fire({
+                        //                  title: 'All done!',
+                        //                  html: `
+                        //  Your answers:
+                        //  <pre><code>${answers}</code></pre>
+                        //`,
+                        confirmButtonText: 'Submit & Print Gate Pass'
+                    }).then((result) => {
+                        var reportname = "GDNReport";
+                        $.ajax({
+                            url: "/GDN/GenerateGDNReport?id=" + CustomerID + '&query=' + 1 + '&ReportName=' + reportname + '&driver=' + driver + '&vhcl=' + numberplate,
+                            success: function (res) {
+                                window.location.href = res.data;
+                            }
+                        });
+                    })
+
+
+                }
+            })
+
+
+            //var url = "/GatePass/GatePass?driver=" + driver + "&numberplate=" + numberplate + "&sale=" + CustomerID;
+            //    //  var url = "/GatePass/GatePass?Id=" + CustomerID;
+            //     window.location.href = url;
+            //$("#modelbody").load(url, function (e) {
+            //    var id = $('#Customer_Id').val();
+            //    if (id > 0) {
+            //        $('#btnaddnewcustomer').html("update ");
+            //    }
+            //    $("#modal-default").modal("show");
+            //});
+        }
+    </script>
+}

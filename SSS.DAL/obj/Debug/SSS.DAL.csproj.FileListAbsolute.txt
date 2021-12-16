@@ -1,0 +1,663 @@
+D:\Projects\SSND\Code\release2\SSS\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Projects\SSND\Code\release2\SSS\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Projects\SSND\Code\release2\SSS\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Projects\SSND\Code\release2\SSS\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\release2\SSS\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\release2\SSS\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SSND\Code\release2\SSS\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Projects\SSND\Code\release2\SSS\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\SSND\Code\release2\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Projects\SSND\Code\release2\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Projects\SSND\Code\release2\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Projects\SSND\Code\release2\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\release2\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\release2\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SSND\Code\release2\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Projects\SSND\Code\release2\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\FluentValidation.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\FluentValidation.xml
+D:\Projects\SSSD\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Projects\SSSD\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Projects\SSSD\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Projects\SSSD\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\Projects\SSSD\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Projects\SSSD\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Projects\SSSD\SSS.DAL\bin\Debug\FluentValidation.pdb
+D:\Projects\SSSD\SSS.DAL\bin\Debug\FluentValidation.xml
+D:\Projects\SSSD\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SSSD\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Projects\SSSD\SSS.DAL\obj\Debug\SSS.DAL.pdb
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.DAL.dll
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.DAL.pdb
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\FluentValidation.dll
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\bin\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\obj\Debug\SSS.DAL.dll
+H:\Projects\SSND\Code\branches\release2\SSS.DAL\obj\Debug\SSS.DAL.pdb
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\bin\Debug\SSS.DAL.dll
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\bin\Debug\SSS.DAL.pdb
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\bin\Debug\FluentValidation.dll
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\bin\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\bin\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\obj\Debug\SSS.DAL.dll
+H:\Projects\SSND\Code\branches\Release3\SSS.DAL\obj\Debug\SSS.DAL.pdb
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\bin\Debug\SSS.DAL.dll
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\bin\Debug\SSS.DAL.pdb
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\bin\Debug\FluentValidation.dll
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\bin\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\bin\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\obj\Debug\SSS.DAL.dll
+H:\Projects\SSND\Code\branches\Release4\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\ABS-SSS\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Projects\ABS-SSS\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Projects\ABS-SSS\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Projects\ABS-SSS\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\Projects\ABS-SSS\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Projects\ABS-SSS\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Projects\ABS-SSS\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\ABS-SSS\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Projects\ABS-SSS\SSS.DAL\obj\Debug\SSS.DAL.pdb
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.DAL.dll
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.DAL.pdb
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\FluentValidation.dll
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\obj\Debug\SSS.DAL.dll
+H:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\Aqeel\SSS\SSS\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release5\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release6\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release7\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release8\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\SSS\Release8\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\SSS\Release8\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\SSS\Release8\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\SSS\Release8\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\SSS\Release8\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\SSS\Release8\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\SSS\Release8\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\SSS\Release8\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\SSS\Release8\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\SSS\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\SSS\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\SSS\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\SSS\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\SSS\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\SSS\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\SSS\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\SSS\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\SSS\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\SSS-COMPLETE\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\Latest Update Release\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Projects\Latest Update Release\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Projects\Latest Update Release\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Projects\Latest Update Release\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\Projects\Latest Update Release\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Projects\Latest Update Release\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Projects\Latest Update Release\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Projects\Latest Update Release\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Projects\Latest Update Release\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\C Drive\Projects\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\C Drive\Projects\Release9\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\C Drive\Projects\Release9\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\C Drive\Projects\Release9\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\C Drive\Projects\Release9\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\C Drive\Projects\Release9\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\C Drive\Projects\Release9\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\C Drive\Projects\Release9\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\C Drive\Projects\Release9\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\C Drive\Projects\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\C Drive\Projects\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\C Drive\Projects\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\C Drive\Projects\Live Projects\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\C Drive\Projects\Live Projects\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\C Drive\Projects\Live Projects\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\C Drive\Projects\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\C Drive\Projects\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\C Drive\Projects\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\FluentValidation.dll
+E:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Umer\OSDA E\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Umer\OSDA E\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Umer\OSDA E\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Umer\OSDA E\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\FluentValidation.dll
+D:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Umer\OSDA E\Live Projects\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Umer\OSDA E\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Umer\OSDA E\Live Projects\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Arsalan\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Arsalan\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Arsalan\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Arsalan\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Arsalan\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Arsalan\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Arsalan\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Arsalan\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\WajidUpdated\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\WajidUpdated\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\WajidUpdated\Updated\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\WajidUpdated\Updated\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\WajidUpdated\Updated\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\WajidUpdated\Updated\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\WajidUpdated\Updated\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\WajidUpdated\Updated\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\bin\Debug\SSS.Utility.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\bin\Debug\SSS.Utility.pdb
+D:\Ahsan\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\Ahsan\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\Ahsan\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\Ahsan\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\Ahsan\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.dll
+D:\Ahsan\WajidPerception-master\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+D:\Ahsan\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\Ahsan\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.pdb
+D:\Ahsan\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\Ahsan\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\Ahsan\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Perception BP\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Perception BP\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Perception BP\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Perception BP\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Perception BP\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.dll
+E:\Perception BP\WajidPerception-master\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+E:\Perception BP\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Perception BP\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.pdb
+E:\Perception BP\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Perception BP\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Perception BP\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.pdb
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.pdb
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.dll
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.dll
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.pdb
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.pdb
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.dll
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.dll
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.pdb
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.pdb
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.pdb
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.dll
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.dll
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.pdb
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.pdb
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.dll
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.pdb
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.pdb
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.pdb
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.pdb
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\bin\Debug\SSS.DAL.pdb
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\bin\Debug\SSS.Utility.pdb
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.DAL\obj\Debug\SSS.DAL.pdb
+H:\office\Zeal\Zeal Master\SSS.DAL\bin\Debug\SSS.DAL.dll.config
+H:\office\Zeal\Zeal Master\SSS.DAL\bin\Debug\SSS.DAL.dll
+H:\office\Zeal\Zeal Master\SSS.DAL\bin\Debug\SSS.DAL.pdb
+H:\office\Zeal\Zeal Master\SSS.DAL\bin\Debug\SSS.Property.dll
+H:\office\Zeal\Zeal Master\SSS.DAL\bin\Debug\SSS.Utility.dll
+H:\office\Zeal\Zeal Master\SSS.DAL\bin\Debug\AjaxControlToolkit.dll
+H:\office\Zeal\Zeal Master\SSS.DAL\bin\Debug\SSS.Property.pdb
+H:\office\Zeal\Zeal Master\SSS.DAL\bin\Debug\SSS.Utility.pdb
+H:\office\Zeal\Zeal Master\SSS.DAL\obj\Debug\SSS.DAL.csprojResolveAssemblyReference.cache
+H:\office\Zeal\Zeal Master\SSS.DAL\obj\Debug\SSS.DAL.dll
+H:\office\Zeal\Zeal Master\SSS.DAL\obj\Debug\SSS.DAL.pdb

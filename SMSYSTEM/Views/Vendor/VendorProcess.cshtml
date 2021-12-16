@@ -1,0 +1,544 @@
+﻿@model SSS.Property.Setups.VendorProcessVM_Property
+@{
+    ViewBag.Title = "VendorProcess";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card-body">
+    <h3>Vendor Process Price</h3>
+    <br />
+
+    <form role="form" id="vendorprocessform">
+        @Html.HiddenFor(model => model.ID, new { id = "ID", value = 0 })
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Product*:</label>
+
+                    @Html.DropDownListFor(model => model.itemIdx, new SelectList(Model.ProductList, "idx", "itemName"), "Select Product", new { @Class = "select2 form-control font-weight-bold" })
+                </div>
+                @Html.ValidationMessageFor(model => model.itemIdx, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-4">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Process*:</label>
+                    @Html.DropDownListFor(model => model.vendorCatIdx, new SelectList(Model.VendorCatList, "idx", "vendorCategory"), "Select Vendor Category", new { @Class = "select2 form-control font-weight-bold" })
+                </div>
+                @Html.ValidationMessageFor(model => model.vendorCatIdx, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-4">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Vendor*:</label>
+                    @{
+                        if (Model.vendorDetailList.Count > 0)
+                        {
+                            @Html.DropDownListFor(model => model.vendorIdx, new SelectList(Model.VendorLST, "idx", "vendorName"), "Select Category", new { @Class = "select2 form-control font-weight-bold" })
+
+                        }
+                        else
+                        {
+                            @Html.DropDownListFor(m => m.vendorIdx,
+       new SelectList(Enumerable.Empty<SelectListItem>(), "idx", "vendorName"),
+              "Select Vendor",
+              new { @class = "select2 form-control" })
+                        }
+                    }
+                    @Html.ValidationMessageFor(m => m.vendorIdx, "", new { @class = "text-danger" })
+                </div>
+                @*@Html.ValidationMessageFor(model => model.vendorIdx, "", new { @class = "text-danger" })*@
+            </div>
+           
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Price*:</label>
+                    @Html.EditorFor(model => model.activityPrice, new { htmlAttributes = new { @placeholder = "Price", @class = "form-control" } })
+                    @*<input id="price" class="form-control font-weight-bold" name="price"/>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.activityPrice, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <br />
+                    <input type="button" value="+" id="btnaddtogrid" class="btn btn-outline-primary" style="font-size: 20px " />
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="btnsubmit">Submit</button>
+            <button type="button" class="btn btn-light" data-dismiss="modal" id="cancelBtn">Cancel</button>
+        </div>
+    </div>
+
+        @*Grid Table*@
+        <div class="row" style="display:block; overflow:scroll" id="milestones">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="">
+                        <table id="example2" class=" table table-dark table-bordered table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Process Name</th>
+                                    <th>Vendor Name</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody style="background:white;color:black; ">
+                                @{
+                                    if (Model.vendorDetailList.Count > 0)
+                                    {
+
+                                        for (int i = 0; i < Model.vendorDetailList.Count; i++)
+                                        {
+                                            <tr>
+                                               
+                                                <td>@Model.vendorDetailList[i].itemName</td>
+                                                <td>@Model.vendorDetailList[i].vendorCategory</td>
+                                                <td>@Model.vendorDetailList[i].vendorName</td>
+                                                <td>@Model.vendorDetailList[i].activityPrice</td>
+                                                <td><button id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn btn-outline-danger"><i class="fa fa-trash menu-icon"></i></button></td>
+                                            </tr>
+
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+      
+       
+        <div class="row" style="display:block; overflow:scroll" id="milestoness">
+            <div class="col-md-12">
+                <div class="card card-primary">
+
+                    <div class="">
+                        <table id="example3" class=" table table-dark table-bordered table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Process Name</th>
+                                    <th>Vendor Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody style="background:white;color:black; ">
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+@section MyScripts {
+    <script type="text/javascript">
+        //$("#itemIdx").change(function () {
+
+        //    var price = $('#activityPrice').val();
+        //    if (price != 0) {
+        //        alert('Update From listing');
+        //        $('#btnsubmit').attr('disabled', true);
+
+        //    }
+        //    else {
+        //        $('#btnsubmit').attr('disabled', false);
+        //    }
+
+        //});
+        $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true });
+
+        $(document).ready(function() {
+
+            // Added By Ahsan
+            // Add To grid
+            $("#itemIdx").on('change', function () {
+                var ddvaue = $("#itemIdx option:selected").val();
+                if (ddvaue > 0) {
+                    GetPODataSet(ddvaue)
+                    //$('#btnaddtogrid').attr('disabled', true);
+                }
+                else
+                {
+                    $("#example3 tbody").empty();
+                    $('#btnaddtogrid').attr('disabled', false);
+                    $("#itemIdx").val("");
+                    $("#vendorCatIdx").val("");
+                    $("#vendorIdx").val("");
+                    $("#activityPrice").val("0");
+
+                }
+
+            });
+            function GetPODataSet(poid) {
+                $.ajax({
+                    url: "/Vendor/GetoneVendorProcess",
+                    data: { id: poid },
+                    success: function (data) {
+                        var POData = JSON.parse(data.data);
+                        //data from quotation
+                        for (var i = 0; i < POData.count; i++) {
+                            var itemName = POData[i].itemName;
+                            var vendorCategory = POData[i].vendorCategory;
+                            var vendorName = POData[i].vendorName;
+                            var activityPrice = POData[i].activityPrice;
+                      
+                        }
+
+                        $("#example3 tbody").empty();
+                        $('#milestoness').show();
+                        var markup;
+                        for (var i = 0; i < POData.length; i++) {
+                            var itemName = POData[i].itemName;
+                            var vendorCategory = POData[i].vendorCategory;
+                            var vendorName = POData[i].vendorName;
+                            var activityPrice = POData[i].activityPrice;
+
+                            markup = "<tr><td>" + itemName + "</td><td>" + vendorCategory + "</td><td>" + vendorName + "</td><td>" + activityPrice + "</td></tr>";
+                            //console.log(markup);
+
+                            $("#example3 tbody").append(markup);
+
+                        }
+
+                    }
+                });
+            }
+
+
+
+            // Cancel Button
+            $("#cancelBtn").click(function() {
+
+                window.location.href = "/Vendor/ViewVendorProcess"
+            });
+
+            // Submit Button
+            $("#btnsubmit").click(function(e) {
+
+                e.preventDefault();
+                var form = $("#vendorprocessform");
+
+                var datatosend = {
+                    objVoucher: {
+                        ID: $('#ID').val(),
+
+                        itemIdx: $('#itemIdx').val(),
+                        vendorCatIdx: $('#vendorCatIdx').val(),
+                        vendorIdx: $('#vendorIdx').val(),
+                        activityPrice: $('#activityPrice').val(),
+
+                        vendorDetailList: []
+
+                    }
+
+                }
+                var table = $("#example2 tbody");
+
+
+                table.find('tr').each(function(i) {
+                    var $tds = $(this).find('td'),
+                        itemIdx = $tds.eq(0).text(),
+                        itemName = $tds.eq(1).text(),
+                        vendorCatIdx = $tds.eq(2).text(),
+                        vendorCategory = $tds.eq(3).text(),
+
+                        vendorIdx = $tds.eq(4).text(),
+                        vendorName =$tds.eq(5).text(),
+                        activityPrice = $tds.eq(6).text()
+
+
+                    datatosend.objVoucher.vendorDetailList.push({
+                        itemIdx: itemIdx,
+                        itemName: itemName,
+                        vendorCatIdx: vendorCatIdx,
+                        vendorCategory: vendorCategory,
+                        vendorIdx: vendorIdx,
+                        vendorName: vendorName,
+                        activityPrice: activityPrice,
+                        visible: 'true'
+
+                    });
+
+                });
+
+
+                console.log(JSON.stringify(datatosend));
+
+
+                var form = $("#vendorprocessform");
+                console.log(datatosend);
+                $(this).removeData("validator").removeData("unobtrusiveValidation"); //remove the form validation
+                $.validator.unobtrusive.parse($(this)); //add the form validation
+                //$.validator.unobtrusive.parse(form);
+                //if ($(form).valid()) // using not operator for a time being
+                if ($(form).valid()) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Vendor/VendorProcessPrice",
+                        data: JSON.stringify(datatosend.objVoucher), // JSON.stringify(milestonearray),// $(form).serialize(),
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function(res) {
+                            console.log(res);
+                            if (res.success) {
+                                alert("Done");
+
+                                window.location.href = "/Vendor/ViewVendorProcess"
+                            } else if (res.success == false && res.msg == 'Failed') {
+
+                            }
+                        },
+                        failure: function(res) {
+                            console.log(res);
+                        },
+                        err: function(res) {
+                            console.log(res);
+                        }
+
+                    })
+                } else {
+                    return false;
+                }
+
+            });
+
+
+            // Vendor and process dependency
+            $("#vendorCatIdx").on('change',
+                function() {
+                    var vendorId = $("#vendorCatIdx option:selected").val();
+                    if (vendorId > 0) {
+                        $.ajax({
+                            url: '/Vendor/SearchVendorsOnCatIdx',
+                            type: "GET",
+                            dataType: "JSON",
+                            data: {
+                                Id: vendorId
+                            },
+                            success: function(data) {
+
+                                $("#vendorIdx").html(""); // clear before appending new list
+
+
+                                $('#vendorIdx').append($('<option>',
+                                    {
+                                        value: "",
+                                        text: "Select Vendor"
+                                    }));
+
+                                $.each(data.data,
+                                    function(key, value) {
+                                        $('#vendorIdx').append($('<option>',
+                                            {
+                                                value: value.idx,
+                                                text: value.vendorName
+                                            }));
+                                    });
+
+
+                            }
+                        });
+                    } else {
+
+                        $("#vendorIdx").empty();
+                        $("#vendorIdx").append($('<option>',
+                            {
+                                value: "",
+                                text: "Select Vendor"
+                            }));
+
+                    }
+
+                });
+
+            // Activity Price
+            $("#vendorIdx").on('change',
+                function() {
+                    var vendorValue = $('#vendorIdx').val();
+                    if (Number(vendorValue) > 0) {
+                        $.ajax({
+                            url: '/Vendor/SearchPrice',
+                            type: "GET",
+                            dataType: "JSON",
+                            data: {
+                                id: vendorValue
+                            },
+                            success: function(data) {
+                                //console.log(data.data[0].price)
+                                $("#activityPrice").val(data.data[0].price);
+
+                            }
+                        });
+                    } else {
+                        $("#activityPrice").val("0.00");
+                    }
+
+                });
+
+            // Add To Grid Button
+            $("#btnaddtogrid").click(function(e) {
+                if (!(gridValidation($("#itemIdx option:selected").val(), $('#vendorCatIdx').val(), $('#vendorIdx').val()))) {
+
+                    displayerror();
+                    return;
+                }
+
+
+                // alert("hello");
+                $('#milestones').show();
+
+                //var actualQty = $("#qty").val();
+                var closebutton = '<button id="deleterow" onclick="SomeDeleteRowFunction(this)"  class="close btn "><i class="fa fa-trash menu-icon"></i></button>';
+                //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+                //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+                // '</button>'
+                var itemname = $("#itemIdx option:selected").text();
+                var itemID = $("#itemIdx option:selected").val();
+
+                var processname = $("#vendorCatIdx option:selected").text();
+                var processID = $("#vendorCatIdx option:selected").val();
+                var vendorCatIdx = $("#vendorCatIdx option:selected").val();
+                var vendorIdx = $("#vendorIdx option:selected").val();
+
+                var vendorname = $("#vendorIdx option:selected").text();
+                var vendorID = $("#vendorIdx option:selected").val();
+
+                var activityPrice = $('#activityPrice').val();
+
+                var markup = "<tr><td style='display:none;'>" + itemID + "</td><td>" + itemname + "</td><td style='display:none;'>" + processID + "</td><td>" + processname + "</td><td style='display:none;'>" + vendorID + "</td><td>" + vendorname + "</td><td>" + activityPrice + "</td><td style='display:none;'>" + vendorCatIdx + "</td><td style='display:none;'>" + vendorIdx + "</td><td>" + closebutton + "</td></tr>";
+
+                $("#example2 tbody").append(markup);
+                $("#typeIdx").prop('disabled', true); //disable
+                $("#orderIdx").prop('disabled', true); //disable
+                $("#vendorCatIdx").prop('disabled', false); //disable
+                $("#vendorIdx").prop('disabled', false); //disable
+
+            });
+
+            // Display Error
+            function displayerror() {
+                for (var i = 0; i < errmsg.length; i++) {
+                    toastr.options = {
+                        "closeButton": false,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": false,
+                        "positionClass": "toast-top-center",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    }
+                    Command: toastr["error"](errmsg[i], "")
+                }
+            }
+
+            // Grid Validations
+            function gridValidation(Id, processId, vendorId) {
+                errmsg = [];
+                var myTab = $("#example2 tbody");
+                var rtrn = true;
+
+                // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+                myTab.find('tr').each(function(i) {
+                    var processIdx = $('#vendorCatIdx').val();
+                    var vendorIdx = $('#vendorIdx').val();
+                    var $tds = $(this).find('td'),
+                        productid = $tds.eq(0).text();
+                    processIdx = $tds.eq(7).text();
+                    vendorIdx = $tds.eq(8).text();
+
+                    if (Id == productid && processId == processIdx && vendorId == vendorIdx) {
+                        rtrn = false;
+                        errmsg.push("Product With Same Process Already exist");
+                    }
+                })
+                if ($('#itemIdx option:selected').val() == '') {
+                    rtrn = false;
+                    errmsg.push("Select Product");
+                }
+
+                if ($('#activityPrice').val() <= 0) {
+                    rtrn = false;
+                    errmsg.push("Price value is zero");
+                }
+
+                return rtrn;
+            }
+
+            
+
+        });
+
+        function SomeDeleteRowFunction(o) {
+            //alert(id);
+            var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            //console.log($tds);
+
+            $.each($tds, function () {                // Visits every single <td> element
+                // console.log($(this).text());         // Prints out the text within the <td>
+            });
+            var p = o.parentNode.parentNode;
+
+            p.parentNode.removeChild(p);
+            $(this).closest('tr').remove();
+            var rowCount = $('#example2 tr').length;
+
+            if (Number(rowCount - 1) == 0)
+            {
+                
+                $("#itemIdx").prop('disabled', false); //enable
+                $("#vendorCatIdx").prop('disabled', false); //enable
+                $("#vendorIdx").prop('disabled', false); //enable
+                $("#activityPrice").prop('disabled', false);
+
+            }
+
+        };
+        // Check Update
+        function checkUpdate() {
+            var update = @Html.Raw(Json.Encode(ViewBag.update));
+            if (update == true) {
+                if (@Model.vendorDetailList.Count > 0) {
+
+                }
+            }
+        }
+    </script>
+}
+
+
+

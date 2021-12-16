@@ -1,0 +1,104 @@
+﻿
+
+
+@model SSS.Property.Setups.User_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Branch *:</label>
+                @Html.DropDownListFor(model => model.branchIdx, new SelectList(ViewBag.branchList, "idx", "branchName"), "Select Branch ", new { @Class = "form-control font-weight-bold" })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.branchIdx, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>First Name</label>
+                @Html.EditorFor(model => model.firstName, new { htmlAttributes = new { @placeholder = "First Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.firstName, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Last Name</label>
+                @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @placeholder = "Last Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>CNIC:</label>
+                @Html.EditorFor(model => model.CNIC, new { htmlAttributes = new { @placeholder = "CNIC", @class = "form-control" } })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.CNIC, "", new { @class = "text-danger" })
+        </div><div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Cell #:</label>
+                @Html.EditorFor(model => model.cellNumber, new { htmlAttributes = new { @placeholder = "Cell #", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.cellNumber, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>User ID*:</label>
+                @Html.EditorFor(model => model.loginId, new { htmlAttributes = new { @placeholder = "User Id", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.loginId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Password</label>
+                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @placeholder = "Address", @class = "form-control" } })
+                Show Password: <input type="checkbox" id="showPass" class="checkbox"/>
+            </div>
+            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+        </div>
+        
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Is Admin</label>
+                @Html.CheckBoxFor(model => model.Is_Admin, new { htmlAttributes = new { @placeholder = "Is Admin", @class = "form-control" } })
+               
+            </div>
+            @Html.ValidationMessageFor(model => model.Is_Admin, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    @*<button id="show_password" class="btn btn-primary" type="button">  
+        <span class="fa fa-eye-slash icon"></span>  
+    </button>*@ 
+
+</form>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        $("#showPass").change(function () {
+            var checked = $(this).is(":checked");
+            if (checked) {
+                $("#password").attr("type", "text");
+            } else {
+                $("#password").attr("type", "password");
+            }
+        });
+
+    });
+
+  
+</script>

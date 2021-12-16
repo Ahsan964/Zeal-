@@ -1,0 +1,447 @@
+﻿@model SSS.Property.Setups.QuotationVM_Property
+@{
+    ViewBag.Title = "AddNewQuotaion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="card-body">
+   
+        <h3>Quotation</h3>
+        
+  <br>
+    <form role="form" id="purchaseform">
+        @Html.HiddenFor(model => model.idx, new { id = "idx", value = 0 })
+
+
+        <div class="row">
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Customers*:</label>
+
+                    @Html.DropDownListFor(model => model.customerIdx, new SelectList(Model.CustomerLST, "idx", "customerName"), "Select Customer", new { @Class = "form-control font-weight-bold" })
+
+                </div>
+                @Html.ValidationMessageFor(model => model.customerIdx, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>QS Number*:</label>
+                    @Html.EditorFor(model => model.qsNumber, new { htmlAttributes = new { @placeholder = "QO Number*:", @class = "form-control", @readonly = true } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.qsNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Quotation Date*:</label>
+                    @Html.EditorFor(model => model.quotationDate, new { htmlAttributes = new { @placeholder = "Purchase Date*:", @class = "form-control" } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.quotationDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="row" id="PurchaseDetails">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h5>+Add Product</h5>
+                        <div class="card-tools">
+
+                        </div>
+                    </div>
+                    <div class="">
+                        <table class="table table-striped table-bordered table-condensed table-hover table-active">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Item Name</th>
+                                    <th>QTY</th>
+                                    <th>Sales Rate</th>
+                                    <th>Sub Amount</th>
+                                    <th>Action</th>
+                                </tr>
+
+                            </thead>
+                            <tbody class="" style="background:white;">
+                                <tr>
+                                    <td>@Html.DropDownListFor(model => model.itemIdx, new SelectList(Model.ProductList, "idx", "itemName"), "Select Product", new { @Class = "form-control font-weight-bold" })</td>
+
+                                    <td>@Html.EditorFor(model => model.qty, new { htmlAttributes = new { @placeholder = "Qty", @class = "form-control" } })</td>
+                                    <td>@Html.EditorFor(model => model.salePrice, new { htmlAttributes = new { @placeholder = "Sale Price", @class = "form-control" } })</td>
+                                    <td>@Html.EditorFor(model => model.amount, new { htmlAttributes = new { @placeholder = "Sub Amount", @class = "form-control", @readonly = true } })</td>
+
+                                    <td>
+
+
+                                        <input type="button" value="+" id="btnaddtogrid" class="btn btn-outline-primary" style="font-size: 20px " />
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div class="row" style="display:block; overflow:scroll" id="milestones">
+                            <div class="col-md-12">
+                                <div class="card card-primary">
+
+                                    <div class="">
+                                        <table id="example2" class=" table table-dark table-bordered table-hover">
+                                            @*<thead class="thead-dark" >
+                                                <tr>
+                                                    <th>Product Name</th>
+                                                    <th>QTY</th>
+                                                    <th>Sale Rate</th>
+                                                    <th>Total Amount</th>
+
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>*@
+                                            <tbody style="background:white;color:black; ">
+
+                                                @{
+                                                    if (ViewBag.DetailData != null)
+                                                    {
+
+
+
+                                                        foreach (var items in ViewBag.DetailData)
+                                                        {
+                                                            <tr>
+                                                                <td style="display:none">@items.itemIdx</td>
+                                                                <td>@items.itemName</td>
+                                                                <td>@items.qty</td>
+                                                                <td><input type="text" placeholder="Enter Sales Price" onkeyup="changeinunitprice(this)" value="@items.salePrice" id="salePrice" class="form-control" /></td>
+                                                                @*<td id="unitprice"></td>*@
+                                                                <td>@items.amount</td>
+                                                                @*<td><i class="icon-trash menu-icon" id="btnaddtogrid"><input type="button" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn-danger" /></i></td>*@
+                                                                <td><button id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn btn-outline-danger"><i class="fa fa-trash menu-icon"></i></button></td>
+                                                            </tr>
+
+                                                        }
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+
+
+
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="inputName">Description</label>
+                    @Html.EditorFor(model => model.description, new { htmlAttributes = new { @placeholder = "Description", @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="inputName">Total Amount</label>
+                    @Html.EditorFor(model => model.totalAmount, new { htmlAttributes = new { @placeholder = "Total Amount", @class = "form-control", @readonly = true } })
+                </div>
+                @Html.ValidationMessageFor(model => model.totalAmount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btnAddQuotation">Submit</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section MyScripts {
+ <script type="text/javascript">
+
+    // Add To grid
+
+
+
+    var errmsg;
+    //Add Project Button Event start
+    $("#qty").keyup(function () {
+        var qtyval = $(this).val();
+        var salepriceval = $("#salePrice").val();
+        var totalamount = qtyval * unitpriceval;
+
+        $("#amount").val(totalamount);
+    });
+    $("#salePrice").keyup(function () {
+        var salepriceval = $(this).val();
+        var qtyval = $("#qty").val();
+        var totalamount = qtyval * salepriceval;
+        $("#amount").val(totalamount);
+    });
+
+
+    $("#btnaddtogrid").click(function (e) {
+        if (!(gridValidation($("#itemIdx option:selected").val()))) {
+           // alert("Product Alreaty Exist")
+            displayerror();
+            return;
+        }
+
+
+       // alert("hello");
+        $('#milestones').show();
+        var closebutton = '<button id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn"><i class="fa fa-trash menu-icon"></i></button>';
+            //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+                         //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+                         // '</button>'
+        var productname = $("#itemIdx option:selected").text();
+        var ProductID = $("#itemIdx option:selected").val();
+        var Qty = $("#qty").val();
+        var salePrice = $("#salePrice").val();
+        var totalamount = $("#amount").val();
+        //var duedate = $("#DueDate").val();
+        var markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + Qty + "</td><td>" + salePrice + "</td><td class='tamnt'>" + totalamount + "</td><td>" + closebutton + "</td></tr>";
+        //if (milestone == "") {
+        //    alert("Enter milestone");
+        //    return;
+        //} else {
+
+        $("#example2 tbody").append(markup);
+        var tamount = 0;
+        //var labourcost = $("#tax").val();
+        //var transportcost = $("#taxAount").val();
+       var tamount =parseFloat( $("#totalAmount").val());
+       tamount = parseFloat(tamount) + parseFloat(totalamount);//+ parseFloat(labourcost) + parseFloat(transportcost);
+        $("#totalAmount").val(tamount);
+
+
+
+    });
+    $('#quotationDate').change(function () {
+        var date = $(this).val();
+        console.log(date, 'change')
+        var GivenDate = date;
+        var CurrentDate = new Date();
+
+        GivenDate = new Date(GivenDate);
+        console.log(GivenDate, 'currentDate')
+        if (GivenDate > CurrentDate) {
+            alert('Given date is greater than the current date.');
+            var today = moment().format('YYYY-MM-DD');
+            $('#quotationDate').val(today);
+        } else {
+           // alert('Given date is not greater than the current date.');
+        }
+    });
+    function SomeDeleteRowFunction(o) {
+        //alert(id);
+        var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+             $tds = $row.find("td:nth-child(2)");
+        //console.log($tds);
+
+        $.each($tds, function () {                // Visits every single <td> element
+           // console.log($(this).text());         // Prints out the text within the <td>
+        });
+        var itmmant = o.parentNode.parentNode.children[4].innerText;
+        var tmnt = $('#totalAmount').val();
+
+        tmnt = tmnt - itmmant;
+        $('#totalAmount').val(tmnt);
+
+       // $('#balanceAmount').val(tmnt);
+        var p = o.parentNode.parentNode;
+
+        p.parentNode.removeChild(p);
+        $(this).closest('tr').remove();
+
+
+    };
+
+    function changeinunitprice(o) {
+        //alert(id);
+        var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+             $tds = $row.find("td:nth-child(2)");
+        //console.log($tds);
+
+
+        var itmqty = o.parentNode.parentNode.children[2].innerText;
+
+        var itmup = o.parentNode.parentNode.children[3].children[0].value;
+
+        itmqty = Number(itmqty);
+        itmup = Number(itmup);
+
+        var tmnt = $('.tamnt').val()
+        tmnt = Number(itmqty) * Number(itmup);
+
+        $('.tamnt').val(tmnt);
+        var totalamnt =o.parentNode.parentNode.children[4].innerText = (parseFloat(itmqty) * parseFloat(itmup));
+
+        var tmnt = $('#totalAmount').val();
+        tmnt = Number(tmnt) + (Number(itmqty) * Number(itmup))
+        $('#totalAmount').val(tmnt)
+        //alert(tmnt);
+
+
+
+    };
+
+    function gridValidation(Id) {
+        errmsg = [];
+        var myTab = $("#example2 tbody");
+        var rtrn = true;
+
+        // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+        myTab.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+                productid = $tds.eq(0).text();
+
+            if(Id==productid){
+                rtrn = false;
+                errmsg.push("Product Already exist");
+            }
+        })
+        if ($('#itemIdx option:selected').val() =='') {
+            rtrn = false;
+            errmsg.push("Select Product");
+        }
+        if ($('#qty').val() <= 0) {
+            rtrn = false;
+            errmsg.push("Qty value is zero");
+        }
+        if ($('#salePrice').val() <= 0) {
+            rtrn = false;
+            errmsg.push("Sale Price is zero");
+        }
+
+        return rtrn;
+    }
+
+    function displayerror() {
+        for (var i = 0; i < errmsg.length; i++) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            Command: toastr["error"](errmsg[i], "")
+        }
+    }
+
+    $("#btnAddQuotation").click(function (e) {
+
+        e.preventDefault();
+        var datatosend = {
+            objquotation: {
+                idx: $('#idx').val(),
+                qsNumber: $('#qsNumber').val(),
+                customerIdx: $('#customerIdx').val(),
+                quotationDate: $('#quotationDate').val(),
+                description: $('#description').val(),
+                totalAmount: $('#totalAmount').val(),
+
+                description: $("#description").val(),
+                //PageList:[{ID:1},{ID:2},{ID:3}]
+                QuotationDetailLST: []
+            }
+
+        }
+        var table = $("#example2 tbody");
+
+        var milestonearray = [];
+        var milestonedetails = {
+        };
+        var pomasternetamount = 0;
+        table.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+                productid = $tds.eq(0).text(),
+                qty = $tds.eq(2).text(),
+                //salePrice = $tds.eq(3).find('#salePrice').val(),
+                salePrice = $tds.eq(3).text(),
+                itemamount = $tds.eq(4).text();
+
+            datatosend.objquotation.QuotationDetailLST.push({
+                itemIdx: productid,
+                qty: qty,
+                salePrice: salePrice,
+                productTypeIdx: 1,
+                amount: itemamount
+            })
+            ;
+
+        });
+
+
+
+
+        var form = $("#purchaseform");
+        console.log(datatosend)
+        $.validator.unobtrusive.parse(form);
+        //if ($(form).valid()) // using not operator for a time being
+        if (true) {
+            $.ajax({
+                type: "POST",
+                url: "/Quotation/AddUpdate",
+                data: JSON.stringify(datatosend),// JSON.stringify(milestonearray),// $(form).serialize(),
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    if (res.success) {
+                       
+                        window.location.href = "/Quotation/ViewQuotation"
+                    }
+                    else if (res.success == false && res.msg == 'Failed') {
+                        
+                    }
+                },
+                failure: function (res) {
+                    console.log(res);
+                },
+                err: function (res) {
+                    console.log(res);
+                }
+
+            })
+        }
+        else {
+            return false;
+        }
+
+    });
+</script>
+       }
+
+
+

@@ -1,0 +1,921 @@
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+4/22/2021 1:41:42 AM
+Error in File GDNReport 15472_20552_{7ADCD60F-C4E5-42EE-8357-E118875A5DDC}.rpt:
+Failed to load database information.
+System.Runtime.InteropServices.COMException (0x800002CD): Error in File GDNReport 15472_20552_{7ADCD60F-C4E5-42EE-8357-E118875A5DDC}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+CrystalDecisions.CrystalReports.Engine.DataSourceException: Error in File GDNReport 15472_20552_{7ADCD60F-C4E5-42EE-8357-E118875A5DDC}.rpt:
+Failed to load database information. ---> System.Runtime.InteropServices.COMException: Error in File GDNReport 15472_20552_{7ADCD60F-C4E5-42EE-8357-E118875A5DDC}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.ReportAppServer.ConvertDotNetToErom.ThrowDotNetException(Exception e)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(DataTable dataTable)
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\19-04-21\Updated\SMSYSTEM\Controllers\BaseController.cs:line 605
+4/22/2021 1:41:42 AM
+4/22/2021 1:45:06 AM
+Error in File GDNReport 15472_19524_{0A686FCA-743A-470D-BBB0-3E3D3D8C0F9B}.rpt:
+Failed to load database information.
+System.Runtime.InteropServices.COMException (0x800002CD): Error in File GDNReport 15472_19524_{0A686FCA-743A-470D-BBB0-3E3D3D8C0F9B}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+CrystalDecisions.CrystalReports.Engine.DataSourceException: Error in File GDNReport 15472_19524_{0A686FCA-743A-470D-BBB0-3E3D3D8C0F9B}.rpt:
+Failed to load database information. ---> System.Runtime.InteropServices.COMException: Error in File GDNReport 15472_19524_{0A686FCA-743A-470D-BBB0-3E3D3D8C0F9B}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.ReportAppServer.ConvertDotNetToErom.ThrowDotNetException(Exception e)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(DataTable dataTable)
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\19-04-21\Updated\SMSYSTEM\Controllers\BaseController.cs:line 605
+4/22/2021 1:45:21 AM
+4/22/2021 1:55:11 AM
+Error in File GDNReport 3912_18388_{12627185-C28A-4356-967F-5EB434A658EC}.rpt:
+Failed to load database information.
+System.Runtime.InteropServices.COMException (0x800002CD): Error in File GDNReport 3912_18388_{12627185-C28A-4356-967F-5EB434A658EC}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+CrystalDecisions.CrystalReports.Engine.DataSourceException: Error in File GDNReport 3912_18388_{12627185-C28A-4356-967F-5EB434A658EC}.rpt:
+Failed to load database information. ---> System.Runtime.InteropServices.COMException: Error in File GDNReport 3912_18388_{12627185-C28A-4356-967F-5EB434A658EC}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.ReportAppServer.ConvertDotNetToErom.ThrowDotNetException(Exception e)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(DataTable dataTable)
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\19-04-21\Updated\SMSYSTEM\Controllers\BaseController.cs:line 605
+4/22/2021 1:55:11 AM
+4/22/2021 1:58:44 AM
+Error in File GDNReport 3912_108_{60234097-E022-4A5F-ABCD-577279301BDD}.rpt:
+Failed to load database information.
+System.Runtime.InteropServices.COMException (0x800002CD): Error in File GDNReport 3912_108_{60234097-E022-4A5F-ABCD-577279301BDD}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+CrystalDecisions.CrystalReports.Engine.DataSourceException: Error in File GDNReport 3912_108_{60234097-E022-4A5F-ABCD-577279301BDD}.rpt:
+Failed to load database information. ---> System.Runtime.InteropServices.COMException: Error in File GDNReport 3912_108_{60234097-E022-4A5F-ABCD-577279301BDD}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.ReportAppServer.ConvertDotNetToErom.ThrowDotNetException(Exception e)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(DataTable dataTable)
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\19-04-21\Updated\SMSYSTEM\Controllers\BaseController.cs:line 605
+4/22/2021 1:58:44 AM
+4/22/2021 2:01:35 AM
+Error in File MRNReport 3912_11344_{3786D482-8B90-4CF0-BA29-B43A6E556CC3}.rpt:
+Failed to load database information.
+System.Runtime.InteropServices.COMException (0x800002CD): Error in File MRNReport 3912_11344_{3786D482-8B90-4CF0-BA29-B43A6E556CC3}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+CrystalDecisions.CrystalReports.Engine.DataSourceException: Error in File MRNReport 3912_11344_{3786D482-8B90-4CF0-BA29-B43A6E556CC3}.rpt:
+Failed to load database information. ---> System.Runtime.InteropServices.COMException: Error in File MRNReport 3912_11344_{3786D482-8B90-4CF0-BA29-B43A6E556CC3}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.ReportAppServer.ConvertDotNetToErom.ThrowDotNetException(Exception e)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(DataTable dataTable)
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\19-04-21\Updated\SMSYSTEM\Controllers\BaseController.cs:line 605
+4/22/2021 2:01:35 AM
+4/22/2021 2:05:59 AM
+Error in File GDNReport 5316_22036_{1EC9F97F-09C4-44CE-89AD-253E4322C307}.rpt:
+Failed to load database information.
+System.Runtime.InteropServices.COMException (0x800002CD): Error in File GDNReport 5316_22036_{1EC9F97F-09C4-44CE-89AD-253E4322C307}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+CrystalDecisions.CrystalReports.Engine.DataSourceException: Error in File GDNReport 5316_22036_{1EC9F97F-09C4-44CE-89AD-253E4322C307}.rpt:
+Failed to load database information. ---> System.Runtime.InteropServices.COMException: Error in File GDNReport 5316_22036_{1EC9F97F-09C4-44CE-89AD-253E4322C307}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.ReportAppServer.ConvertDotNetToErom.ThrowDotNetException(Exception e)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(DataTable dataTable)
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName)
+4/22/2021 2:05:59 AM
+4/22/2021 2:06:13 AM
+Error in File GDNReport 5316_13860_{AF9381D8-B21F-4A18-9C5D-5300732C9B10}.rpt:
+Failed to load database information.
+System.Runtime.InteropServices.COMException (0x800002CD): Error in File GDNReport 5316_13860_{AF9381D8-B21F-4A18-9C5D-5300732C9B10}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+CrystalDecisions.CrystalReports.Engine.DataSourceException: Error in File GDNReport 5316_13860_{AF9381D8-B21F-4A18-9C5D-5300732C9B10}.rpt:
+Failed to load database information. ---> System.Runtime.InteropServices.COMException: Error in File GDNReport 5316_13860_{AF9381D8-B21F-4A18-9C5D-5300732C9B10}.rpt:
+Failed to load database information.
+   at CrystalDecisions.ReportAppServer.Controllers.DatabaseControllerClass.ReplaceConnection(Object oldConnection, Object newConnection, Object parameterFields, Object crDBOptionUseDefault)
+   at CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.ReportAppServer.ConvertDotNetToErom.ThrowDotNetException(Exception e)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSourceInternal(Object val, Type type)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(DataTable dataTable)
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName)
+4/22/2021 2:06:13 AM
+5/2/2021 9:13:13 PM
+Load report failed.
+System.Runtime.InteropServices.COMException (0x80004005): The system cannot find the file specified.
+   at CrystalDecisions.ReportAppServer.ClientDoc.ReportClientDocumentClass.Open(Object& DocumentPath, Int32 Options)
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.Open(Object& DocumentPath, Int32 Options)
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.EnsureDocumentIsOpened()
+CrystalDecisions.Shared.CrystalReportsException: Load report failed. ---> System.Runtime.InteropServices.COMException: The system cannot find the file specified.
+   at CrystalDecisions.ReportAppServer.ClientDoc.ReportClientDocumentClass.Open(Object& DocumentPath, Int32 Options)
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.Open(Object& DocumentPath, Int32 Options)
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.EnsureDocumentIsOpened()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.EnsureDocumentIsOpened()
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.Load(String filename, OpenReportMethod openMethod, Int16 parentJob)
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument.Load(String filename)
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\19-04-21\Updated\SMSYSTEM\Controllers\BaseController.cs:line 603
+5/2/2021 9:13:13 PM
+5/2/2021 11:06:52 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.Runtime.InteropServices.COMException (0x80040154): Retrieving the COM class factory for component with CLSID {4DB2E2BB-78E6-4AEA-BEFB-FDAAB610FD1B} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.Runtime.InteropServices.COMException: Retrieving the COM class factory for component with CLSID {4DB2E2BB-78E6-4AEA-BEFB-FDAAB610FD1B} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\19-04-21\Updated\SMSYSTEM\Controllers\BaseController.cs:line 602
+5/2/2021 11:06:52 PM
+Exception at level Reporting Controller ADDUpdate Start5/6/2021 1:27:18 AM
+Exception at level Reporting Controller ADDUpdate System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'dbo.ssp_ReportData'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SSS.DAL.Setups.Reporting_DAL.SelectReportData()
+ClientConnectionId:86a5be39-9ea8-4fd2-9f30-2f919d9d97ad
+Error Number:2812,State:62,Class:165/6/2021 1:27:18 AM
+Exception at level Reporting Controller ADDUpdate Branch::SelectAll::Error occured.5/6/2021 1:27:18 AM
+Exception at level Reporting Controller ADDUpdate End5/6/2021 1:27:18 AM
+Exception at level Reporting Controller ADDUpdate Start5/6/2021 1:27:43 AM
+Exception at level Reporting Controller ADDUpdate System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'sp_ReportData' expects parameter '@id', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SSS.DAL.Setups.Reporting_DAL.SelectReportData()
+ClientConnectionId:86a5be39-9ea8-4fd2-9f30-2f919d9d97ad
+Error Number:201,State:4,Class:165/6/2021 1:27:43 AM
+Exception at level Reporting Controller ADDUpdate Branch::SelectAll::Error occured.5/6/2021 1:27:43 AM
+Exception at level Reporting Controller ADDUpdate End5/6/2021 1:27:43 AM
+Exception at level Reporting Controller ADDUpdate Start5/6/2021 1:37:06 AM
+Exception at level Reporting Controller ADDUpdate System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'sp_ReportData' expects parameter '@id', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SSS.DAL.Setups.Reporting_DAL.SelectReportData()
+ClientConnectionId:86a5be39-9ea8-4fd2-9f30-2f919d9d97ad
+Error Number:201,State:4,Class:165/6/2021 1:37:06 AM
+Exception at level Reporting Controller ADDUpdate Branch::SelectAll::Error occured.5/6/2021 1:37:06 AM
+Exception at level Reporting Controller ADDUpdate End5/6/2021 1:37:06 AM
+Exception at level Reporting Controller ADDUpdate Start5/6/2021 1:37:41 AM
+Exception at level Reporting Controller ADDUpdate System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'sp_ReportData' expects parameter '@id', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SSS.DAL.Setups.Reporting_DAL.SelectReportData()
+ClientConnectionId:86a5be39-9ea8-4fd2-9f30-2f919d9d97ad
+Error Number:201,State:4,Class:165/6/2021 1:37:41 AM
+Exception at level Reporting Controller ADDUpdate Branch::SelectAll::Error occured.5/6/2021 1:37:41 AM
+Exception at level Reporting Controller ADDUpdate End5/6/2021 1:37:41 AM
+Exception at level Reporting Controller ADDUpdate Start5/6/2021 1:38:25 AM
+Exception at level Reporting Controller ADDUpdate System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'sp_ReportData' expects parameter '@id', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SSS.DAL.Setups.Reporting_DAL.SelectReportData()
+ClientConnectionId:86a5be39-9ea8-4fd2-9f30-2f919d9d97ad
+Error Number:201,State:4,Class:165/6/2021 1:38:25 AM
+Exception at level Reporting Controller ADDUpdate Branch::SelectAll::Error occured.5/6/2021 1:38:25 AM
+Exception at level Reporting Controller ADDUpdate End5/6/2021 1:38:25 AM
+Exception at level Reporting Controller ADDUpdate Start5/10/2021 1:32:22 PM
+Exception at level Reporting Controller ADDUpdate System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'dbo.sp_ReportData'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SSS.DAL.Setups.Reporting_DAL.SelectReportData() in E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\Setups\Reporting_DAL.cs:line 60
+ClientConnectionId:1c892cb9-0163-4be4-bc74-ffcd76a0d7d9
+Error Number:2812,State:62,Class:165/10/2021 1:32:22 PM
+Exception at level Reporting Controller ADDUpdate Branch::SelectAll::Error occured.5/10/2021 1:32:22 PM
+Exception at level Reporting Controller ADDUpdate End5/10/2021 1:32:22 PM
+Exception at level Reporting Controller ADDUpdate Start5/10/2021 1:33:13 PM
+Exception at level Reporting Controller ADDUpdate System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'dbo.sp_ReportData'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SSS.DAL.Setups.Reporting_DAL.SelectReportData() in E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.DAL\Setups\Reporting_DAL.cs:line 60
+ClientConnectionId:1c892cb9-0163-4be4-bc74-ffcd76a0d7d9
+Error Number:2812,State:62,Class:165/10/2021 1:33:13 PM
+Exception at level Reporting Controller ADDUpdate Branch::SelectAll::Error occured.5/10/2021 1:33:13 PM
+Exception at level Reporting Controller ADDUpdate End5/10/2021 1:33:13 PM
+Exception at level Reporting Controller ADDUpdate Start5/10/2021 1:34:43 PM
+Exception at level Reporting Controller ADDUpdate System.Runtime.InteropServices.COMException (0x80041811): Unsupported Operation. A document processed by the JRC engine cannot be opened in the C++ stack.
+   at CrystalDecisions.ReportAppServer.ClientDoc.ReportClientDocumentClass.Open(Object& DocumentPath, Int32 Options)
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.Open(Object& DocumentPath, Int32 Options)
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.EnsureDocumentIsOpened()5/10/2021 1:34:43 PM
+Exception at level Reporting Controller ADDUpdate Load report failed.5/10/2021 1:34:43 PM
+Exception at level Reporting Controller ADDUpdate End5/10/2021 1:34:43 PM
+Exception at level Reporting Controller ADDUpdate Start5/10/2021 1:36:36 PM
+Exception at level Reporting Controller ADDUpdate System.Runtime.InteropServices.COMException (0x80041811): Unsupported Operation. A document processed by the JRC engine cannot be opened in the C++ stack.
+   at CrystalDecisions.ReportAppServer.ClientDoc.ReportClientDocumentClass.Open(Object& DocumentPath, Int32 Options)
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.Open(Object& DocumentPath, Int32 Options)
+   at CrystalDecisions.ReportAppServer.ReportClientDocumentWrapper.EnsureDocumentIsOpened()5/10/2021 1:36:36 PM
+Exception at level Reporting Controller ADDUpdate Load report failed.5/10/2021 1:36:36 PM
+Exception at level Reporting Controller ADDUpdate End5/10/2021 1:36:36 PM
+6/4/2021 12:47:39 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/4/2021 12:47:39 PM
+6/4/2021 12:47:59 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/4/2021 12:47:59 PM
+6/4/2021 12:49:59 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/4/2021 12:49:59 PM
+6/4/2021 12:50:04 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/4/2021 12:50:04 PM
+6/4/2021 12:50:09 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/4/2021 12:50:09 PM
+6/4/2021 12:50:15 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/4/2021 12:50:15 PM
+6/4/2021 2:12:35 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/4/2021 2:12:35 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 2:23:53 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 2:23:53 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 2:23:53 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 2:23:53 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 2:24:01 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 2:24:01 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 2:24:01 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 2:24:01 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 2:24:10 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 2:24:10 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 2:24:10 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 2:24:10 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 2:24:20 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 2:24:20 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 2:24:20 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 2:24:20 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 2:24:21 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 2:24:21 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 2:24:21 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 2:24:21 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 2:24:42 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 2:24:42 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 2:24:42 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 2:24:42 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 2:24:49 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 2:24:49 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 2:24:49 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 2:24:49 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 3:03:00 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 3:03:00 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 3:03:00 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 3:03:00 PM
+Exception at level Reporting Controller ADDUpdate Start6/4/2021 3:03:00 PM
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+6/4/2021 3:03:00 PM
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.6/4/2021 3:03:00 PM
+Exception at level Reporting Controller ADDUpdate End6/4/2021 3:03:00 PM
+6/7/2021 6:00:43 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/7/2021 6:00:43 PM
+6/7/2021 6:02:35 PM
+The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.
+System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = E:\Perception BP\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\Perception BP\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsan\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsan/AppData/Local/Temp/Temporary ASP.NET Files/root/c8d36910/d9be7ca1/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///E:/Perception BP/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+
+System.TypeInitializationException: The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+   --- End of inner exception stack trace ---
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..ctor()
+   at SMSYSTEM.Controllers.BaseController.GenerateReport(Nullable`1 id, Nullable`1 query, String ReportName) in E:\Perception BP\WajidPerception-master\SMSYSTEM\Controllers\BaseController.cs:line 753
+6/7/2021 6:02:35 PM
+Exception at level Reporting Controller ADDUpdate Start23/06/2021 6:25:10 am
+Exception at level Reporting Controller ADDUpdate System.IO.FileNotFoundException: Could not load file or assembly 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304' or one of its dependencies. The system cannot find the file specified.
+File name: 'CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304'
+   at CrystalDecisions.CrystalReports.Engine.ReportDocument..cctor()
+
+=== Pre-bind state information ===
+LOG: DisplayName = CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+ (Fully-specified)
+LOG: Appbase = file:///H:/office/Perception BP/Updated Perception/WajidPerception-master/SMSYSTEM/
+LOG: Initial PrivatePath = H:\office\Perception BP\Updated Perception\WajidPerception-master\SMSYSTEM\bin
+Calling assembly : CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: H:\office\Perception BP\Updated Perception\WajidPerception-master\SMSYSTEM\web.config
+LOG: Using host configuration file: C:\Users\Ahsi\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304
+LOG: Attempting download of new URL file:///C:/Users/Ahsi/AppData/Local/Temp/Temporary ASP.NET Files/root/7b5c12de/4868aa9c/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsi/AppData/Local/Temp/Temporary ASP.NET Files/root/7b5c12de/4868aa9c/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///H:/office/Perception BP/Updated Perception/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///H:/office/Perception BP/Updated Perception/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Ahsi/AppData/Local/Temp/Temporary ASP.NET Files/root/7b5c12de/4868aa9c/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///C:/Users/Ahsi/AppData/Local/Temp/Temporary ASP.NET Files/root/7b5c12de/4868aa9c/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///H:/office/Perception BP/Updated Perception/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+LOG: Attempting download of new URL file:///H:/office/Perception BP/Updated Perception/WajidPerception-master/SMSYSTEM/bin/CrystalDecisions.ReportAppServer.CommLayer/CrystalDecisions.ReportAppServer.CommLayer.EXE.
+23/06/2021 6:25:10 am
+Exception at level Reporting Controller ADDUpdate The type initializer for 'CrystalDecisions.CrystalReports.Engine.ReportDocument' threw an exception.23/06/2021 6:25:10 am
+Exception at level Reporting Controller ADDUpdate End23/06/2021 6:25:10 am

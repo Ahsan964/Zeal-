@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDB42CB6-CAB2-4847-AC17-6B67A8B878DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSS.DAL</RootNamespace>
+    <AssemblyName>SSS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>keypairForFBArea.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation">
+      <HintPath>..\SSS.Webapplication\bin\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Capability_DAL.cs" />
+    <Compile Include="ConnectionProvider.cs" />
+    <Compile Include="DBInteractionBase.cs" />
+    <Compile Include="ErrorTracer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ConsolidatedSalesSummary_Report_DAL.cs" />
+    <Compile Include="Report\ProductivityandExecution_Report_DAL.cs" />
+    <Compile Include="Report\Salesandstock_Report_DAL.cs" />
+    <Compile Include="Role_DAL.cs" />
+    <Compile Include="Setups\Accounts\firstTier_DAL.cs" />
+    <Compile Include="Setups\Accounts\fourthTier_DAL.cs" />
+    <Compile Include="Setups\Accounts\LP_GeneralVoucher_DAL.cs" />
+    <Compile Include="Setups\Accounts\thirdTier_DAL.cs" />
+    <Compile Include="Setups\AchivementDetail_DAL..cs" />
+    <Compile Include="Setups\AchivementMaster_DAL.cs" />
+    <Compile Include="Setups\AchivementProductDetail_DAL.cs" />
+    <Compile Include="Setups\Bank_DAL.cs" />
+    <Compile Include="Setups\Batch_DAL.cs" />
+    <Compile Include="Setups\BATCH_SETUP.cs" />
+    <Compile Include="Setups\Branch_DAL.cs" />
+    <Compile Include="Setups\Business_Type_DAL.cs" />
+    <Compile Include="Setups\CALLCARD_PARAMETER_SETUP_DAL.cs" />
+    <Compile Include="Setups\CashMemo_ViewAll_Filter_DAL.cs" />
+    <Compile Include="Setups\ClaimType_DAL.cs" />
+    <Compile Include="Setups\Claim_DAL.cs" />
+    <Compile Include="Setups\CompanyBank_DAL.cs" />
+    <Compile Include="Setups\companyCurrency_DAL.cs" />
+    <Compile Include="Setups\Company_DAL.cs" />
+    <Compile Include="Setups\CONFIGURATION_SETUP_DAL.cs" />
+    <Compile Include="Setups\Customers_DAL.cs" />
+    <Compile Include="Setups\CustomerType_DAL.cs" />
+    <Compile Include="Setups\Departments_DAL.cs" />
+    <Compile Include="Setups\Department_DAL.cs" />
+    <Compile Include="Setups\Invoice_DAL.cs" />
+    <Compile Include="Setups\itemUnit_DAL.cs" />
+    <Compile Include="Setups\LP_CustomerBanks_DAL.cs" />
+    <Compile Include="Setups\LP_Purchase_Type_DAL.cs" />
+    <Compile Include="Setups\LP_VendorBanks_DAL.cs" />
+    <Compile Include="Setups\Payment_Term_DAL.cs" />
+    <Compile Include="Setups\Product_Category_DAL.cs" />
+    <Compile Include="Setups\Product_SubCategory_DAL.cs" />
+    <Compile Include="Setups\PuchaseVM_DAL.cs" />
+    <Compile Include="Setups\PurchaseOrder_DAL.cs" />
+    <Compile Include="Setups\PurchaseRequisition_DAL.cs" />
+    <Compile Include="Setups\Reporting_DAL.cs" />
+    <Compile Include="Setups\SalesPerson_DAL.cs" />
+    <Compile Include="Setups\Supplier_DAL.cs" />
+    <Compile Include="Setups\Taxes_DAL.cs" />
+    <Compile Include="Setups\User_Region_DAL.cs" />
+    <Compile Include="Setups\Sales_Category_DAL.cs" />
+    <Compile Include="Setups\Sale_Category_Product_DAL.cs" />
+    <Compile Include="Setups\TradeMarketingExpenseDetail_DAL.cs" />
+    <Compile Include="Setups\TradeMarketingSetup_DAL.cs" />
+    <Compile Include="Setups\FuelSharingDetail_DAL.cs" />
+    <Compile Include="Setups\FuelType_DAL.cs" />
+    <Compile Include="Setups\DistributorWise_BlockedDiscount_DAL.cs" />
+    <Compile Include="Setups\DistributorWise_HistoryBlockedDiscount_DAL.cs" />
+    <Compile Include="Setups\Distributor_Discount_Limit_DAL.cs" />
+    <Compile Include="Setups\Daily_Cash_Received_DAL.cs" />
+    <Compile Include="Setups\Daily_Collection_Dtl_DAL.cs" />
+    <Compile Include="Setups\Daily_Collection_Mst_DAL.cs" />
+    <Compile Include="Setups\Day_DAL.cs" />
+    <Compile Include="Setups\Discount_Business_Type_Detail_DAL.cs" />
+    <Compile Include="Setups\Discount_Location_Detail_DAL.cs" />
+    <Compile Include="Setups\Discount_Master_DAL.cs" />
+    <Compile Include="Setups\Discount_Pos_Detail_DAL.cs" />
+    <Compile Include="Setups\Discount_Product_Detail_DAL.cs" />
+    <Compile Include="Setups\Discount_Product_FreePieces_DAL.cs" />
+    <Compile Include="Setups\Discount_Slabs_Setup_DAL.cs" />
+    <Compile Include="Setups\Discount_Type_Setup_DAL.cs" />
+    <Compile Include="Setups\Distributor_Closing_Day_DAL.cs" />
+    <Compile Include="Setups\Distributor_Location_Dtl_DAL.cs" />
+    <Compile Include="Setups\Distributor_Mst_Setup_DAL.cs" />
+    <Compile Include="Setups\Distributor_Region_DAL.cs" />
+    <Compile Include="Setups\Distributor_Setup_DAL.cs" />
+    <Compile Include="Setups\Distributor_Srep_Dtl_DAL.cs" />
+    <Compile Include="Setups\Distributor_Type_Setup_DAL.cs" />
+    <Compile Include="Setups\Document_Type_Setup_DAL.cs" />
+    <Compile Include="Setups\Error_Tracer_DAL.cs" />
+    <Compile Include="Setups\Final_Product_Selection_DAL.cs" />
+    <Compile Include="Setups\Financial_Period_Calendar_DAL.cs" />
+    <Compile Include="Setups\Financial_Period_DAL.cs" />
+    <Compile Include="Setups\FuelSetUp_DAL.cs" />
+    <Compile Include="Setups\Location_Setup_DAL.cs" />
+    <Compile Include="Setups\MiscellaneousExpenseDetail_DAL.cs" />
+    <Compile Include="Setups\MiscellaneousSetup_DAL.cs" />
+    <Compile Include="Setups\OrganogramLevel_DAL.cs" />
+    <Compile Include="Setups\Organogram_Setup_DAL.cs" />
+    <Compile Include="Setups\Page_DAL.cs" />
+    <Compile Include="Setups\Paking_Unit_Setup_DAL.cs" />
+    <Compile Include="Setups\Permanent_Route_Plan_Detail_DAL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Setups\Permanent_Route_Plan_Setup_DAL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Setups\Personel_Setup_DAL.cs" />
+    <Compile Include="Setups\Personnel_Setup_DAL.cs" />
+    <Compile Include="Setups\POS_Category_DAL.cs" />
+    <Compile Include="Setups\POS_Setup_DAL.cs" />
+    <Compile Include="Setups\Pos_Type_Setup_DAL.cs" />
+    <Compile Include="Setups\Price_List_Mst_DAL.cs" />
+    <Compile Include="Setups\Printer_Setup_DAL.cs" />
+    <Compile Include="Setups\ProductTax_DAL.cs" />
+    <Compile Include="Setups\Product_DAL.cs" />
+    <Compile Include="Setups\Product_Form_DAL.cs" />
+    <Compile Include="Setups\Product_Selection_DLL.cs" />
+    <Compile Include="Setups\Product_Type_DAL.cs" />
+    <Compile Include="Setups\RecordHistory_DAL.cs" />
+    <Compile Include="Setups\Region_DAL.cs" />
+    <Compile Include="Setups\Registration_Type_DAL.cs" />
+    <Compile Include="Setups\Replenishment_Detail_DAL.cs" />
+    <Compile Include="Setups\Replenishment_Master_DAL.cs" />
+    <Compile Include="Setups\ReturnReasons_DAL.cs" />
+    <Compile Include="Setups\Role_Capability_DAL.cs" />
+    <Compile Include="Setups\Role_Setup_DAL.cs" />
+    <Compile Include="Setups\Route_DAL.cs" />
+    <Compile Include="Setups\Route_POS_DAL.cs" />
+    <Compile Include="Setups\Sales_Rep_Type_DAL.cs" />
+    <Compile Include="Setups\Sales_Type_DAL.cs" />
+    <Compile Include="Setups\Special_DiscountMasterDAL.cs" />
+    <Compile Include="Setups\Special_Discount_Detail_DAL.cs" />
+    <Compile Include="Setups\Sub_Pos_Type_Setup_DAL.cs" />
+    <Compile Include="Setups\TargetPeriod_DAL.cs" />
+    <Compile Include="Setups\TargetType_DAL.cs" />
+    <Compile Include="Setups\Target_Setting_Detail_DAL.cs" />
+    <Compile Include="Setups\Target_Setting_Master_DAL.cs" />
+    <Compile Include="Setups\Tax_DAL.cs" />
+    <Compile Include="Setups\Transaction_Detail_DAL.cs" />
+    <Compile Include="Setups\Transaction_Master_DAL.cs" />
+    <Compile Include="Setups\TreeView_DAL.cs" />
+    <Compile Include="Setups\User_Role_DAL.cs" />
+    <Compile Include="Setups\VehicleSharing_DAL.cs" />
+    <Compile Include="Setups\Vehicle_DAL.cs" />
+    <Compile Include="Setups\VendorProcess_DAL.cs" />
+    <Compile Include="Setups\Vendors_DAL.cs" />
+    <Compile Include="Setups\VendorType_DAL.cs" />
+    <Compile Include="Setups\Vendor_Category_DAL.cs" />
+    <Compile Include="Setups\WareHouse_DAL.cs" />
+    <Compile Include="Setups\Wh_Location_DAL.cs" />
+    <Compile Include="Transactions\AutoEntryOfStock_DAL.cs" />
+    <Compile Include="Transactions\Collection_Detail_DAL.cs" />
+    <Compile Include="Transactions\Collection_Master_DAL.cs" />
+    <Compile Include="Transactions\DCR_DAL.cs" />
+    <Compile Include="Transactions\DSRAdjustment_DAL.cs" />
+    <Compile Include="Transactions\GDN_DAL\LP_GDN_DAL.cs" />
+    <Compile Include="Transactions\Inventory_DAL.cs" />
+    <Compile Include="Transactions\LP_Activity_DAL.cs" />
+    <Compile Include="Transactions\LP_DisplayOrder_DAL.cs" />
+    <Compile Include="Transactions\LP_FinishProduct_DAL.cs" />
+    <Compile Include="Transactions\LP_GRN_DAL.cs" />
+    <Compile Include="Transactions\LP_ImportedExpense_DAL.cs" />
+    <Compile Include="Transactions\LP_MRN_DAL.cs" />
+    <Compile Include="Transactions\LP_PI_DAL.cs" />
+    <Compile Include="Transactions\LP_Purchase_DAL.cs" />
+    <Compile Include="Transactions\LP_Purchase_Invoice_DAL.cs" />
+    <Compile Include="Transactions\LP_Quotation_DAL.cs" />
+    <Compile Include="Transactions\LP_SalesOrder_DAL.cs" />
+    <Compile Include="Transactions\LP_Transaction_Type_DAL.cs" />
+    <Compile Include="Transactions\LP_Voucher_DAL.cs" />
+    <Compile Include="Transactions\PO_Detail_DAL.cs" />
+    <Compile Include="Transactions\PO_Master_DAL.cs" />
+    <Compile Include="Transactions\retnCashmemo_DAL.cs" />
+    <Compile Include="Transactions\SS_Cashmemo_DAL.cs" />
+    <Compile Include="Transactions\StockAdjustmentOutDetails_DAL.cs" />
+    <Compile Include="Transactions\StockAdjustmentOutMasterDetail_DAL.cs" />
+    <Compile Include="Transactions\StockAdjustmentOutMaster_DAL.cs" />
+    <Compile Include="User_DAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\SSS.DAL.dll.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="keypairForFBArea.snk" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSS.Property\SSS.Property.csproj">
+      <Project>{8A15CB57-FF17-429C-B014-671625167421}</Project>
+      <Name>SSS.Property</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSS.Utility\SSS.Utility.csproj">
+      <Project>{BA84E779-D245-4CA1-A6EC-2B78DE356EB2}</Project>
+      <Name>SSS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\SSS.DAL.dll" />
+    <Content Include="bin\Debug\SSS.DAL.pdb" />
+    <Content Include="bin\Debug\SSS.Property.dll" />
+    <Content Include="bin\Debug\SSS.Property.pdb" />
+    <Content Include="obj\Debug\SSS.DAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SSS.DAL.dll" />
+    <Content Include="obj\Debug\SSS.DAL.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A4694B0-B48E-4C41-AFC6-F4225523FB70}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSS.BLL</RootNamespace>
+    <AssemblyName>SSS.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>keypairForFBArea.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation">
+      <HintPath>..\SSS.Webapplication\bin\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Capability_BLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GridCommandBase.cs" />
+    <Compile Include="Report\ConsolidateSalesSummary_Report_BLL.cs" />
+    <Compile Include="Report\ProductivityandExecution_Report_BLL.cs" />
+    <Compile Include="Report\Salesandstock_Report_BLL.cs" />
+    <Compile Include="Role_BLL.cs" />
+    <Compile Include="Setups\Accounts\firstTier_BLL.cs" />
+    <Compile Include="Setups\Accounts\firstTier_DAL.cs" />
+    <Compile Include="Setups\Accounts\fourthTier_BLL.cs" />
+    <Compile Include="Setups\Accounts\fourthTier_DAL.cs" />
+    <Compile Include="Setups\Accounts\LP_GeneralVoucher_DAL.cs" />
+    <Compile Include="Setups\Accounts\thirdTier_BLL.cs" />
+    <Compile Include="Setups\Accounts\thirdTier_DAL.cs" />
+    <Compile Include="Setups\AchivementDetail_BLL.cs" />
+    <Compile Include="Setups\AchivementMaster_BLL.cs" />
+    <Compile Include="Setups\AchivementProductDetail_BLL.cs" />
+    <Compile Include="Setups\Bank_BLL.cs" />
+    <Compile Include="Setups\Batch_Setup_BLL.cs" />
+    <Compile Include="Setups\Branch_BLL.cs" />
+    <Compile Include="Setups\Business_Type_BLL.cs" />
+    <Compile Include="Setups\CALLCARD_PARAMETER_SETUP_BLL.cs" />
+    <Compile Include="Setups\CashMemo_ViewAll_Filter_BLL.cs" />
+    <Compile Include="Setups\ClaimType_BLL.cs" />
+    <Compile Include="Setups\Claim_BLL.cs" />
+    <Compile Include="Setups\CompanyBank_BLL.cs" />
+    <Compile Include="Setups\companyCurrency_BLL.cs" />
+    <Compile Include="Setups\Company_BLL.cs" />
+    <Compile Include="Setups\CONFIGURATION_SETUP_BLL.cs" />
+    <Compile Include="Setups\Customers_BLL.cs" />
+    <Compile Include="Setups\CustomerType_BLL.cs" />
+    <Compile Include="Setups\Departments_BLL.cs" />
+    <Compile Include="Setups\Department_Setup_BLL.cs" />
+    <Compile Include="Setups\Invoice_BLL.cs" />
+    <Compile Include="Setups\itemUnit_BLL.cs" />
+    <Compile Include="Setups\LP_CustomerBanks_BLL.cs" />
+    <Compile Include="Setups\LP_Purchase_Type_BLL.cs" />
+    <Compile Include="Setups\LP_Transaction_Type_BLL.cs" />
+    <Compile Include="Setups\LP_VendorBanks_BLL.cs" />
+    <Compile Include="Setups\Payment_Terms_BLL.cs" />
+    <Compile Include="Setups\Product_Category_BLL.cs" />
+    <Compile Include="Setups\Product_SubCategory_BLL.cs" />
+    <Compile Include="Setups\PurchaseOrder_BLL.cs" />
+    <Compile Include="Setups\PurchaseRequisition_BLL.cs" />
+    <Compile Include="Setups\PurchaseVM_BLL.cs" />
+    <Compile Include="Setups\Reporting\LP_Reporting_BLL.cs" />
+    <Compile Include="Setups\SalesPerson_BLL.cs" />
+    <Compile Include="Setups\Supplier_BLL.cs" />
+    <Compile Include="Setups\Taxes_BLL.cs" />
+    <Compile Include="Setups\User_Region_BLL.cs" />
+    <Compile Include="Setups\Sales_Category_BLL.cs" />
+    <Compile Include="Setups\Sale_Category_Product_BLL.cs" />
+    <Compile Include="Setups\TradeMarketingExpenseDetail_BLL.cs" />
+    <Compile Include="Setups\TradeMarketingSetup_BLL.cs" />
+    <Compile Include="Setups\FuelSharingDetail_BLL.cs" />
+    <Compile Include="Setups\FuelType_BLL.cs" />
+    <Compile Include="Setups\Daily_Cash_Received_BLL.cs" />
+    <Compile Include="Setups\Day_BLL.cs" />
+    <Compile Include="Setups\Discount_Business_Type_Detail_BLL.cs" />
+    <Compile Include="Setups\Discount_Location_Detail_BLL.cs" />
+    <Compile Include="Setups\Discount_Master_BLL.cs" />
+    <Compile Include="Setups\Discount_Pos_Detail_BLL.cs" />
+    <Compile Include="Setups\Discount_Product_Detail_BLL.cs" />
+    <Compile Include="Setups\Discount_Product_FreePieces_BLL.cs" />
+    <Compile Include="Setups\Discount_Slab_Setup_BLL.cs" />
+    <Compile Include="Setups\Discount_Type_Setup_BLL.cs" />
+    <Compile Include="Setups\DistributorWise_BlockedDiscountHistory_BLL.cs" />
+    <Compile Include="Setups\DistributorWise_BlockedDiscount_BLL.cs" />
+    <Compile Include="Setups\Distributor_Closing_Day_BLL.cs" />
+    <Compile Include="Setups\Distributor_Discount_Limit_BLL.cs" />
+    <Compile Include="Setups\Distributor_Region_BLL.cs" />
+    <Compile Include="Setups\Distributor_Setup_BLL.cs" />
+    <Compile Include="Setups\Final_Product_Selection_BLL.cs" />
+    <Compile Include="Setups\FuelSetUp_BLL.cs" />
+    <Compile Include="Setups\Location_Setup_BLL.cs" />
+    <Compile Include="Setups\MiscellaneousExpenseDetail_BLL.cs" />
+    <Compile Include="Setups\MiscellaneousSetup_BLL.cs" />
+    <Compile Include="Setups\OrganogramLevel_BLL.cs" />
+    <Compile Include="Setups\Organogram_Setup_BLL.cs" />
+    <Compile Include="Setups\Page_BLL.cs" />
+    <Compile Include="Setups\Paking_Unit_Setup_BLL.cs" />
+    <Compile Include="Setups\Permanent_Route_Plan_Detail_BLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Setups\Permanent_Route_Plan_Setup_BLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Setups\Personel_Setup_BLL.cs" />
+    <Compile Include="Setups\Personnel_Setup_BLL.cs" />
+    <Compile Include="Setups\POS_Category_BLL.cs" />
+    <Compile Include="Setups\POS_Setup_BLL.cs" />
+    <Compile Include="Setups\Pos_Type_Setup_BLL.cs" />
+    <Compile Include="Setups\Price_List_Mst_BLL.cs" />
+    <Compile Include="Setups\Printer_Setup_BLL.cs" />
+    <Compile Include="Setups\ProductTax_BLL.cs" />
+    <Compile Include="Setups\Product_BLL.cs" />
+    <Compile Include="Setups\Product_Form_BLL.cs" />
+    <Compile Include="Setups\Product_Setup_BLL.cs" />
+    <Compile Include="Setups\Product_Type_BLL.cs" />
+    <Compile Include="Setups\Region_BLL.cs" />
+    <Compile Include="Setups\Registration_Type_BLL.cs" />
+    <Compile Include="Setups\Replenishment_Detail_BLL.cs" />
+    <Compile Include="Setups\Replenishment_Master_BLL.cs" />
+    <Compile Include="Setups\ReturnReasons_BLL.cs" />
+    <Compile Include="Setups\Role_Capability_BLL.cs" />
+    <Compile Include="Setups\Role_Setup_BLL.cs" />
+    <Compile Include="Setups\Route_BLL.cs" />
+    <Compile Include="Setups\Route_POS_BLL.cs" />
+    <Compile Include="Setups\Sales_Rep_Type_BLL.cs" />
+    <Compile Include="Setups\Sale_Type_BLL.cs" />
+    <Compile Include="Setups\Special_DiscountDetail_BLL.cs" />
+    <Compile Include="Setups\Special_DiscountMaster.cs" />
+    <Compile Include="Setups\TargetPeriod_BLL.cs" />
+    <Compile Include="Setups\TargetType_BLL.cs" />
+    <Compile Include="Setups\Target_Setting_Detail_BLL.cs" />
+    <Compile Include="Setups\Target_Setting_Master_BLL.cs" />
+    <Compile Include="Setups\Tax_BLL.cs" />
+    <Compile Include="Setups\Transaction_Detail_BLL.cs" />
+    <Compile Include="Setups\Transaction_Master_BAL.cs" />
+    <Compile Include="Setups\TreeView_BLL.cs" />
+    <Compile Include="Setups\User_Role_BLL.cs" />
+    <Compile Include="Setups\VehicleSharing_BLL.cs" />
+    <Compile Include="Setups\Vehicle_BLL.cs" />
+    <Compile Include="Setups\VendorProcess_BLL.cs" />
+    <Compile Include="Setups\Vendors_BLL.cs" />
+    <Compile Include="Setups\VendorType_BLL.cs" />
+    <Compile Include="Setups\Vendor_Category_BLL.cs" />
+    <Compile Include="Setups\WareHouse_BLL.cs" />
+    <Compile Include="Setups\WH_Location_BLL.cs" />
+    <Compile Include="Transactions\AutoEntryOfStock_BLL.cs" />
+    <Compile Include="Transactions\Collection_Detail_BLL.cs" />
+    <Compile Include="Transactions\Collection_Master_BLL.cs" />
+    <Compile Include="Transactions\DCR_BLL.cs" />
+    <Compile Include="Transactions\DSRAdjustment_BLL.cs" />
+    <Compile Include="Transactions\GDN\LP_GDN_BLL.cs" />
+    <Compile Include="Transactions\LP_Activity_BLL.cs" />
+    <Compile Include="Transactions\LP_DisplayOrder_BLL.cs" />
+    <Compile Include="Transactions\LP_FinishProduct_BLL.cs" />
+    <Compile Include="Transactions\LP_GeneralVoucher_BLL.cs" />
+    <Compile Include="Transactions\LP_GRN_BLL.cs" />
+    <Compile Include="Transactions\LP_ImportedExpense_BLL.cs" />
+    <Compile Include="Transactions\LP_Inventory_BLL.cs" />
+    <Compile Include="Transactions\LP_MRN_BLL.cs" />
+    <Compile Include="Transactions\LP_PInvoice_BLL.cs" />
+    <Compile Include="Transactions\LP_PI_BLL.cs" />
+    <Compile Include="Transactions\LP_Purchase_BLL.cs" />
+    <Compile Include="Transactions\LP_Quotation_BLL.cs" />
+    <Compile Include="Transactions\LP_SalesOrder_BLL.cs" />
+    <Compile Include="Transactions\LP_Voucher_BLL.cs" />
+    <Compile Include="Transactions\PO_Detail_BLL.cs" />
+    <Compile Include="Transactions\PO_Master_BLL.cs" />
+    <Compile Include="Transactions\retnCashmemo_BLL.cs" />
+    <Compile Include="Transactions\SS_Cashmemo_BLL.cs" />
+    <Compile Include="Transactions\StockAdjustmentOutDetails_BLL.cs" />
+    <Compile Include="Transactions\StockAdjustmentOutMasterDetail_BLL.cs" />
+    <Compile Include="Transactions\StockAdjustmentOutMaster_BLL.cs" />
+    <Compile Include="Transactions\ViewModels\LP_GRN_ViewModel.cs" />
+    <Compile Include="User_BLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSS.DAL\SSS.DAL.csproj">
+      <Project>{BDB42CB6-CAB2-4847-AC17-6B67A8B878DB}</Project>
+      <Name>SSS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSS.Property\SSS.Property.csproj">
+      <Project>{8A15CB57-FF17-429C-B014-671625167421}</Project>
+      <Name>SSS.Property</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Transactions\DailyCollection\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="keypairForFBArea.snk" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\FluentValidation.dll" />
+    <Content Include="bin\Debug\FluentValidation.pdb" />
+    <Content Include="bin\Debug\FluentValidation.xml" />
+    <Content Include="bin\Debug\SSS.BLL.dll" />
+    <Content Include="bin\Debug\SSS.BLL.pdb" />
+    <Content Include="bin\Debug\SSS.DAL.dll" />
+    <Content Include="bin\Debug\SSS.DAL.pdb" />
+    <Content Include="bin\Debug\SSS.Property.dll" />
+    <Content Include="bin\Debug\SSS.Property.pdb" />
+    <Content Include="obj\Debug\SSS.BLL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SSS.BLL.dll" />
+    <Content Include="obj\Debug\SSS.BLL.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

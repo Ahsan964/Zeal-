@@ -1,0 +1,319 @@
+﻿
+@{
+    ViewBag.Title = "ViewPI";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row  float-right">
+            @*<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" id="btnaddnew">Add new PI<i class="mdi mdi-play-circle ml-1"></i></button>*@
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" id="btnaddne" onclick="@("window.location.href='" + @Url.Action("AddNewPI", "PInvoice") + "'");">Add new PI<i class="mdi mdi-play-circle ml-1"></i></button>
+
+        </div>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">PI List</h4>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="example1" class="table table-striped table-bordered table-condensed table-hover dataTable no-footer">
+                        <thead>
+                            <tr>
+                                <th>PI-Number</th>
+                                
+                                <th>Date</th>
+                                
+
+                                <th>Description</th>
+
+                                <th>Gross Amount</th>
+                                <th>Net Amount</th>
+                                 <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal starts -->
+@*<div class="text-center">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Click for demo<i class="mdi mdi-play-circle ml-1"></i></button>
+    </div>*@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background:#f7f7f7">
+                <h5 class="modal-title" id="exampleModalLabel" style=" color:rgb(43, 174, 240)">+ Add New PI</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modelbody" style="background:white;">
+
+            </div>
+            <div class="modal-footer" style="background:#f7f7f7">
+                <button type="button" class="btn btn-success" id="btnsubmit">Submit</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Ends -->
+
+
+@section MyScripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "/PInvoice/GetAllPI",
+                success: function (data) {
+                    bindCustomersInDataTable(data);
+                }
+            });
+
+            //show popup
+            $("#btnaddnew").click(function () {
+                //$.post("/Customer/AddCustomer", function (data) {
+                //    $("#modal-default").html(data);
+                //});
+
+                $("#modelbody").load("/PInvoice/AddNewPI", function (e) {
+                    $("#modal-default").modal("show");
+
+
+                });
+
+            })
+
+            //add customer button event
+            $("#btnsubmit").click(function (e) {
+                //console.log("here");
+                e.preventDefault();
+
+
+
+                var datatosend = {
+                    objPI: {
+                        idx: $('#idx').val(),
+                        InvoiceNo: $('#InvoiceNo').val(),
+                        ParentDocID: $('#ParentDocID').val(),
+                        TotalAmount: $('#TotalAmount').val(),
+                        NetAmount: $('#NetAmount').val(),
+                        PaymentType: $('#PaymentType').val(),
+                        BalanceAmount: $('#BalanceAmount').val(),
+                        Description: $('#Description').val(),
+                        VendorID: $("#VendorID").val(),
+                        //PageList:[{ID:1},{ID:2},{ID:3}]
+                        PITAXLIST: [],
+                        InvoiceDetails: []
+                    }
+
+                }
+                $("#purchaseform input:checkbox:checked").each(function () {
+                    if ($(this).val() > 0) {
+
+                        var taxpercnt = $(this).attr('data-id');
+                        datatosend.objPI.PITAXLIST.push({
+                            Tax_Id: $(this).val(),
+                            TaxPercent: taxpercnt
+
+                        })
+
+                    }
+
+                    // add $(this).val() to your array
+                });
+
+                var table = $("#example2 tbody");
+                table.find('tr').each(function (i) {
+                    var $tds = $(this).find('td'),
+                        ItemIdx = $tds.eq(0).text(),
+                        Qty = $tds.eq(2).text();
+                    UnitPrice = $tds.eq(3).text(),
+                    TotalAmount = $tds.eq(4).text(),
+                    Status = true
+                    ;
+
+                    datatosend.objPI.InvoiceDetails.push({
+                        ItemIdx: $tds.eq(0).text(),
+                        Qty: $tds.eq(2).text(),
+                        UnitPrice: $tds.eq(3).text(),
+                        TotalAmount: $tds.eq(4).text(),
+                        Status: true
+                    })
+
+
+                });
+                console.log(datatosend);
+                var form = $("#purchaseform");
+
+                // $.validator.unobtrusive.parse(form);
+                // if ($(form).valid()){
+                console.log("here1");
+                if (true) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/PInvoice/AddUpdate",
+                        data: JSON.stringify(datatosend),// $(form).serialize(),
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function (res) {
+                            console.log(res);
+                            if (res.success) {
+                                //Command: toastr["success"]("", "Added Successfuly")
+
+                                //toastr.options = {
+                                //    "closeButton": false,
+                                //    "debug": false,
+                                //    "newestOnTop": false,
+                                //    "progressBar": true,
+                                //    "positionClass": "toast-top-center",
+                                //    "preventDuplicates": false,
+                                //    "onclick": null,
+                                //    "showDuration": "300",
+                                //    "hideDuration": "1000",
+                                //    "timeOut": "5000",
+                                //    "extendedTimeOut": "1000",
+                                //    "showEasing": "swing",
+                                //    "hideEasing": "linear",
+                                //    "showMethod": "fadeIn",
+                                //    "hideMethod": "fadeOut"
+                                //}
+                                window.location.href = "/PInvoice/ViewPI"
+                            }
+                            else if (res.success == false && res.msg == 'Failed') {
+                                //    Command: toastr["error"]("Invalid ", " Failed")
+
+                                //toastr.options = {
+                                //    "closeButton": false,
+                                //    "debug": false,
+                                //    "newestOnTop": false,
+                                //    "progressBar": true,
+                                //    "positionClass": "toast-top-center",
+                                //    "preventDuplicates": false,
+                                //    "onclick": null,
+                                //    "showDuration": "300",
+                                //    "hideDuration": "1000",
+                                //    "timeOut": "5000",
+                                //    "extendedTimeOut": "1000",
+                                //    "showEasing": "swing",
+                                //    "hideEasing": "linear",
+                                //    "showMethod": "fadeIn",
+                                //    "hideMethod": "fadeOut"
+                                //}
+                            }
+                        },
+                        failure: function (res) {
+                            console.log(res);
+                        },
+                        err: function (res) {
+                            console.log(res);
+                        }
+
+                    })
+                }
+                else {
+                    return false;
+                }
+
+            });
+
+            function bindCustomersInDataTable(data) {
+                console.log(data);
+                console.log(JSON.parse(data.data));
+                var status = "Blocked".toString();
+                var table = $('#example1').DataTable({
+                    data: JSON.parse(data.data),
+                    columns: [
+                        { data: 'InvoiceNo' },
+                        { data: 'CreatedDate' },
+                        
+
+                        { data: 'Description' },
+
+
+                         { data: 'TotalAmount' },
+                         { data: 'NetAmount' },
+
+                   {
+                       "data": "idx",
+                       "render": function (idx, type, full, meta) {
+
+                           return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + idx + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + idx + ')"><i class="fa fa-trash"></i></a>'
+                           //<a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + ID + ')"><i class="fa fa-trash"></i></a>
+
+                       },
+                       "orderable": true,
+                       "searchable": true,
+
+
+                   }
+                    ]
+                });
+
+            }
+
+
+        });
+
+        function ShowCustomer(CustomerID) {
+
+            console.log(CustomerID);
+            //$("#isMainBranch").attr("disabled", true);
+
+            var url = "/PInvoice/AddNewPI?id=" + CustomerID;
+            //$("#modelbody").load(url, function (e) {
+            //    //var id = $('#CustomerID').val();
+            //    //if (id > 0) {
+            //    //    $('#btnaddnewclient').html("update ");
+
+            //    //}
+            //    $("#exampleModal").modal("show");
+            //});
+             window.location.href = url;
+
+
+        }
+
+        function ConfirmDelete(CustomerID) {
+
+            $.ajax({
+                type: 'GET',
+                url: '/Vendor/Delete?id=' + CustomerID,
+                dataType: 'JSON',
+                success: function (res) {
+                    if (res.success) {
+                        swalWithBootstrapButtons.fire(
+                            'Done!',
+                            'Blocked',
+                            'success'
+                            )
+                        window.location.href = "/Client/ViewClient"
+                    }
+                    else {
+                        swalWithBootstrapButtons.fire(
+                            'Error!',
+                            'Failes',
+                            'success'
+                            )
+                    }
+                },
+                failure: function (res) {
+                    console.log(res);
+                },
+                err: function (res) {
+                    console.log(res);
+                }
+            })
+
+
+
+        }
+
+    </script>
+}

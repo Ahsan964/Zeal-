@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A15CB57-FF17-429C-B014-671625167421}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSS.Property</RootNamespace>
+    <AssemblyName>SSS.Property</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>keypairForFBArea.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\..\..\..\Production\ABS-ProductionCode\branches\Release1\ABS-ProductionWeb\Bin\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Capability_Property.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ConsolidateSalesSummary_Report_Property.cs" />
+    <Compile Include="Report\ProductivityandExecution_Report_Property.cs" />
+    <Compile Include="Report\Salesandstock_Report_Property.cs" />
+    <Compile Include="Role_Property.cs" />
+    <Compile Include="SessionManager.cs" />
+    <Compile Include="Setups\Accounts\AccountGJ.cs" />
+    <Compile Include="Setups\Accounts\AccountMasterGL.cs" />
+    <Compile Include="Setups\Accounts\firstTier_Property.cs" />
+    <Compile Include="Setups\Accounts\fourthTier_Property.cs" />
+    <Compile Include="Setups\Accounts\thirdTierVM_Property.cs" />
+    <Compile Include="Setups\Accounts\thirdTier_Property.cs" />
+    <Compile Include="Setups\AchivementDetail_Property.cs" />
+    <Compile Include="Setups\AchivementMaster_Property.cs" />
+    <Compile Include="Setups\AchivementProductDetail_Property.cs" />
+    <Compile Include="Setups\Bank_Property.cs" />
+    <Compile Include="Setups\Batch_Property.cs" />
+    <Compile Include="Setups\Batch_Setup_Property.cs" />
+    <Compile Include="Setups\Branch_Property.cs" />
+    <Compile Include="Setups\Business_Type_Property.cs" />
+    <Compile Include="Setups\CALLCARD_PARAMETER_SETUP_Property.cs" />
+    <Compile Include="Setups\ClaimType_Property.cs" />
+    <Compile Include="Setups\Claim_Property.cs" />
+    <Compile Include="Setups\CompanyBank_Property.cs" />
+    <Compile Include="Setups\companyCurrency_Property.cs" />
+    <Compile Include="Setups\Company_Bank_Property.cs" />
+    <Compile Include="Setups\Company_Property.cs" />
+    <Compile Include="Setups\CONFIGURATION_SETUP_Prperty.cs" />
+    <Compile Include="Setups\currency_Property.cs" />
+    <Compile Include="Setups\Customers_Property.cs" />
+    <Compile Include="Setups\CustomerType_Property.cs" />
+    <Compile Include="Setups\Departments_property.cs" />
+    <Compile Include="Setups\Department_Setup_Property.cs" />
+    <Compile Include="Setups\GDN\LP_GDNDetail_Property.cs" />
+    <Compile Include="Setups\GDN\LP_GDNMaster_Property.cs" />
+    <Compile Include="Setups\GDN\LP_GDN_VM.cs" />
+    <Compile Include="Setups\LP_CustomerBanks_Property.cs" />
+    <Compile Include="Setups\LP_GenerateTransNumber_Property.cs" />
+    <Compile Include="Setups\itemUnit_Property.cs" />
+    <Compile Include="Setups\LP_PageAccess_Property.cs" />
+    <Compile Include="Setups\LP_Pages_Property.cs" />
+    <Compile Include="Setups\LP_PageUser_Property.cs" />
+    <Compile Include="Setups\LP_Products_Picture.cs" />
+    <Compile Include="Setups\LP_Product_VM.cs" />
+    <Compile Include="Setups\LP_Purchase_Type.cs" />
+    <Compile Include="Setups\LP_Transaction_Type_Property.cs" />
+    <Compile Include="Setups\LP_VendorBanks_Property.cs" />
+    <Compile Include="Setups\mrnDetails_Property.cs" />
+    <Compile Include="Setups\MRNVM_Property.cs" />
+    <Compile Include="Setups\MRN_Property.cs" />
+    <Compile Include="Setups\Parent_Document_Entries.cs" />
+    <Compile Include="Setups\PaymentMode_Property.cs" />
+    <Compile Include="Setups\Product_Category_Property.cs" />
+    <Compile Include="Setups\Product_SubCategory_Property.cs" />
+    <Compile Include="Setups\PurchaseDetails_Property.cs" />
+    <Compile Include="Setups\PurchaseOrderMaster.cs" />
+    <Compile Include="Setups\PurchaseRequisitionMaster_Property.cs" />
+    <Compile Include="Setups\PurchaseRequisition_Detail_Property.cs" />
+    <Compile Include="Setups\PurchaseVM_Property.cs" />
+    <Compile Include="Setups\QuotationDetails_Property.cs" />
+    <Compile Include="Setups\QuotationVM_Property.cs" />
+    <Compile Include="Setups\Reports\LP_Report_Property.cs" />
+    <Compile Include="Setups\SalesOrdersDetails_Property.cs" />
+    <Compile Include="Setups\SalesOrderVM_Property.cs" />
+    <Compile Include="Setups\SalesPerson_Property.cs" />
+    <Compile Include="Setups\Suppliers_Property.cs" />
+    <Compile Include="Setups\Taxes_Property.cs" />
+    <Compile Include="Setups\User_Property.cs" />
+    <Compile Include="Setups\User_Region_Property.cs" />
+    <Compile Include="Setups\Sales_Category_Property.cs" />
+    <Compile Include="Setups\Sale_Category_Product_Property.cs" />
+    <Compile Include="Setups\TradeMarketingExpenseDetail_Property.cs" />
+    <Compile Include="Setups\TradeMarketingSetup_Property.cs" />
+    <Compile Include="Setups\FuelSharingDetail_Property.cs" />
+    <Compile Include="Setups\FuelType_Property.cs" />
+    <Compile Include="Setups\DistributorWise_BlockedDiscountHistory_Property.cs" />
+    <Compile Include="Setups\DistributorWise_BlockedDiscount_Property.cs" />
+    <Compile Include="Setups\Distributor_Discount_Limit_Property.cs" />
+    <Compile Include="Setups\Daily_Cash_Received_Property.cs" />
+    <Compile Include="Setups\Daily_Collection_Dtl_Property.cs" />
+    <Compile Include="Setups\Daily_Collection_Mst_Property.cs" />
+    <Compile Include="Setups\Day_Property.cs" />
+    <Compile Include="Setups\Discount_Business_Type_Detail_Property.cs" />
+    <Compile Include="Setups\Discount_Location_Detail_Property.cs" />
+    <Compile Include="Setups\Discount_Master_Property.cs" />
+    <Compile Include="Setups\Discount_Pos_Detail_Property.cs" />
+    <Compile Include="Setups\Discount_Product_Detail_Property.cs" />
+    <Compile Include="Setups\Discount_Product_FreePieces_Property.cs" />
+    <Compile Include="Setups\Discount_Slabs_Setup_Property.cs" />
+    <Compile Include="Setups\Discount_Type_Setup_Property.cs" />
+    <Compile Include="Setups\Distributor_Closing_Day_Property.cs" />
+    <Compile Include="Setups\Distributor_Location_Dtl_Property.cs" />
+    <Compile Include="Setups\Distributor_Mst_Setup_Property.cs" />
+    <Compile Include="Setups\Distributor_Region_Property.cs" />
+    <Compile Include="Setups\Distributor_Setup_Property.cs" />
+    <Compile Include="Setups\Distributor_Srep_Dtl_Property.cs" />
+    <Compile Include="Setups\Distributor_Type_Setup_Property.cs" />
+    <Compile Include="Setups\Document_Type_Setup_Property.cs" />
+    <Compile Include="Setups\Error_Tracer_Property.cs" />
+    <Compile Include="Setups\Final_Product_Selection_Property.cs" />
+    <Compile Include="Setups\Financial_Period_Calendar_Property.cs" />
+    <Compile Include="Setups\Financial_Period_Property.cs" />
+    <Compile Include="Setups\FuelSetUp_Property.cs" />
+    <Compile Include="Setups\Location_Setup_Property.cs" />
+    <Compile Include="Setups\MiscellaneousExpenseDetail_Property.cs" />
+    <Compile Include="Setups\MiscellaneousSetup_Property.cs" />
+    <Compile Include="Setups\OrganogramLevel_Property.cs" />
+    <Compile Include="Setups\Organogram_Property.cs" />
+    <Compile Include="Setups\Page_Property.cs" />
+    <Compile Include="Setups\Paking_Unit_Setup_Property.cs" />
+    <Compile Include="Setups\Permanent_Route_Plan_Detail_Property.cs" />
+    <Compile Include="Setups\Permanent_Route_Plan_Setup_Property.cs" />
+    <Compile Include="Setups\Personel_Setup_Property.cs" />
+    <Compile Include="Setups\Personnel_Setup_Property.cs" />
+    <Compile Include="Setups\POS_Category_Property.cs" />
+    <Compile Include="Setups\POS_Setup_Property.cs" />
+    <Compile Include="Setups\Pos_Type_Setup_Property.cs" />
+    <Compile Include="Setups\Price_List_Mst_Property.cs" />
+    <Compile Include="Setups\Printer_Setup_Property.cs" />
+    <Compile Include="Setups\ProductTax_Property.cs" />
+    <Compile Include="Setups\Product_Form_Property.cs" />
+    <Compile Include="Setups\Product_Selection_Property.cs" />
+    <Compile Include="Setups\Product_Property.cs" />
+    <Compile Include="Setups\Product_Type_Property.cs" />
+    <Compile Include="Setups\RecordHistory_Property.cs" />
+    <Compile Include="Setups\Region_Property.cs" />
+    <Compile Include="Setups\Registration_Type_Property.cs" />
+    <Compile Include="Setups\Replenishment_Detail_Property.cs" />
+    <Compile Include="Setups\Replenishment_Master_Property.cs" />
+    <Compile Include="Setups\ReturnReasons_Property.cs" />
+    <Compile Include="Setups\Role_Capability_Property.cs" />
+    <Compile Include="Setups\Role_Setup_Property.cs" />
+    <Compile Include="Setups\Route_POS_Property.cs" />
+    <Compile Include="Setups\Route_Property.cs" />
+    <Compile Include="Setups\Sales_Rep_Type_Property.cs" />
+    <Compile Include="Setups\Sales_Type_Property.cs" />
+    <Compile Include="Setups\Special_Discount_Detail_Property.cs" />
+    <Compile Include="Setups\Special_Discount_Master_Property.cs" />
+    <Compile Include="Setups\Sub_Pos_Type_Setup_Property.cs" />
+    <Compile Include="Setups\TargetPeriod_Property.cs" />
+    <Compile Include="Setups\TargetType_Property.cs" />
+    <Compile Include="Setups\Target_Setting_Detail_Property.cs" />
+    <Compile Include="Setups\Target_Setting_Master_Property.cs" />
+    <Compile Include="Setups\Tax_Property.cs" />
+    <Compile Include="Setups\Transaction_Detail_Property.cs" />
+    <Compile Include="Setups\Transaction_Master_Property.cs" />
+    <Compile Include="Setups\User_Role_Property.cs" />
+    <Compile Include="Setups\VehicleSharingDetail_Property.cs" />
+    <Compile Include="Setups\Vehicle_Property.cs" />
+    <Compile Include="Setups\VendorProcessVM_Property.cs" />
+    <Compile Include="Setups\Vendors_Property.cs" />
+    <Compile Include="Setups\VendorType_Property.cs" />
+    <Compile Include="Setups\Vendor_Category_Property.cs" />
+    <Compile Include="Setups\ViewModels\PriceListProperViewModel.cs" />
+    <Compile Include="Setups\ViewModels\Product_Setup_MST_ViewModel.cs" />
+    <Compile Include="Setups\WareHouse_Property.cs" />
+    <Compile Include="Setups\Wh_Location_Property.cs" />
+    <Compile Include="Transactions\Collection_Detail_Property.cs" />
+    <Compile Include="Transactions\Collection_Master_Property.cs" />
+    <Compile Include="Transactions\DisplayOrderVM.cs" />
+    <Compile Include="Transactions\ImportedExpenseVM.cs" />
+    <Compile Include="Transactions\LP_Activity_Property.cs" />
+    <Compile Include="Transactions\LP_ConsigmentDetails.cs" />
+    <Compile Include="Transactions\DailyCollection\Detail\DailyCollection_property.cs" />
+    <Compile Include="Transactions\DailyCollection\Master\DailyCollection_property.cs" />
+    <Compile Include="Transactions\DSRAdjustment_Property.cs" />
+    <Compile Include="Transactions\LP_CI_PurchaseDetails_Property.cs" />
+    <Compile Include="Transactions\LP_CI_PurchaseOrder_Property.cs" />
+    <Compile Include="Transactions\LP_Consigment_Property.cs" />
+    <Compile Include="Transactions\LP_Consigment_ViewModel.cs" />
+    <Compile Include="Transactions\LP_DisplayOrder_Details_Property.cs" />
+    <Compile Include="Transactions\LP_DisplayOrder_Master_Property.cs" />
+    <Compile Include="Transactions\LP_FinsihProduct_Property.cs" />
+    <Compile Include="Transactions\LP_GeneralVoucher_Property.cs" />
+    <Compile Include="Transactions\LP_ImportedExpense_Details_Property.cs" />
+    <Compile Include="Transactions\LP_ImportedExpense_Master_Property.cs" />
+    <Compile Include="Transactions\LP_InventoryLogs_Property.cs" />
+    <Compile Include="Transactions\LP_Inventory_Movement.cs" />
+    <Compile Include="Transactions\LP_Inv_Report.cs" />
+    <Compile Include="Transactions\LP_Performa_Invoice_Details_Property.cs" />
+    <Compile Include="Transactions\LP_Performa_Invoice_Property.cs" />
+    <Compile Include="Transactions\LP_GRN_Detail_Property.cs" />
+    <Compile Include="Transactions\LP_GRN_Master_Property.cs" />
+    <Compile Include="Transactions\LP_MRN_Detail_Property.cs" />
+    <Compile Include="Transactions\LP_MRN_Master_Property.cs" />
+    <Compile Include="Transactions\LP_PIReturn_Details_Property.cs" />
+    <Compile Include="Transactions\LP_PIReturn_Property.cs" />
+    <Compile Include="Transactions\LP_PI_Taxes_Property.cs" />
+    <Compile Include="Transactions\LP_ProductDetailsForCombo_Property.cs" />
+    <Compile Include="Transactions\LP_PurchaseReturnVM_Property.cs" />
+    <Compile Include="Transactions\LP_Purchase_Detail_Property.cs" />
+    <Compile Include="Transactions\LP_Purchase_Master_Property.cs" />
+    <Compile Include="Transactions\LP_P_Invoice_Details.cs" />
+    <Compile Include="Transactions\LP_P_Invoice_Property.cs" />
+    <Compile Include="Transactions\LP_Quotation_Detail_Property.cs" />
+    <Compile Include="Transactions\LP_Quotation_Master_Property.cs" />
+    <Compile Include="Transactions\LP_SalesOrder_Detail_Property.cs" />
+    <Compile Include="Transactions\LP_SalesOrder_Master_Property.cs" />
+    <Compile Include="Transactions\LP_SalesReturnVM_Property.cs" />
+    <Compile Include="Transactions\LP_salesTaxes_Property.cs" />
+    <Compile Include="Transactions\LP_Voucher_Details.cs" />
+    <Compile Include="Transactions\LP_Voucher_Property.cs" />
+    <Compile Include="Transactions\PO_Detail_Property.cs" />
+    <Compile Include="Transactions\PO_Master_Property.cs" />
+    <Compile Include="Transactions\SS_Cashmemo_Property.cs" />
+    <Compile Include="Transactions\StockAdjustmentOutMaster_Property.cs" />
+    <Compile Include="Transactions\ViewModels\LP_CI_ViewModel.cs" />
+    <Compile Include="Transactions\ViewModels\LP_PerformaInvoice_ViewModel.cs" />
+    <Compile Include="Transactions\ViewModels\LP_GRN_ViewModel.cs" />
+    <Compile Include="Transactions\ViewModels\LP_PI_ViewModel.cs" />
+    <Compile Include="Transactions\ViewModels\LP_Voucher_ViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\de\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\es\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\FluentValidation.dll" />
+    <Content Include="bin\Debug\FluentValidation.pdb" />
+    <Content Include="bin\Debug\FluentValidation.xml" />
+    <Content Include="bin\Debug\fr\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\it\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\nl\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\pl\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\pt\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\ru\FluentValidation.resources.dll" />
+    <Content Include="bin\Debug\SSS.Property.dll" />
+    <Content Include="bin\Debug\SSS.Property.pdb" />
+    <Content Include="bin\Debug\sv\FluentValidation.resources.dll" />
+    <Content Include="obj\Debug\SSS.Property.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SSS.Property.dll" />
+    <Content Include="obj\Debug\SSS.Property.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="keypairForFBArea.snk" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

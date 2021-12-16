@@ -1,0 +1,39 @@
+﻿
+
+@model SSS.Property.Setups.Accounts.thirdTier_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- text input -->
+            <div class="form-group">
+                <label>CAO Name*:</label>
+                @Html.DropDownListFor(model => model.headIdx, new SelectList(Model.headLST, "idx", "accountName"), "Select coa name", new { @Class = "select2 form-control font-weight-bold" })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.headIdx, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Sub Head Name</label>
+                @Html.EditorFor(model => model.subHeadName, new { htmlAttributes = new { @placeholder = "Sub Head Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.subHeadName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    
+
+</form>
+
+    <script type="text/javascript">
+        $(document).ajaxComplete(function() {
+            $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true, dropdownParent: $('#modelbody') });
+
+        });
+    </script>

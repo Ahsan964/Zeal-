@@ -1,0 +1,282 @@
+﻿@model SSS.Property.Report.LP_Inv_Report
+@{
+    ViewBag.Title = "ViewInventory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+        <form id="reportform">
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>Branch#*:</label>
+                        @Html.DropDownListFor(model => model.branchid, new SelectList(Model.BranchList, "idx", "branchName"), "Select Branch", new { @Class = "select2 form-control font-weight-bold" })
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>Product*:</label>
+                        @Html.DropDownListFor(model => model.productid, new SelectList(Model.ProductList, "idx", "itemName"), "Select Product", new { @Class = "select2 form-control font-weight-bold" })
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>From#*:</label>
+                        @Html.EditorFor(model => model.fromdate, new { htmlAttributes = new { @placeholder = "PO Number*:", @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>To*:</label>
+                        @Html.EditorFor(model => model.todate, new { htmlAttributes = new { @placeholder = "PO Number*:", @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label></label>
+                        <input type="button" id="btngeneratereport" class="btn btn-success" value="Generate Detail Report" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <hr />
+        <h4 class="card-title">View Inventory</h4>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="example1" class="table table-striped table-bordered table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Stock</th>
+
+                                <th>Rate</th>
+
+                                <th>Total Amount</th>
+                                @* <th>Action</th>*@
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal starts -->
+@*<div class="text-center">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Click for demo<i class="mdi mdi-play-circle ml-1"></i></button>
+    </div>*@
+
+<!-- Modal Ends -->
+
+
+@section MyScripts {
+    <script type="text/javascript">
+        $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true });
+
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "/Inventory/SelectAllInventory",
+                success: function (data) {
+                    bindCustomersInDataTable(data);
+                }
+            });
+
+            //show popup
+            //$("#btnaddnew").click(function () {
+            //    //$.post("/Customer/AddCustomer", function (data) {
+            //    //    $("#modal-default").html(data);
+            //    //});
+
+            //    $("#modelbody").load("/MRN/AddNewMRN", function (e) {
+            //        $("#modal-default").modal("show");
+
+
+            //    });
+
+            //})
+
+            //add customer button event
+
+
+            function bindCustomersInDataTable(data) {
+                console.log(data);
+                console.log(JSON.parse(data.data));
+                var status = "Blocked".toString();
+                var table = $('#example1').DataTable({
+                    data: JSON.parse(data.data),
+                    columns: [
+                        { data: 'itemName' },
+                        { data: 'stock' },
+
+                        { data: 'unitPrice' },
+
+
+                        { data: 'totalAmount' }
+
+                        //{
+                        //    "data": "idx",
+                        //    "render": function (idx, type, full, meta) {
+
+                        //        return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + idx + ')"><i class="fa fa-eye"></i></a>'// <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + idx + ')"><i class="fa fa-trash"></i></a>'
+                        //        //<a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + ID + ')"><i class="fa fa-trash"></i></a>
+
+                        //    },
+                        //    "orderable": true,
+                        //    "searchable": true,
+
+
+                        //}
+                    ]
+                });
+
+            }
+
+
+        });
+        $("#btngeneratereport").click(function (e) {
+            console.log("here");
+            e.preventDefault();
+
+
+            var datatosend = {
+                objMRN: {
+                    idx: $('#idx').val(),
+                    mrNumber: $('#mrNumber').val(),
+                    //vendorIdx: $('#vendorIdx').val(),
+                    mrnDate: $('#mrnDate').val(),
+                    description: $('#description').val(),
+                    //totalAmount: $('#totalAmount').val(),
+                    //PageList:[{ID:1},{ID:2},{ID:3}]
+                    MrnDetailsLST: []
+                }
+
+            }
+            var table = $("#example2 tbody");
+
+            var milestonearray = [];
+            var milestonedetails = {
+            };
+            var pomasternetamount = 0;
+            table.find('tr').each(function (i) {
+                var $tds = $(this).find('td'),
+                    productid = $tds.eq(0).text(),
+                    qty = $tds.eq(2).text();
+                //unitprice = $tds.eq(3).text(),
+                //itemamount = $tds.eq(4).text();
+
+                datatosend.objMRN.MrnDetailsLST.push({
+                    itemIdx: productid,
+                    qty: qty
+                    //unitprice: unitprice,
+                    //productTypeIdx: 1,
+                    //amount: itemamount
+                })
+
+
+
+
+
+
+            });
+            //console.log(milestonearray);
+            var form = $("#reportform");
+            // $.post("/Inventory/GenerateDetailReport", $(form).serialize());
+            // $.validator.unobtrusive.parse(form);
+            // if ($(form).valid()){
+            console.log("here1");
+            if (true) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Inventory/GenerateDetailReport",
+                    data:  $(form).serialize(),
+                    //contentType: 'application/json',
+                    //dataType: 'json',
+                    success: function (res) {
+                        console.log(res);
+                        if (res.success) {
+
+                            window.location.href = "/Inventory/Download?fpath=" + res.data;
+                        }
+                        else if (res.success == false && res.msg == 'Failed') {
+
+                        }
+                    },
+                    failure: function (res) {
+                        console.log(res);
+                    },
+                    err: function (res) {
+                        console.log(res);
+                    }
+
+                })
+            }
+            else {
+                return false;
+            }
+
+        });
+        function ShowCustomer(CustomerID) {
+
+            console.log(CustomerID);
+            window.location.href = '/MRN/AddNewMRN?id=' + CustomerID;
+            //$.ajax({
+            //    url: "/MRN/AddNewMRN?id=" + CustomerID,
+            //    success: function (data) {
+
+            //    }
+            //});
+
+        }
+
+        function ConfirmDelete(CustomerID) {
+
+            $.ajax({
+                type: 'GET',
+                url: '/Vendor/Delete?id=' + CustomerID,
+                dataType: 'JSON',
+                success: function (res) {
+                    if (res.success) {
+                        swalWithBootstrapButtons.fire(
+                            'Done!',
+                            'Blocked',
+                            'success'
+                        )
+                        window.location.href = "/Client/ViewClient"
+                    }
+                    else {
+                        swalWithBootstrapButtons.fire(
+                            'Error!',
+                            'Failes',
+                            'success'
+                        )
+                    }
+                },
+                failure: function (res) {
+                    console.log(res);
+                },
+                err: function (res) {
+                    console.log(res);
+                }
+            })
+
+
+
+        }
+
+    </script>
+}
+

@@ -1,0 +1,266 @@
+﻿
+@model SSS.Property.Setups.Product_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+<form action="/Product/AddUpdate" id="addnewform" enctype="multipart/form-data">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        @*<div class="col-sm-4">
+          
+            <div class="form-group">
+                <label>Product Type *:</label>
+                @Html.DropDownListFor(model => model.productTypeIdx, new SelectList(ViewBag.productTypeLST, "idx", "productType"), "Select ProductType ", new { @Class = "select2 form-control font-weight-bold" })
+                 </div>
+            @Html.ValidationMessageFor(model => model.productTypeIdx, "", new { @class = "text-danger" })
+        </div>*@
+        <div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Category *:</label>
+                @Html.DropDownListFor(model => model.productCatIdx, new SelectList(ViewBag.catLST, "idx", "category"), "Select Category ", new { @Class = "select2 form-control font-weight-bold" })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.productCatIdx, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Sub-Category*:</label>
+                @{
+                    if (Model.idx > 0)
+                    {
+                        @Html.DropDownListFor(model => model.productSubCatIdx, new SelectList(ViewBag.subCatLST, "idx", "subCategory"), "Select Category ", new { @Class = "select2 form-control font-weight-bold" })
+
+                    }
+                    else
+                    {
+                        <select id="productSubCatIdx" name="productSubCatIdx" class=" form-control font-weight-bold">
+                            @{
+                                <option value="0" data-hscode="0">Select Sub Category</option>
+
+                                foreach (var item in ViewBag.subCatLST)
+                                {
+                                    <option value="@item.idx" data-val="@item.product_catIdx">@item.subCategory</option>
+                                }
+
+                            }
+                        </select>
+                    }
+                }
+         
+            </div>
+            @Html.ValidationMessageFor(model => model.productSubCatIdx, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Item Name*:</label>
+                @Html.EditorFor(model => model.itemName, new { htmlAttributes = new { @placeholder = "Item Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.itemName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>HS-CODE*:</label>
+                @Html.EditorFor(model => model.HSCODE, new { htmlAttributes = new { @placeholder = "HS-Code", @class = "form-control", @readonly = "true" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.HSCODE, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Item Code*:</label>
+                @Html.EditorFor(model => model.itemCode, new { htmlAttributes = new { @placeholder = "Item Code", @class = "form-control", @readonly = "true" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.itemCode, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Unit*:</label>
+                @Html.DropDownListFor(model => model.unitIdx, new SelectList(ViewBag.unitLST, "idx", "itemUnit"), "Select Unit ", new { @Class = "select2 form-control font-weight-bold" })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.unitIdx, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    @*<div class="row">*@
+      
+    @*  Added By Ahsan*@
+        @*<div class="col-sm-6">
+            <div class="form-group">
+                <label>Reference*:</label>
+                @Html.EditorFor(model => model.Reference, new { htmlAttributes = new { @placeholder = "Reference", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.Reference, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Description*:</label>
+                @Html.EditorFor(model => model.description, new { htmlAttributes = new { @placeholder = "Description", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+        </div>*@
+
+    @*</div>*@
+    @*<div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Cost Price*:</label>
+                @Html.EditorFor(model => model.costPrice, new { htmlAttributes = new { @placeholder = "Cost Price", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.costPrice, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Sale Price*:</label>
+                @Html.EditorFor(model => model.salePrice, new { htmlAttributes = new { @placeholder = "Sales Price", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.salePrice, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Product Tax*:</label>
+                @Html.EditorFor(model => model.productTax, new { htmlAttributes = new { @placeholder = "Product Tax", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.productTax, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+  
+    <div class="input-images">
+
+    </div>
+
+
+</form>
+<script type="text/javascript">
+    
+    $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true, dropdownParent: $('#modelbody') });
+
+    var cattext,catValue;
+    var subcattext,subcatValue;
+    var prdctpic=@Html.Raw(Json.Encode(ViewBag.ProductPics));
+    console.log(prdctpic);
+    $('.input-images').imageUploader();
+
+
+    if(prdctpic.length!=null){
+
+
+        console.log("HELLO")
+        console.log(prdctpic)
+        let preloaded = [];
+        for(var i=0;i<prdctpic.length;i++){
+            var j=i;
+            preloaded.push(
+                {
+                    id:i,
+                    src:prdctpic[i].PicturePath
+                }
+            )
+        }
+
+        $('.input-images').imageUploader({
+            preloaded: preloaded,
+            imagesInputName: 'photos',
+            preloadedInputName: 'old',
+            maxSize: 2 * 1024 * 1024,
+            maxFiles: 10
+        });
+
+
+    }
+
+
+    //var imagefiles = document.getElementsByName("images")
+    //console.log(imagefiles);
+    //for (var i = 0; i < imagefiles.files.length; i++) {
+    //    alert("HEllo");
+    //}
+    @*$("#productCatIdx").change(function () {
+        cattext = $("#productCatIdx option:selected").val();
+        if (Number(cattext) > 0)
+        {
+            var CatList =@Html.Raw(ViewBag.catLST);
+
+            for (var i = 0; i < CatList.hasOwnProperty.length; i++) {
+                console.log[CatList[i]];
+            }
+        }
+        GenerateHSCode();
+    });*@
+
+
+    $("#productCatIdx").change(function () {
+
+        var $options = $('#productSubCatIdx')
+            // update the dropdown value if necessary
+            .val('')
+            // get options
+            .find('option')
+            // show all of the initially
+            .show();
+        console.log($options);
+        // check current value is not 0
+        if (this.value != '0')
+            $options
+                // filter out options which is not corresponds to the first option
+                .not('[data-val="' + this.value + '"],[data-val=""]')
+                // hide them
+                .hide();
+
+        catValue = $("#productCatIdx option:selected").val();
+        if(Number(catValue)>0)
+        {
+            GenerateHSCode();
+        }
+        else
+        {
+            catValue=Number(0);
+        }
+
+
+    });
+    $("#productSubCatIdx").change(function () {
+        subcatValue = $("#productSubCatIdx option:selected").val();
+        if(Number(subcatValue)>0)
+        {
+            GenerateHSCode();
+        }
+        else
+        {
+            subcatValue = Number('0');
+        }
+    });
+
+    function GenerateHSCode() {
+        var catData = @Html.Raw(ViewBag.categoryLST);
+        for (var i = 0; i < catData.length; i++) {
+            if(Number(catData[i].idx)==Number(catValue))
+            {
+                cattext = catData[i].HSCodeCat;
+                break;
+            }
+            else
+            {
+                cattext = '';
+            }
+        }
+        var subcatData = @Html.Raw(ViewBag.subcategoryLST);
+        for (var i = 0; i < subcatData.length; i++) {
+            if(Number(subcatData[i].idx)==Number(subcatValue))
+            {
+                subcattext = subcatData[i].HS_CodeSub;
+                break;
+            }
+            else
+            {
+                subcattext = '';
+            }
+        }
+
+        $("#HSCODE").val(cattext + "-" + subcattext);
+    }
+</script>

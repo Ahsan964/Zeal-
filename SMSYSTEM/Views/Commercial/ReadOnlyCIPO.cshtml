@@ -1,0 +1,827 @@
+﻿@model SSS.Property.Transactions.ViewModels.LP_CI_ViewModel
+@{
+    ViewBag.Title = "ReadOnlyCI";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card-body">
+    <h3>Commercial Invoice</h3>
+    <br />
+    <form role="form" id="purchaseform">
+        @Html.HiddenFor(model => model.idx, new { id = "idx", value = 0 })
+        <div class="row">
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Select PI*:</label>
+                    @Html.DropDownListFor(model => model.PINO, new SelectList(Model.PerformaLISt, "idx", "poNumber"), "Select Performa Invoice", new { @Class = "select2 form-control font-weight-bold" })
+                </div>
+                @Html.ValidationMessageFor(model => model.PINO, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>PO#*:</label>
+                    @Html.EditorFor(model => model.poNumber, new { htmlAttributes = new { @placeholder = "PO Number*:", @class = "form-control", @readonly = true } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.poNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Date*:</label>
+                    @Html.EditorFor(model => model.purchaseDate, new { htmlAttributes = new { @placeholder = "Purchase Date*:", @class = "form-control" } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.purchaseDate, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Exchange Rate*:</label>
+                    <input type="text" class="form-control" id="exchangerate" disabled>
+                </div>
+                @Html.ValidationMessageFor(model => model.purchaseDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Product Count:</label>
+                    @Html.EditorFor(model => model.numberOfProducts, new { htmlAttributes = new { @placeholder = "Count*:", @class = "form-control", @readonly = true } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.numberOfProducts, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Total Actual Value PKR#*:</label>
+                    @Html.EditorFor(model => model.grandTotalAVPKR, new { htmlAttributes = new { @placeholder = "TACPKR:", @class = "form-control", @readonly = true } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.grandTotalAVPKR, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="row" id="PurchaseDetails">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h5>+Add Product</h5>
+                        <div class="card-tools">
+                        </div>
+                    </div>
+                    <div class="">
+                      
+                        <div class="row" style="display:block; overflow:scroll" id="milestones">
+                            <div class="col-md-12">
+                                <div class="card card-primary">
+                                    <div class="">
+                                        <table id="example2" class="table table-dark table-bordered table-hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>Item Name</th>
+                                                    <th colspan="1">QTY</th>
+                                                    <th>(Unit/DV) Price(KG)/Qty</th>
+                                                    <th>Total (DV)Price</th>
+                                                    @*<th>Tota Price</th>*@
+                                                    <th>Actual Price</th>
+                                                    <th>Description</th>
+                                                    <th>ASSVCI</th>
+                                                    <th>Landing</th>
+                                                    <th>CD%</th>
+                                                    <th>RD%</th>
+                                                    <th>ACD %</th>
+                                                    <th>ST %</th>
+                                                    <th>AST %</th>
+                                                    <th>IT %</th>
+                                                    <th>TD/Tax</th>
+                                                    @*<th>Cleaning</th>
+                    <th>Total  Price</th>*@
+                                                    <th>TotalASSVSCI</th>
+                                                    <th>TotalLanding</th>
+                                                    <th>TotalCDValue</th>
+                                                    <th>TotalRDValue</th>
+                                                    <th>TotalACDValue</th>
+                                                    <th>TotalASTValue</th>
+                                                    <th>TotalITValue</th>
+                                                    <th>TotalSTValue</th>
+
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody style="background:white;color:black; ">
+                                                @{
+                                                    if (Model.CILIST != null)
+                                                    {
+                                                        foreach (var items in Model.CILIST)
+                                                        {
+                                                            <tr>
+                                                                <td style="display:none">@items.itemIdx</td>
+                                                                <td>@items.itemName</td>
+                                                                <td>@items.qty</td>
+                                                                <td>@items.unitPrice</td>
+                                                                @*<td><input type="text" placeholder="Enter Unit Price" onkeyup="changeinunitprice(this)" value="@items.unitPrice" id="unitprice" class="form-control" /></td>*@
+                                                                <td>@items.amount</td>
+                                                                <td>@items.ADVRate</td>
+                                                                <td>@items.ItemDescription</td>
+                                                                <td>@items.ASSVCI</td>
+                                                                <td>@items.Landing</td>
+                                                                <td>@items.CDPercntage</td>
+                                                                <td>@items.RDPercentage</td>
+                                                                <td>@items.ACDPercentage</td>
+                                                                <td>@items.STPercentage</td>
+                                                                <td>@items.ASTPercentage</td>
+                                                                <td>@items.ITPercentage</td>
+                                                                <td>@items.TDTax</td>
+                                                                <td>@items.TotalASSVSCI</td>
+                                                                <td>@items.TotalLanding</td>
+                                                                <td>@items.TotalCDValue</td>
+                                                                <td>@items.TotalRDValue</td>
+                                                                <td>@items.TotalACDValue</td>
+                                                                <td>@items.TotalASTValue</td>
+                                                                <td>@items.TotalITValue</td>
+                                                                <td>@items.TotalSTValue</td>
+
+                                                                <td><button id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn btn-outline-danger"><i class="fa fa-trash menu-icon"></i></button></td>
+                                                            </tr>
+
+                                                        }
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="inputName">Description</label>
+                    @Html.EditorFor(model => model.description, new { htmlAttributes = new { @placeholder = "Description", @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="inputName">Total Amount</label>
+                    @Html.EditorFor(model => model.totalAmount, new { htmlAttributes = new { @placeholder = "Total Amount", @class = "form-control", @readonly = true } })
+                </div>
+                @Html.ValidationMessageFor(model => model.totalAmount, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="inputName">Total TD/Tax</label>
+                    @Html.EditorFor(model => model.totalTD, new { htmlAttributes = new { @placeholder = "Total Amount", @class = "form-control", @readonly = true } })
+                </div>
+                @Html.ValidationMessageFor(model => model.totalTD, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal-footer">
+                @*<button type="button" class="btn btn-success" id="btnAddPO">Submit</button>*@
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section MyScripts
+    {
+    <script type="text/javascript">
+        // Added By Ahsan
+        $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true });
+
+        var PIData;
+        // Add To grid
+        $("#PINO").on('change', function () {
+            var ddvaue = $("#PINO option:selected").val();
+            if (ddvaue > 0) {
+                GetPODataSet(ddvaue)
+                // $('#btnaddtogrid').attr('disabled', true);
+            }
+            else {
+                $("#example2 tbody").empty();
+                $('#btnaddtogrid').attr('disabled', false);
+                $("#totalAmount").val("0");
+            }
+
+        });
+        //product change
+        $("#itemIdx").on('change', function () {
+            var ddvaue = $("#itemIdx option:selected").val();
+            if (ddvaue > 0) {
+
+
+                var PerformaDetails = PIData.filter(function (el) {
+                    return el.itemIdx == ddvaue;
+                });
+                console.log(PerformaDetails);
+                AppendPI(PerformaDetails);
+                // console.log(newArray);
+                // $('#btnaddtogrid').attr('disabled', true);
+            }
+            else {
+                //$("#example2 tbody").empty();
+                //$('#btnaddtogrid').attr('disabled', false);
+                //$("#totalAmount").val("0");
+            }
+
+        });
+        function AppendPI(PIDETAILS) {
+            $('#qty').val(PIDETAILS[0].qty);
+            $('#DVRate').val(PIDETAILS[0].DVRate);
+            $('#TDVRate').val(PIDETAILS[0].TDVRate);
+            $('#ADVRate').val(PIDETAILS[0].ADVRate);
+            $('#ItemDescription').val(PIDETAILS[0].ItemDescription);
+
+        }
+
+        function GetPODataSet(poid) {
+            $.ajax({
+                url: "/Commercial/GetPIById?id=" + poid,
+                data: { id: poid },
+                success: function (data) {
+                    var POData = JSON.parse(data.data);
+                    PIData = POData;
+                    console.log(POData);
+
+                    $("#example2 tbody").empty();
+                    $('#milestones').show();
+                    var markup;
+                    $('#exchangerate').val(POData[0].ExchangeRate);
+                    $('#numberOfProducts').val(POData[0].numberOfProducts);
+                    $('#grandTotalAVPKR').val(POData[0].grandTotalAVPKR);
+                    $('#itemIdx').append($('<option>', {
+                        value: 0,
+                        text: 'Select Product'
+                    }));
+                    for (var i = 0; i < POData.length; i++) {
+
+                        $('#itemIdx').append($('<option>', {
+                            value: POData[i].itemIdx,
+                            text: POData[i].itemName
+                        }));
+
+
+                    }
+
+                    var tamount = 0;
+
+                    $("#totalAmount").val(tamount);
+
+                }
+            });
+        }
+        var errmsg;
+        //Add Project Button Event start
+        $("#qty").keyup(function () {
+            var qtyval = $(this).val();
+            var unitpriceval = $("#unitPrice").val();
+            var totalamount = qtyval * unitpriceval;
+
+            $("#amount").val(totalamount);
+        });
+        $("#unitPrice").keyup(function () {
+            var unitpriceval = $(this).val();
+            var qtyval = $("#qty").val();
+            var totalamount = qtyval * unitpriceval;
+            $("#amount").val(totalamount);
+        });
+
+
+        $("#btnaddtogrid").click(function (e) {
+            //alert(1);
+            if (!(gridValidation($("#itemIdx option:selected").val()))) {
+                // alert("Product Alreaty Exist")
+                displayerror();
+                return;
+            }
+
+
+            // alert("hello");
+            $('#milestones').show();
+            var closebutton = '<input type="button" value="x" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="fa fa-window-close close" />';
+            var productname = $("#itemIdx option:selected").text();
+            var ProductID = $("#itemIdx option:selected").val();
+            var Qty = $("#qty").val();
+            var unitprice = $("#DVRate").val();
+            var totalamount = $("#TDVRate").val();
+            var adv = $("#ADVRate").val();
+            var itemdescription = $("#ItemDescription").val();
+            //2
+            var ASSVCI = $("#ASSVCI").val();
+            var TotalASSVSCI = $("#tassv").val();
+            //var tassv = $("#tassv").val();
+            var Landing = $("#Landing").val();
+            var TotalLanding = $("#tLanding").val();
+
+
+            var CDPercntage = $("#CDPercntage").val();
+            var TotalCDPercntage = $("#tCDPercntage").val();
+
+
+            var RDPercentage = $("#RDPercentage").val();
+            var TotalRDPercentage = $("#tRDPercentage").val();
+            //3
+            var ACDPercentage = $("#ACDPercentage").val();
+            var TotalACDPercentage = $("#tACDPercentage").val();
+
+
+            var STDPercentage = $("#ITPercentage").val();
+            var TotalSTDPercentage = $("#tSTDPercentage").val();
+
+            var ASTPercentage = $("#ASTPercentage").val();
+            var TotalASTPercentage = $("#tASTPercentage").val();
+
+            var ITTPercentage = $("#ITPercentage").val();
+            var TotalITTPercentage = $("#tITTPercentage").val();
+            //
+
+            var TDTax = $("#TDTax").val();
+            //var CleaningPrice = $("#CleaningPrice").val();
+            //var TotalPrice = $("#TotalPrice").val();
+            //
+            var row2markup = "<td>" + ASSVCI + "</td><td>" + Landing + "</td><td>" + CDPercntage + "</td><td>" + RDPercentage + "</td>";
+            var row3markup = "<td>" + ACDPercentage + "</td><td>" + STDPercentage + "</td><td>" + ASTPercentage + "</td><td>" + ITTPercentage + "</td>";
+            var row4markup = "<td>" + TDTax + "</td>";
+            var row5Totalsmarkup = "<td>" + TotalASSVSCI + "</td><td>" + TotalLanding + "</td><td>" + TotalCDPercntage + "</td><td>" + TotalRDPercentage + "</td><td>" + TotalACDPercentage + "</td><td>" + TotalSTDPercentage + "</td><td>" + TotalASTPercentage + "</td><td>" + TotalITTPercentage + "</td>";
+
+            var markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + Qty + "</td><td id='unitprice'>" + unitprice + "</td><td class='tamnt'>" + totalamount + "</td><td>" + adv + "</td><td>" + itemdescription + "</td>" + row2markup + row3markup + row4markup + row5Totalsmarkup + "<td>" + closebutton + "</td></tr>";
+            $("#example2 tbody").append(markup);
+            calculation();
+
+
+
+        });
+
+        $('#purchaseDate').change(function () {
+            var date = $(this).val();
+            console.log(date, 'change')
+            var GivenDate = date;
+            var CurrentDate = new Date();
+            GivenDate = new Date(GivenDate);
+
+            if (GivenDate > CurrentDate) {
+                alert('Given date is greater than the current date.');
+                var today = moment().format('YYYY-MM-DD');
+                $('#purchaseDate').val(today);
+            } else {
+                // alert('Given date is not greater than the current date.');
+            }
+        });
+        function SomeDeleteRowFunction(o) {
+            //alert(id);
+            var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            //console.log($tds);
+
+            $.each($tds, function () {                // Visits every single <td> element
+                // console.log($(this).text());         // Prints out the text within the <td>
+            });
+            var itmmant = o.parentNode.parentNode.children[4].innerText;
+            var tmnt = $('#totalAmount').val();
+
+            // $('#balanceAmount').val(tmnt);
+            var p = o.parentNode.parentNode;
+
+            p.parentNode.removeChild(p);
+            $(this).closest('tr').remove();
+            calculation();
+
+
+        };
+
+        function changeinunitprice(o) {
+            //alert(id);
+            var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            //console.log($tds);
+
+
+            var itmqty = o.parentNode.parentNode.children[2].innerText;
+
+            var itmup = o.parentNode.parentNode.children[3].children[0].value;
+
+            itmqty = Number(itmqty);
+            itmup = Number(itmup);
+
+            var tmnt = $('.tamnt').val()
+            tmnt = Number(itmqty) * Number(itmup);
+
+            $('.tamnt').val(tmnt);
+            var totalamnt = o.parentNode.parentNode.children[4].innerText = (parseFloat(itmqty) * parseFloat(itmup));
+
+            var tmnt = $('#totalAmount').val();
+            tmnt = Number(tmnt) + (Number(itmqty) * Number(itmup))
+            $('#totalAmount').val(tmnt)
+            //alert(tmnt);
+            calculate();
+            //  $("#calculate").trigger("click");
+
+
+        };
+
+        function gridValidation(Id) {
+            errmsg = [];
+            var myTab = $("#example2 tbody");
+            var rtrn = true;
+
+            // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+            myTab.find('tr').each(function (i) {
+                var $tds = $(this).find('td'),
+                    productid = $tds.eq(0).text();
+
+                if (Id == productid) {
+                    rtrn = false;
+                    errmsg.push("Product Already exist");
+                }
+            })
+            if ($('#itemIdx option:selected').val() == '') {
+                rtrn = false;
+                errmsg.push("Select Product");
+            }
+            if ($('#qty').val() <= 0) {
+                rtrn = false;
+                errmsg.push("Qty value is zero");
+            }
+            if ($('#unitPrice').val() <= 0) {
+                rtrn = false;
+                errmsg.push("unit value is zero");
+            }
+            //if ($('#DueDate').val() < 0) {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is Invalid");
+            //}
+            //var dat = $('#DueDate').val()
+            //console.log(moment((new Date())).format("DD-MM-YYYY"));
+            //var today = moment((new Date())).format("DD-MM-YYYY");
+            //var slctddte = moment(dat).format("DD-MM-YYYY");
+
+            //if ((new Date($('#DueDate').val())) == 'Invalid Date') {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is invalid ");
+            //    // alert(errorarray.length);
+            //}
+            //if (slctddte < today) {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is INVALID /Should be greater than current date");
+            //    // alert(errorarray.length);
+            //}
+            return rtrn;
+        }
+
+        function displayerror() {
+            for (var i = 0; i < errmsg.length; i++) {
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                Command: toastr["error"](errmsg[i], "")
+            }
+        }
+
+        function calculate() {
+            var tmnt = $('#totalAmount').val('0');
+            var table = $("#example2 tbody");
+            table.find('tr').each(function (i) {
+                var $tds = $(this).find('td'),
+                    itemamount = $tds.eq(4).text();
+
+                console.log(itemamount);
+                // itemamount = itemamount + itemamount;
+
+                var tamnt = $('#totalAmount').val();
+                tamnt = Number(tamnt) + (Number(itemamount))
+                $('#totalAmount').val(tamnt)
+
+            });
+        }
+
+
+        $("#calculate").click(function (e) {
+
+
+            calculate();
+
+
+
+
+
+
+
+        });
+
+        $("#btnAddPO").click(function (e) {
+
+            e.preventDefault();
+            var datatosend = {
+                objpurchase: {
+                    idx: $('#idx').val(),
+                    poNumber: $('#poNumber').val(),
+                    PINO: $("#PINO option:selected").val(),
+                    //exchangerate: $('#exchangerate').val(),
+                    purchaseDate: $('#purchaseDate').val(),
+                    description: $('#description').val(),
+                    totalAmount: $('#totalAmount').val(),
+                    totalTD: $('#totalTD').val(),
+                    ExchangeRate: $('#exchangerate').val(),
+                    grandTotalAVPKR: $("#grandTotalAVPKR").val(),
+                    numberOfProducts: $("#numberOfProducts").val(),
+
+
+                    //ContainerNo: $('#ContainerNo').val(),
+                    //DocumentNumber: $('#DocumentNumber').val(),
+                    //ExchangeRate:$('#ExchangeRate').val(),
+                    //description: $("#description").val(),
+                    //DepartmentID: $("#DepartmentID option:selected").val(),
+                    //PageList:[{ID:1},{ID:2},{ID:3}]
+                    CILIST: []
+                }
+
+            }
+            var table = $("#example2 tbody");
+
+            var milestonearray = [];
+            var milestonedetails = {
+            };
+            var pomasternetamount = 0;
+            var ExchangeRate = $('#exchangerate').val();
+
+            table.find('tr').each(function (i) {
+                var $tds = $(this).find('td'),
+                    productid = $tds.eq(0).text(),
+                    qty = $tds.eq(2).text(),
+                    unitprice = $tds.eq(3).text(),
+                    TotalACDvalue = $tds.eq(22).text(),
+                    Totallanding = $tds.eq(19).text(),
+                    landing = $tds.eq(8).text(),
+
+                    TDtax = $tds.eq(15).text(),
+
+                    DVRate = $tds.eq(3).text(),
+                    TDVRate = $tds.eq(4).text(),
+                    ADVRate = $tds.eq(5).text();
+
+                datatosend.objpurchase.CILIST.push({
+                        itemIdx: productid,
+                        qty: qty,
+                        unitprice: unitprice,
+                        productTypeIdx: 1,
+                        amount: qty * unitprice,
+                        DVRate: $tds.eq(3).text(),
+                        TDVRate: $tds.eq(4).text(),
+                        ADVRate: $tds.eq(5).text(),
+                        ItemDescription: $tds.eq(6).text(),
+                        ASSVCI: $tds.eq(7).text(),
+                        Landing: $tds.eq(8).text(),
+                        CDPercntage: $tds.eq(9).text(),
+                        RDPercentage: $tds.eq(10).text(),
+                        ACDPercentage: $tds.eq(11).text(),
+                        STPercentage: $tds.eq(12).text(),
+                        ASTPercentage: $tds.eq(13).text(),
+                        ITPercentage: $tds.eq(14).text(),
+                        TDTax: $tds.eq(15).text(),
+                        CleaningPrice: $tds.eq(16).text(),
+                        TotalAmount: $tds.eq(17).text(),
+
+                        TotalASSVSCI: $tds.eq(18).text(),
+                        TotalLanding: $tds.eq(19).text(),
+                        TotalCDValue: $tds.eq(20).text(),
+                        TotalRDValue: $tds.eq(21).text(),
+                        TotalACDValue: $tds.eq(22).text(),
+                        TotalASTValue: $tds.eq(23).text(),
+                        TotalITValue: $tds.eq(24).text(),
+                        TotalSTValue: $tds.eq(25).text(),
+
+                        // Added By Ahsan
+                        clearingExpensePerProduct: (TotalACDvalue * ExchangeRate) * 0.25,
+
+                        //                Actual Value PKR        TD-Tax   clearing expense                         qty
+                        pricePerProduct: (parseFloat(((landing * qty) * ExchangeRate)) + parseFloat(((TotalACDvalue * ExchangeRate) * 0.25)) + parseFloat((TDtax))) / qty
+                    })
+                    ;
+
+            });
+            var form = $("#purchaseform");
+            console.log(datatosend)
+            $.validator.unobtrusive.parse(form);
+            //if ($(form).valid()) // using not operator for a time being
+            if (true) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Commercial/AddUpdateCI",
+                    data: JSON.stringify(datatosend),// JSON.stringify(milestonearray),// $(form).serialize(),
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (res) {
+                        console.log(res);
+                        if (res.success) {
+
+                            window.location.href = "/Commercial/ViewCommercialInvoice/"
+                        }
+                        else if (res.success == false && res.msg == 'Failed') {
+
+                        }
+                    },
+                    failure: function (res) {
+                        console.log(res);
+                    },
+                    err: function (res) {
+                        console.log(res);
+                    }
+
+                })
+            }
+            else {
+                return false;
+            }
+
+        });
+
+
+        //Filter Product Based On HSCODE
+        $('#HSCode').change(function () {
+            // get optios of second dropdown and cache it
+            var $options = $('#itemIdx')
+                // update the dropdown value if necessary
+                .val('')
+                // get options
+                .find('option')
+                // show all of the initially
+                .show();
+            console.log($options);
+            // check current value is not 0
+            if (this.value != '0')
+                $options
+                    // filter out options which is not corresponds to the first option
+                    .not('[data-val="' + this.value + '"],[data-val=""]')
+                    // hide them
+                    .hide();
+        })
+
+
+        //TotalASSV
+        //$('#ASSVCI').keyup(function () {
+        //    var ASSVCI = $(this).val();
+        //    var qty = $("#qty").val();
+        //    $('#tassv').val(qty * ASSVCI);
+        //})
+        function percentage(num, per) {
+            var x = num / 100;
+            return x * per;
+        }
+        function culculateinputs() {
+            var ASSVCI = $('#ASSVCI').val();
+            var qty = $("#qty").val();
+            var exchangerate = $('#exchangerate').val();
+
+            //assvci
+            var tassv = qty * ASSVCI;
+            $('#tassv').val(tassv);
+
+            //Landing
+            var lndingpercntge = percentage(ASSVCI, 2.01);
+            var Landingamount = parseFloat(Number(ASSVCI) + Number(lndingpercntge)).toFixed(2);
+
+            $('#Landing').val(Landingamount);
+            var tlandingamount = ((Landingamount * qty) * (exchangerate)).toFixed(2);
+            $('#tLanding').val(tlandingamount)
+
+
+            //CD
+            var CDPercntge = $('#CDPercntage').val();
+            var tcdvalue = (percentage(tlandingamount, CDPercntge)).toFixed(2);
+            $('#tCDPercntage').val(tcdvalue);
+
+            //RD
+            var RDpercntge = $('#RDPercentage').val();
+            var trdvalue = (percentage(tlandingamount, RDpercntge)).toFixed(2);
+            $('#tRDPercentage').val(trdvalue);
+
+            //ACD
+            var acdpercntage = $('#ACDPercentage').val();
+            var tacdamount = (percentage(tlandingamount, acdpercntage)).toFixed(2);
+            $('#tACDPercentage').val(tacdamount);
+
+
+
+            if (Landingamount > 0 && Number($('#tCDPercntage').val()) > 0 && Number($('#tRDPercentage').val()) > 0 && Number($('#tACDPercentage').val()) > 0 && Number($('#STPercentage').val())) {
+                var tsumofpreviousamnt = (parseFloat(Number($('#tLanding').val())) + parseFloat(Number($('#tCDPercntage').val())) + parseFloat(Number($('#tRDPercentage').val())) + parseFloat(Number($('#tACDPercentage').val())));
+                var STPrcntage = $('#STPercentage').val();
+                var tsdamint = (percentage(tsumofpreviousamnt, STPrcntage)).toFixed(2);
+                //var tsdamint = (parseFloat(Number($('#tLanding').val())) + parseFloat(Number($('#tCDPercntage').val())) + parseFloat(Number($('#tRDPercentage').val())) + parseFloat(Number($('#tACDPercentage').val()))) * (parseFloat(Number($('#STPercentage').val())));
+                console.log(tsdamint)
+                $('#tSTDPercentage').val(tsdamint);
+            }
+            else {
+                $('#tSTDPercentage').val('0');
+            }
+
+            //ASTprice
+            var astprcntage = $('#ASTPercentage').val();
+            var sumofpreviastamount = (parseFloat(Number($('#tLanding').val())) + parseFloat(Number($('#tCDPercntage').val())) + parseFloat(Number($('#tRDPercentage').val())) + parseFloat(Number($('#tACDPercentage').val())));
+            var tastamount = (percentage(sumofpreviastamount, astprcntage)).toFixed(2);
+            $('#tASTPercentage').val(tastamount);
+
+            //IItprice
+            // if (Landingamount > 0 && Number($('#ITPercentage').val()) > 0 && Number($('#tRDPercentage').val()) > 0 && Number($('#tACDPercentage').val()) > 0 && Number($('#STPercentage').val())) {
+
+            var ItPercntage = $('#ITPercentage').val();
+            var sopvsitvlue = (parseFloat(Number(($('#tLanding').val())) + Number($('#tCDPercntage').val()) + Number($('#tSTDPercentage').val()) + Number($('#tRDPercentage').val()) + Number($('#tACDPercentage').val()) + Number($('#tASTPercentage').val()))).toFixed(2);
+            var titvalue = (percentage(sopvsitvlue, ItPercntage)).toFixed(2);
+            //alert(titvalue);
+            $('#tITTPercentage').val(titvalue);
+
+            //TDPRICE
+            //        12                                                14                                      16                               18                                     20                                   22
+            var tdtax = (parseFloat(Number($('#tCDPercntage').val()) + Number($('#tRDPercentage').val()) + Number($('#tACDPercentage').val()) + Number($('#tSTDPercentage').val()) + Number($('#tASTPercentage').val()) + Number($('#tITTPercentage').val()))).toFixed(2);
+            $('#TDTax').val(tdtax);
+
+
+
+            //$('#tCleaningPrice').val(0);
+            //$('#TotalPrice').val(0);
+            //$('#tCleaningPrice').val(((parseFloat(Number($('#TDTax').val())))) * (parseFloat(Number($('#CleaningPrice').val()))).toFixed(2));
+
+            // $('#TotalPrice').val((parseFloat(Number($('#Landing').val())) + parseFloat(Number($('#TDTax').val())) + parseFloat(Number($('#tCleaningPrice').val())) / qty).toFixed(2));
+        }
+
+        function calculation() {
+
+            var table = $("#example2 tbody");
+            $('#totalAmount').val('0');
+            $('#totalTD').val('0');
+            var tamnt = 0;
+            var TotalTD = Number('0');
+            var ExchangeRate = $('#exchangerate').val();
+            if (Number(ExchangeRate) <= 0) {
+                ExchangeRate = 1;
+                $('#exchangerate').val(ExchangeRate);
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                Command: toastr["error"]("Exchange Rate cannot be less than or Equals to 0 !", "")
+            }
+
+
+            table.find('tr').each(function (i) {
+                var $tds = $(this).find('td'),
+                    totalASTV = $tds.eq(16).text(),
+                    totalTD = $tds.eq(15).text();
+
+
+                tamnt = Number(tamnt) + (Number(totalASTV))
+                TotalTD = Number(TotalTD) + (Number(totalTD))
+
+
+            });
+
+            $('#totalAmount').val(tamnt);//Gross Amount Filled
+            $('#totalTD').val(TotalTD);
+
+        }
+    </script>
+}

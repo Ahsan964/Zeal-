@@ -1,0 +1,378 @@
+D:\Projects\SSND\Code\release2\SSS\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\release2\SSS\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\release2\SSS\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SSND\Code\release2\SSS\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\release2\SSS\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\release2\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\release2\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\release2\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SSND\Code\release2\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\release2\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SSND\Code\branches\release2\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\FluentValidation.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\FluentValidation.pdb
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\FluentValidation.xml
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\de\FluentValidation.resources.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\es\FluentValidation.resources.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\fr\FluentValidation.resources.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\it\FluentValidation.resources.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\nl\FluentValidation.resources.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\pl\FluentValidation.resources.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\pt\FluentValidation.resources.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\ru\FluentValidation.resources.dll
+D:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\sv\FluentValidation.resources.dll
+D:\Projects\SSSD\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Projects\SSSD\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Projects\SSSD\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\SSSD\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Projects\SSSD\SSS.Property\obj\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\release2\SSS.Property\bin\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\release2\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+H:\Projects\SSND\Code\branches\release2\SSS.Property\obj\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\release2\SSS.Property\obj\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release3\SSS.Property\bin\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release3\SSS.Property\bin\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release3\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+H:\Projects\SSND\Code\branches\Release3\SSS.Property\obj\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release3\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\ABS-SSS\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Projects\ABS-SSS\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Projects\ABS-SSS\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\ABS-SSS\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Projects\ABS-SSS\SSS.Property\obj\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release4\SSS.Property\bin\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release4\SSS.Property\bin\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release4\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+H:\Projects\SSND\Code\branches\Release4\SSS.Property\obj\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release4\SSS.Property\obj\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release4.4\SSS.Property\bin\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release4.4\SSS.Property\bin\Debug\SSS.Property.pdb
+H:\Projects\SSND\Code\branches\Release4.4\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+H:\Projects\SSND\Code\branches\Release4.4\SSS.Property\obj\Debug\SSS.Property.dll
+H:\Projects\SSND\Code\branches\Release4.4\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\Aqeel\SSS\SSS\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Projects\Aqeel\SSS\SSS\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Projects\Aqeel\SSS\SSS\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Projects\Aqeel\SSS\SSS\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\Aqeel\SSS\SSS\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.Property\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Reports\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-9Targets\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-4\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-5\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-6-BugsSol-15102014\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release4.4-11-Patch-7-BugsSol-16012015\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release5\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release5\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release5\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release5\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release5\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release6\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release6\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release6\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release6\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release6\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release7\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release7\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release7\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release7\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release7\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release8\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release8\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release8\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release8\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release8\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\SSS\Release8\SSS.Property\bin\Debug\SSS.Property.dll
+D:\SSS\Release8\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\SSS\Release8\SSS.Property\obj\Debug\SSS.Property.dll
+D:\SSS\Release8\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\SSS\Release8\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\Code\branches\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+G:\Projects\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\SSS\SSS.Property\bin\Debug\SSS.Property.dll
+D:\SSS\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\SSS\SSS.Property\obj\Debug\SSS.Property.dll
+D:\SSS\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\SSS\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\SSND\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\SSS Development in SFPL\SSS-Complete\Code\LatestUpdatedRelease\SSS Development in SFPL\SSS\CODE\Branches\Release9\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Projects\Latest Update Release\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Projects\Latest Update Release\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Projects\Latest Update Release\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Projects\Latest Update Release\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\Latest Update Release\Release9\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+D:\PROJECTS\Web\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+E:\D Drive\Projects\OSDA2017\Code\trunk\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\C Drive\Projects\Release9\SSS.Property\bin\Debug\SSS.Property.dll
+E:\C Drive\Projects\Release9\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\C Drive\Projects\Release9\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\C Drive\Projects\Release9\SSS.Property\obj\Debug\SSS.Property.dll
+E:\C Drive\Projects\Release9\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.Property\bin\Debug\SSS.Property.dll
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.Property\obj\Debug\SSS.Property.dll
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\C Drive\SSS-SHEZAN_BKOn24012018\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Projects\MS\SSS-SHEZAN-Intigrated25012018\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\C Drive\Projects\Live Projects\SSS.Property\bin\Debug\SSS.Property.dll
+E:\C Drive\Projects\Live Projects\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\C Drive\Projects\Live Projects\SSS.Property\obj\Debug\SSS.Property.dll
+E:\C Drive\Projects\Live Projects\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\C Drive\Projects\Live Projects\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Talha\Main Projects\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Umer\OSDA CCL Pharma\Live Projects\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Umer\OSDA E\Live Projects\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Umer\OSDA E\Live Projects\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Umer\OSDA E\Live Projects\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Umer\OSDA E\Live Projects\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Umer\OSDA E\Live Projects\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Umer\OSDA E\Live Projects\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Umer\OSDA E\Live Projects\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Umer\OSDA E\Live Projects\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Umer\OSDA E\Live Projects\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Umer\OSDA E\Live Projects\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Umer\OSDA E\OSDA E MVC\OSDAEMVC\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\AppiCoders\OSDAs-master\OSDA MVC\OSDAESUITMVC\OSDAESUITMVC\OSDAEMVC\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+E:\TEMPLETE\VICTORY ASP\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+F:\ERP-Ghafoor\VICTORY ASP\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Arsalan\ERP_Ghafoor\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Arsalan\Project\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Arsalan\Project\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Arsalan\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Arsalan\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Arsalan\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Project\Project\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Arsalan\Project\updatedByUmer\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\updatedByUmer\SMSYSTEM\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Arsalan\Project\SMSYSTEM\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\PROJECT14-01-21\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Arsalan\Project\Ghafoor\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-bf72f6\UpdatedProject\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\SMSYSTEM\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\Updated\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Arsalan\UmerUpdatedProject\Updated\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\ARS\wetransfer-2375c6\Updated\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Arsalan\11-02-21UpdatedProject\Updated\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated15-02-21\Updated\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\ABDUL GHAFOOR\Project\wetransfer-017c3f (1)\Updated\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\WajidUpdated\Updated\SSS.Property\bin\Debug\SSS.Property.dll
+D:\WajidUpdated\Updated\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\WajidUpdated\Updated\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\WajidUpdated\Updated\SSS.Property\obj\Debug\SSS.Property.dll
+D:\WajidUpdated\Updated\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Updated (1)\Updated\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\bin\Debug\SSS.Property.dll
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\obj\Debug\SSS.Property.dll
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\WajidUpdated\UmerUpdated\WajidPerception-main\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Visual Studio Projects\MangoTechProjects\WAJID\Project\WajidPerception-main\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\Ahsan\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.dll
+D:\Ahsan\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\Ahsan\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\Ahsan\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.dll
+D:\Ahsan\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Perception BP\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Perception BP\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Perception BP\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Perception BP\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Perception BP\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.pdb
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.dll
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.pdb
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.dll
+D:\AhsanPerc10-06-21\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.dll
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.dll
+E:\Perception BP\11-6-21\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.dll
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.pdb
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.dll
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.pdb
+E:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\bin\Debug\SSS.Property.pdb
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.dll
+H:\office\Perception BP\Updated Perception\Wajid New\WajidPerception-master\SSS.Property\obj\Debug\SSS.Property.pdb
+H:\office\Zeal\Zeal Master\SSS.Property\bin\Debug\SSS.Property.dll
+H:\office\Zeal\Zeal Master\SSS.Property\bin\Debug\SSS.Property.pdb
+H:\office\Zeal\Zeal Master\SSS.Property\obj\Debug\SSS.Property.csprojResolveAssemblyReference.cache
+H:\office\Zeal\Zeal Master\SSS.Property\obj\Debug\SSS.Property.dll
+H:\office\Zeal\Zeal Master\SSS.Property\obj\Debug\SSS.Property.pdb

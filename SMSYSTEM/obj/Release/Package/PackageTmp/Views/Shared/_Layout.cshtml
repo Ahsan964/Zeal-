@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/node_module/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/node_module/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/node_module/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/node_module/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">
+    <link href="~/scripts/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/node_module/datatables.net-bs4/css/dataTables.bootstrap4.css" />
+
+    <link href="~/Dist/css/icon.css" rel="stylesheet" />
+    <link href="~/Dist/image-uploader.min.css" rel="stylesheet" />
+   @* Added By Ahsan*@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+   <style>
+       table.dataTable thead tr {
+  background-color: #03A9F3;
+  color : #F7F7F7;
+  font-family: "roboto-regular", sans-serif;
+  width: 100%;
+}
+   </style>
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="~/node_module/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/node_module/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+    <!-- End plugin css for this page -->
+
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" type="text/css" href="~/scripts/sweetalert2/dist/sweetalert2.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/Dist/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body class="sidebar-dark">
+
+
+    <div class="container-scroller">
+        @Html.Partial("_navbar")
+        <div class="container-fluid page-body-wrapper">
+            <div class="row row-offcanvas row-offcanvas-right">
+                @Html.Partial("_settings_panel")
+
+                @Html.Partial("_sidebar")
+                <div class="content-wrapper">
+                    @RenderBody()
+                </div>
+                @Html.Partial("_footer")
+            </div>
+        </div>
+
+    </div>
+
+    <!-- plugins:js -->
+    <script src="~/node_module/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_module/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/node_module/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/node_module/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="~/node_module/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="~/node_module/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
+    <!-- endinject -->
+    <script src="~/Dist/js/jquery.validate.min.js"></script>
+    <script src="~/Dist/js/jquery.validate.unobtrusive.min.js"></script>
+    <!-- Plugin js for this page-->
+    <!-- Plugin js for this page-->
+<script src="~/scripts/sweetalert2/sweetalert2.min.js"></script>
+<script src="~/scripts/sweetalert2/sweetalert2.js"></script>
+    <script src="~/scripts/sweetalert2/sweetalert2.all.js"></script>
+    <script src="~/node_module/jquery.avgrund/jquery.avgrund.min.js"></script>
+    <!-- End plugin js for this page-->
+    <script src="~/node_module/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script src="~/node_module/chart.js/dist/Chart.min.js"></script>
+    <script src="~/node_module/raphael/raphael.min.js"></script>
+    <script src="~/node_module/morris.js/morris.min.js"></script>
+    <script src="~/node_module/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- End plugin js for this page-->
+    <!--
+DAtatable -->
+    <script src="~/node_module/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="~/node_module/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
+    <!--End DATATABLE-->
+    <!-- inject:js -->
+    <script src="~/Dist/js/off-canvas.js"></script>
+    <script src="~/Dist/js/hoverable-collapse.js"></script>
+    <script src="~/Dist/js/misc.js"></script>
+    <script src="~/Dist/js/settings.js"></script>
+    <script src="~/Dist/js/todolist.js"></script>
+    <!-- endinject -->
+
+    <script src="~/Dist/image-uploader.min.js"></script>
+ 
+    <link href="~/node_module/toastr/toastr.min.css" rel="stylesheet" />
+    <script src="~/node_module/toastr/toastr.min.js"></script>
+    <!-- Custom js for this page-->
+    <script src="~/Dist/js/dashboard.js"></script>
+    <!-- End custom js for this page-->
+    <script src="~/Dist/js/data-table.js"></script>
+    <!-- Custom js for this page-->
+    <script src="~/Dist/js/alerts.js"></script>
+<script src="~/Dist/js/avgrund.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <!-- End custom js for this page-->
+    @RenderSection("MyScripts", required: false)
+</body>
+
+</html>

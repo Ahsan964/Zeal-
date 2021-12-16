@@ -1,0 +1,65 @@
+﻿
+
+
+
+@model SSS.Property.Setups.LP_CustomerBanks_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Bank*:</label>
+                @Html.DropDownListFor(model => model.bankIdx, new SelectList(Model.BankList, "idx", "bankName"), "Select Bank", new { @Class = "select2 form-control font-weight-bold ", @id = "drp" })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.bankIdx, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Customer*:</label>
+                @Html.DropDownListFor(model => model.customerIdx, new SelectList(Model.CustomerList, "idx", "customerName"), "Select Customer", new { @Class = "select2 form-control font-weight-bold" })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.customerIdx, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Account Title</label>
+                @Html.EditorFor(model => model.accountTitle, new { htmlAttributes = new { @placeholder = "accountTitle", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.accountTitle, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Account #</label>
+                @Html.EditorFor(model => model.accountNumber, new { htmlAttributes = new { @placeholder = "Account #", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.accountNumber, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>IBAN #</label>
+                @Html.EditorFor(model => model.ibanNumber, new { htmlAttributes = new { @placeholder = "IBAN #", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.ibanNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+</form>
+
+<script src="~/Scripts/adminlte/components/select2/dist/js/select2.min.js"></script>
+
+<script>
+    $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true, dropdownParent: $('#modelbody') });
+
+</script>

@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewBag.Title = "ViewSalesOrder";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row float-right">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" id="btnaddnew" onclick="@("window.location.href='" + @Url.Action("AddNewSalesOrder", "SalesOrder") + "'");">Add new Sales Invoice<i class="mdi mdi-play-circle ml-1"></i></button>
+        </div>
+    </div>
+    <div class="card-body">
+
+        <h4 class="card-title">Sales Invoice List</h4>
+
+        <div class="row">
+
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="example1" class="table table-striped table-bordered table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>SO-Number</th>
+                                @*<th>Branch</th>*@
+                                <th>Customer</th>
+                                <th>SO-Date</th>
+                                <th>Gross Amount</th>
+                                <th>Net Amount</th>
+                                <th>Description</th>
+                                <th>status</th>
+                                @*<th>Created By</th>*@
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal starts -->
+@*<div class="text-center">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Click for demo<i class="mdi mdi-play-circle ml-1"></i></button>
+    </div>*@
+
+<!-- Modal Ends -->
+
+
+@section MyScripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+           
+            $.ajax({
+                url: "/SalesOrder/GetAllSalesOrder",
+                success: function (data) {
+                    bindCustomersInDataTable(data);
+                }
+            });
+
+
+
+            //add customer button event
+          
+
+            function bindCustomersInDataTable(data) {
+                console.log(data);
+                console.log(JSON.parse(data.data));
+                var dataarray = JSON.parse(data.data);
+                var status = "Blocked".toString();
+                var table = $('#example1').DataTable({
+                    data: JSON.parse(data.data),
+                    columns: [
+
+                        { data: 'soNumber' },
+                        { data: 'customerName' },
+
+
+                         { data: 'salesorderDate' },
+                         { data: 'totalAmount' },
+                         { data: 'netAmount' },
+                         { data: 'description' },
+                         { data: 'statusCode' },
+
+                   {
+                       "data": "idx",
+                       "render": function (ID, type, full, meta) {
+
+                           var check = '';
+                           for (var i = 0; i < dataarray.length; i++) {
+                               if (dataarray[i].idx == ID) {
+                                   console.log(dataarray[i].Productioncheck)
+                                   check = dataarray[i].Productioncheck;
+                               }
+
+                           }
+
+                           if (check == '0') {
+                               return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + ID + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + ID + ')"><i class="fa fa-trash"></i></a>'
+                           } else {
+                               // alert(2);
+                           }
+
+                           return ''
+                       },
+                       "orderable": true,
+                       "searchable": true,
+
+
+                   }
+                    ]
+                });
+
+            }
+            function calculatepercentage(tamt, taxpercent)
+            {
+                var amountInNumber = parseFloat(taxpercent / 100).toFixed(2);
+                return parseFloat(amountInNumber + tamt).toFixed(2);
+            }
+
+        });
+
+        function ShowCustomer(CustomerID) {
+
+            console.log(CustomerID);
+            //$("#isMainBranch").attr("disabled", true);
+
+            var url = "/SalesOrder/AddNewSalesOrder?Id=" + CustomerID;
+            //$("#modelbody").load(url, function (e) {
+            //    //var id = $('#CustomerID').val();
+            //    //if (id > 0) {
+            //    //    $('#btnaddnewclient').html("update ");
+
+            //    //}
+            //    $("#exampleModal").modal("show");
+            //});
+             window.location.href = url;
+
+
+        }
+
+        function ConfirmDelete(CustomerID) {
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+            })
+
+
+            swalWithBootstrapButtons.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/SalesOrder/Delete?id=' + CustomerID,
+
+
+                        dataType: 'JSON',
+                        success: function (res) {
+                            if (res.success) {
+                                swalWithBootstrapButtons.fire(
+                                    'Done!',
+                                    'Blocked',
+                                    'success'
+                                )
+                                window.location.href = "/salesOrder/ViewsalesOrder"
+                            }
+                        }
+                    })
+
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire(
+                        'Cancelled',
+                        'Your imaginary file is safe :)',
+                        'error'
+                    )
+                }
+            })
+        }
+
+
+         function GenerateReport(CustomerID) {
+
+            console.log(CustomerID);
+            var reportname = "SaleOrderReport";
+            // window.location.href = '/MRN/AddNewMRN?id=' + CustomerID;
+            $.ajax({
+                url: "/Base/GenerateReport?id=" + CustomerID + '&query=' + 2 + '&ReportName=' + reportname,
+                success: function (res) {
+                    window.location.href = res.data;
+                }
+            });
+        }
+       
+    </script>
+}
+

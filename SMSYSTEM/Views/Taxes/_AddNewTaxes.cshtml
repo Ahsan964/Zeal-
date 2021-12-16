@@ -1,0 +1,68 @@
+﻿
+
+
+@model SSS.Property.Setups.Taxes_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Tax Name</label>
+                @Html.EditorFor(model => model.taxName, new { htmlAttributes = new { @placeholder = "Tax Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.taxName, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Tax Percentage</label>
+                @Html.EditorFor(model => model.taxPercent, new { htmlAttributes = new { @placeholder = "Tax %", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.taxPercent, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Short Name</label>
+                @Html.EditorFor(model => model.shortName, new { htmlAttributes = new { @placeholder = "Shor Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.shortName, "", new { @class = "text-danger" })
+        </div>
+        <br />
+        @{
+            if (Model.idx > 0)
+            {
+        <div class="col-sm-6">
+    <div class="form-group">
+        <label for="inputName">tax type</label>
+                @Html.EditorFor(model => model.IsClaimble, new { htmlAttributes = new { @placeholder = "", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IsClaimble, "", new { @class = "text-danger" })
+    </div>
+        </div>
+            }
+            else
+            {
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="inputName">tax type</label>
+                        <select id="IsClaimble" class="form-control" name="IsClaimble">
+                            <option value="true">tax input</option>
+                            <option value="false">tax output</option>
+                    
+                        </select>
+                    </div>
+                </div>
+            }
+        }
+
+      
+    </div>
+
+</form>

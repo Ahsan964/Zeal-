@@ -1,0 +1,1102 @@
+﻿
+@model SSS.Property.Transactions.ViewModels.LP_Voucher_ViewModel
+@{
+    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card-body">
+<h3>Payment Voucher</h3>
+<br />
+<form role="form" id="purchaseform">
+@Html.HiddenFor(model => model.idx, new { id = "idx", value = 0 })
+<div class="row">
+    <div class="col-sm-3">
+        <!-- text input -->
+       
+        <div class="form-group">
+           
+            @{
+                if (Model.idx > 0)
+                {
+                    <label>Voucher Type*:</label>
+                    @Html.EditorFor(model => model.voucher_type, new { htmlAttributes = new { @placeholder = "PO Number*:", @class = "form-control", @readonly = true } })
+                }
+                else
+                {
+                    <label>Voucher Type*:</label>
+                    <select class="select2 form-control font-weight-bold" id="voucher_type">
+                        <option value="">Select</option>
+                        <option value="1">Cash</option>
+                        <option value="2">Bank</option>
+                    </select>
+                }
+            }
+            @*@Html.DropDownListFor(model => model.voucher_type, new SelectList(Model.vouchertypelist, "idx", "Name"), "Select Voucher Type", new { @Class = "form-control font-weight-bold" })*@
+           
+            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+        </div>
+        @Html.ValidationMessageFor(model => model.voucher_type, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Transaction Number*:</label>
+            @Html.EditorFor(model => model.voucher_no, new { htmlAttributes = new { @placeholder = "PO Number*:", @class = "form-control", @readonly = true } })
+            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+        </div>
+        @Html.ValidationMessageFor(model => model.voucher_no, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Voucher Date*:</label>
+            @Html.EditorFor(model => model.date_created, new { htmlAttributes = new { @placeholder = "Purchase Date*:", @class = "form-control" } })
+            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+        </div>
+        @Html.ValidationMessageFor(model => model.date_created, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Reference:</label>
+            @Html.EditorFor(model => model.reference, new { htmlAttributes = new { @placeholder = "Refrence:", @class = "form-control" } })
+            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+        </div>
+        @Html.ValidationMessageFor(model => model.reference, "", new { @class = "text-danger" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Nature Type*:</label>
+            <select class="select2 form-control font-weight-bold" id="natureType">
+                <option value="">Select</option>
+                <option value="1">On Account</option>
+                      
+                <option value="2">Expense</option>
+            </select>
+            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+        </div>
+        @Html.ValidationMessageFor(model => model.natureType, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Cash Balance*:</label>
+            @Html.EditorFor(model => model.cashBankBalance, new { htmlAttributes = new { @placeholder = "Balance*:", @class = "form-control", @readonly = true } })
+            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+        </div>
+        @Html.ValidationMessageFor(model => model.cashBankBalance, "", new { @class = "text-danger" })
+                
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Vendor*:</label>
+            @Html.DropDownListFor(model => model.vendor_id, new SelectList(Model.vendorlist, "coaIdx", "vendorName"), "Select Vendor", new { @Class = "select2 form-control font-weight-bold" })
+        </div>
+        @Html.ValidationMessageFor(model => model.vendor_id, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Vendor Balance*:</label>
+            @Html.EditorFor(model => model.vendorBalance, new { htmlAttributes = new { @placeholder = "Vendor Balance*:", @class = "form-control",@readOnly ="true"} })
+            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+        </div>
+        @Html.ValidationMessageFor(model => model.vendorBalance, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Expense*:</label>
+            @Html.DropDownListFor(model => model.exp_id, new SelectList(Model.explist, "idx", "childHeadName"), "Select Expense", new { @Class = "select2 form-control font-weight-bold" })
+        </div>
+        @Html.ValidationMessageFor(model => model.exp_id, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label>Paid Amount*:</label>
+            @Html.EditorFor(model => model.paidAmount, new { htmlAttributes = new { @placeholder = "Paid*:", @class = "form-control" } })
+            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+        </div>
+        @Html.ValidationMessageFor(model => model.paidAmount, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <!-- text input -->
+        <div class="form-group">
+            <label></label>
+            @*<input type="button" class="btn btn-primary form-control" value="Search" id="btnserach" />*@
+            <input type="button" value="+" id="btnaddtogrid" class="btn btn-outline-primary" style="font-size: 20px " />
+        </div>
+    </div>
+</div>
+<div class="row">
+
+</div>
+
+<hr />
+<div class="row" id="PurchaseDetails">
+    <div class="col-md-12">
+        <div class="card card-primary">
+            @*<div class="card-header" style="background-color:black;color:white">*@
+            <h5>+Add</h5>
+            @*<div class="card-tools">
+
+                    </div>*@
+        </div>
+        <div class="">
+                  
+            <div class="row" style="display:block; overflow:scroll" id="milestones">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="">
+                            <table id="example2" class=" table table-dark table-bordered table-hover">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th>Vendor/Expense</th>
+                                    <th>Amount</th>
+                                    <th>Paid Amount</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody style="background:white;color:black; ">
+                                @{
+                                    if (Model.AccountGJLST != null)
+                                    {
+
+                                      
+                                        foreach (var items in Model.AccountGJLST)
+                                        {
+                                            <tr>
+                                                <td style="display:none">@items.coaIdx</td>
+                                                <td>@items.childHeadName</td>
+                                                <td>@items</td>
+                                                <td>@items.paidAmount</td>
+                                                @*<td><i class="icon-trash menu-icon" id="btnaddtogrid"><input type="button" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn-danger" /></i></td>*@
+                                                <td><button id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn btn-outline-danger"><i class="fa fa-trash menu-icon"></i></button></td>
+                                            </tr>
+
+                                        }
+                                    }
+                                }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</div>
+@*<div class="row" id="PurchaseDetails">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h5>Voucher Deatils</h5>
+                        <div class="card-tools">
+                        </div>
+                    </div>
+                    <disv class="">
+
+                        <table id="example2" class="table table-striped table-bordered table-condensed table-hover table-active">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th></th>
+                                    <th>PI No</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Paid Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody class="" style="background:white;">
+                                @{
+                                    if (ViewBag.DetailData != null)
+                                    {
+
+
+
+                                        foreach (var items in ViewBag.DetailData)
+                                        {
+                                            <tr>
+                                                <td></td>
+                                                <td style="display:none">@items.itemIdx</td>
+                                                <td>@items.itemName</td>
+                                                <td>@items.qty</td>
+                                            </tr>
+
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+
+                    </disv>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+
+
+        </div>*@
+<br />
+<div class="row">
+
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label for="inputName">Description</label>
+            @Html.EditorFor(model => model.description, new { htmlAttributes = new { @placeholder = "Description", @class = "form-control" } })
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label for="inputName">Total Amount</label>
+            @Html.EditorFor(model => model.voucher_amount, new { htmlAttributes = new { @placeholder = "Description", @class = "form-control", @readonly = true } })
+        </div>
+    </div>
+    @*<div class="col-sm-3">
+                <div class="form-group">
+                    <label for="inputName">Payment Method</label>
+                    <select id="paymenttype" class="form-control">
+                        <option value="1">Cash</option>
+                        <option value="2">Bank</option>
+                        <option value="3">Cheque</option>
+                    </select>
+                </div>
+            </div>*@
+
+
+</div>
+@*<div class="row" id="paymntmethodoptions" style="display:none;">
+
+            <div class="col-sm-4" id="banks">
+                <div class="form-group">
+                    <label for="inputName">Bank</label>
+                    @Html.DropDownListFor(model => model.bank_id, new SelectList(Model.banklist, "idx", "accountTitle"), "Select Vendor", new { @Class = "form-control font-weight-bold" })
+                </div>
+            </div>
+            <div class="col-sm-4" id="cheqno">
+                <div class="form-group">
+                    <label for="inputName">Cheque</label>
+                    @Html.EditorFor(model => model.account_cheque_no, new { htmlAttributes = new { @placeholder = "Acc /Cheque", @class = "form-control" } })
+                </div>
+            </div>
+        </div>*@
+
+
+<div class="row">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label for="inputName">Payment Method</label>
+            <select id="paymenttype" class="form-control">
+                <option value="0">Select Payment Mode</option>
+                <option value="1">Cash</option>
+                <option value="3">Bank</option>
+                <option value="2">Cheque</option>
+                <option value="4">Customer Payment</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+<div class="row" id="paymntmethodoptions" style="display:none;">
+
+    <div class="col-sm-4" id="banks">
+        <div class="form-group">
+            <label for="inputName">Bank</label>
+            @Html.DropDownListFor(model => model.bankIdx, new SelectList(Model.BankList, "coaIdx", "accountTitle"), "Select Bank", new { @Class = "select2 form-control font-weight-bold" })
+        </div>
+    </div>
+    <div class="col-sm-3" id="cheqno">
+        <div class="form-group">
+            <label for="inputName">Cheque</label>
+            @Html.EditorFor(model => model.accorChequeNumber, new { htmlAttributes = new { @placeholder = "Acc /Cheque", @class = "form-control" } })
+        </div>
+    </div>
+    <div class="col-sm-3" id="customerPaymentBalancediv">
+        <div class="form-group">
+            <label for="inputName">Customer Payment Balance</label>
+            @Html.EditorFor(model => model.customerPaymentBalance, new { htmlAttributes = new { @placeholder = "Acc /Cheque", @class = "form-control", @readOnly = "true" } })
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="modal-footer">
+
+
+
+
+        @*<button type="button" class="btn btn-success" id="btnsubmit">Submit</button>*@
+        <button type="button" class="btn btn-success" id="btnAddSale">Submit</button>
+
+        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+    </div>
+</div>
+</form>
+</div>
+@section MyScripts {
+    <script type="text/javascript">
+        // Added By Ahsan
+        $(document).ready(function() {
+            if (@Model.idx > 0) {
+               
+                var value = $('#voucher_type').val();
+                alert(value);
+                    if (value == 1)
+                    {
+                        $.ajax({
+                            url: "/Payment/getCashBalance",
+                    
+                            success: function (data) {
+                                var POData = JSON.parse(data.data);
+                                PIData = POData;
+                                //console.log(POData[0].numberOfProducts);
+                                $('#cashBankBalance').val(POData[0].cashBalance);
+                                $('#paymntmethodoptions').hide();
+                                $("#paymenttype option[value='2']").attr("disabled", "disabled");
+                                $("#paymenttype option[value='3']").attr("disabled", "disabled");
+                                $("#paymenttype option[value='4']").attr("disabled", "disabled");
+
+                            }
+                        });
+                    }
+                    else
+                    {
+                        $('#cashBankBalance').val("0.00");
+                        $("#paymenttype option[value='2']").attr('disabled', false);
+                        $("#paymenttype option[value='3']").attr("disabled", false);
+                        $("#paymenttype option[value='4']").attr("disabled", false);
+                        $("#paymenttype option[value='1']").attr("disabled", "disabled");
+                    }
+            }
+        });
+        $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true });
+
+        var errmsg;
+        //Add Project Button Event start
+        $("#qty").keyup(function () {
+            var qtyval = $(this).val();
+            //var unitpriceval = $("#unitPrice").val();
+            //var totalamount = qtyval * unitpriceval;
+
+            //$("#amount").val(totalamount);
+        });
+
+        //$('#paymenttype').on('change', function () {
+
+        //    if ($('#paymenttype option:selected').val() == 1) {
+        //        $('#paymntmethodoptions').hide();
+        //    }
+        //    if ($('#paymenttype option:selected').val() == 3) {
+        //        $('#paymntmethodoptions').show();
+        //        $('#cheqno').hide();
+        //    }
+
+        //    if ($('#paymenttype option:selected').val() == 2) {
+        //        $('#paymntmethodoptions').show();
+        //        $('#cheqno').show();
+        //    }
+        //});
+        $("#btnsubmit").click(function (e) {
+            console.log("here");
+            e.preventDefault();
+
+            var datatosend = {
+                objVoucher: {
+                    idx: $('#idx').val(),
+                    voucher_no: $('#voucher_no').val(),
+                    voucher_type: $('#voucher_type option:selected').val(),
+                    date_created: $('#date_created').val(),
+                    description: $('#description').val(),
+                    vendor_id: $('#vendor_id option:selected').val(),
+                    voucher_amount: $('#voucher_amount').val(),
+                    //PageList:[{ID:1},{ID:2},{ID:3}]
+                    VoucherDetails: []
+                }
+
+            }
+            var selected = new Array();
+            $('#example2 input[type="checkbox"]:checked').each(function () {
+                selected.push($(this).val());
+
+                var id, name;
+                PIID = $(this).val();
+
+                PaidAmount = $(this).closest('tr').find('.qty').val();
+
+
+                datatosend.objVoucher.VoucherDetails.push({
+                    parent_doc_id: PIID,
+                    amount: PaidAmount
+                })
+                //alert('ID: ' + id + " | Name: " + name);
+
+            });
+            console.log(datatosend);
+
+            var form = $("#purchaseform");
+
+            // $.validator.unobtrusive.parse(form);
+            // if ($(form).valid()){
+
+            if (true) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Payment/AddUpdate",
+                    data: JSON.stringify(datatosend),// $(form).serialize(),
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (res) {
+                        console.log(res);
+                        if (res.success) {
+                            //Command: toastr["success"]("", "Added Successfuly")
+
+                            //toastr.options = {
+                            //    "closeButton": false,
+                            //    "debug": false,
+                            //    "newestOnTop": false,
+                            //    "progressBar": true,
+                            //    "positionClass": "toast-top-center",
+                            //    "preventDuplicates": false,
+                            //    "onclick": null,
+                            //    "showDuration": "300",
+                            //    "hideDuration": "1000",
+                            //    "timeOut": "5000",
+                            //    "extendedTimeOut": "1000",
+                            //    "showEasing": "swing",
+                            //    "hideEasing": "linear",
+                            //    "showMethod": "fadeIn",
+                            //    "hideMethod": "fadeOut"
+                            //}
+                            window.location.href = "/Payment/Vouchers"
+                        }
+                        else if (res.success == false && res.msg == 'Failed') {
+                            //    Command: toastr["error"]("Invalid ", " Failed")
+
+                            //toastr.options = {
+                            //    "closeButton": false,
+                            //    "debug": false,
+                            //    "newestOnTop": false,
+                            //    "progressBar": true,
+                            //    "positionClass": "toast-top-center",
+                            //    "preventDuplicates": false,
+                            //    "onclick": null,
+                            //    "showDuration": "300",
+                            //    "hideDuration": "1000",
+                            //    "timeOut": "5000",
+                            //    "extendedTimeOut": "1000",
+                            //    "showEasing": "swing",
+                            //    "hideEasing": "linear",
+                            //    "showMethod": "fadeIn",
+                            //    "hideMethod": "fadeOut"
+                            //}
+                        }
+                    },
+                    failure: function (res) {
+                        console.log(res);
+                    },
+                    err: function (res) {
+                        console.log(res);
+                    }
+
+                })
+            }
+            else {
+                return false;
+            }
+
+        });
+
+        $("#btnserach").click(function (e) {
+
+            GetPIData();
+
+            // alert("hello");
+            $('#milestones').show();
+
+
+
+
+
+        });
+
+        function GetPIData() {
+            var datatosearch = {
+                objsearchPI: {
+                    vendor_id: $('#vendor_id option:selected').val(),
+                    From_Date: $('#From_Date').val(),
+                    To_Date: $('#To_Date').val()
+                }
+            }
+
+            console.log(datatosearch);
+
+            //calling API
+            $.ajax({
+                type: 'POST',
+                url: '/Payment/SearchPurchaseInvoice',
+                data: datatosearch,
+                success: function (res) {
+                    BindDataToTable(res);
+                },
+                failure: function (res) {
+                    console.log(res);
+                },
+                err: function (res) {
+                    console.log(res);
+                }
+
+            });
+        }
+
+        function BindDataToTable(res) {
+            $("#example2 tbody").empty();
+            for (var i = 0; i < res.data.length; i++) {
+
+
+                var checkbox = '<input type="checkbox" onclick="calculate();" value="' + res.data[i].idx + '"  />';
+                //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+                //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+                // '</button>'
+                var PINUMBER = res.data[i].InvoiceNo;
+                var Description = res.data[i].Description;
+                var Tamount = res.data[i].BalanceAmount;
+                //var unitprice = $("#unitPrice").val();
+                //var totalamount = $("#amount").val();
+                var paidamount = '<input type="text"value="0.00" id="paidamnt" class="form-control qty" />';
+                var markup = "<tr><td>" + checkbox + "</td><td class='pi'>" + PINUMBER + "</td><td>" + Description + "</td><td>" + Tamount + "</td><td>" + paidamount + "</td></tr>";
+                $("#example2 tbody").append(markup);
+                //if (milestone == "") {
+                //    alert("Enter milestone");
+                //    return;
+                //} else {
+            }
+
+            var tamount = 0;
+        }
+
+        $('#mrnDate').change(function () {
+            var date = $(this).val();
+            console.log(date, 'change')
+            var GivenDate = date;
+            var CurrentDate = new Date();
+            GivenDate = new Date(GivenDate);
+
+            if (GivenDate > CurrentDate) {
+                alert('Given date is greater than the current date.');
+                var today = moment().format('YYYY-MM-DD');
+                $('#mrnDate').val(today);
+            } else {
+                // alert('Given date is not greater than the current date.');
+            }
+        });
+        function SomeDeleteRowFunction(o) {
+            //alert(id);
+            var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            console.log($tds);
+
+            $.each($tds, function () {                // Visits every single <td> element
+                console.log($(this).text());         // Prints out the text within the <td>
+            });
+
+
+            var p = o.parentNode.parentNode;
+
+            p.parentNode.removeChild(p);
+            $(this).closest('tr').remove();
+            calculation();
+
+        };
+        $("#btnaddtogrid").click(function (e) {
+            
+            if (!(gridValidation($("#voucher_type option:selected").val()))) {
+                // alert("Product Alreaty Exist")
+                displayerror();
+                return;
+            }
+
+
+            // alert("hello");
+            $('#milestones').show();
+
+            var actualQty = $("#vendorBalance").val();
+            var closebutton = '<button id="deleterow" onclick="SomeDeleteRowFunction(this)"  class="close btn "><i class="fa fa-trash menu-icon"></i></button>';
+            //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+            //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+            // '</button>'
+            var vendorname, vendorID;
+            if (Number($("#natureType option:selected").val()) == 1)
+            {
+                vendorname = $("#vendor_id option:selected").text();
+                vendorID = $("#vendor_id option:selected").val();
+            }
+            else
+            {
+                vendorname = $("#exp_id option:selected").text();
+                vendorID = $("#exp_id option:selected").val();
+            }
+            
+            
+            var amount = $('#paidAmount').val();
+            
+            var markup = "<tr><td style='display:none;'>" + vendorID + "</td><td>" + vendorname + "</td><td>" + actualQty + "</td><td class='tamnt'>" + amount + "</td><td>" + closebutton + "</td></tr>";
+          
+
+            $("#example2 tbody").append(markup);
+            var tamount = parseFloat($("#voucher_amount").val());
+            //var Amount = $('#amount').val();
+            tamount = parseFloat(tamount) + parseFloat(amount);//+ parseFloat(labourcost) + parseFloat(transportcost);
+            $("#voucher_amount").val(tamount);
+
+            calculation();
+       
+
+
+
+        });
+
+        function calculation() {
+            var tmnt = $('#voucher_amount').val('0');
+            var table = $("#example2 tbody");
+            var calculateNetAmount = 0;
+            var totalTaxAmount = 0;
+            //var tamnt = $('#netAmount').val('0');
+            var grossAmountinInvoice = Number('0');
+            table.find('tr').each(function (i) {
+                var $tds = $(this).find('td'),
+                    itemamount = $tds.eq(3).text();
+
+               
+                grossAmountinInvoice = Number(grossAmountinInvoice) + (Number(itemamount))
+
+            });
+           
+            $('#voucher_amount').val(grossAmountinInvoice);
+
+        }
+        function gridValidation(Id) {
+            errmsg = [];
+            var myTab = $("#example2 tbody");
+            var rtrn = true;
+            if (Id == 1)
+            {
+                // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+                var natureType = $('#natureType option:selected').val();
+                if (parseInt(natureType) == 1) {
+                    var vendorId = $('#vendor_id option:selected').val();
+                    myTab.find('tr').each(function (i) {
+                        var $tds = $(this).find('td'),
+                            coaId = $tds.eq(0).text();
+
+                        if (vendorId == coaId) {
+                            rtrn = false;
+                            errmsg.push("Vendor Already exist");
+                        }
+                       
+                    })
+                    if ($('#vendor_id option:selected').val() == '') {
+                        rtrn = false;
+                        errmsg.push("Select Product");
+                    }
+                    if (parseFloat($('#paidAmount').val()).toFixed(2) < 0) {
+                        rtrn = false;
+                        errmsg.push("Paid Amount Should Be Greater Than Zero!");
+                    }
+                    var balanceAmount = $('#vendorBalance').val();
+                    var paidAmount = parseFloat($('#paidAmount').val()).toFixed(2);
+                   
+                    if (balanceAmount < 0)
+                    {
+                        balanceAmount = parseFloat(balanceAmount * -1).toFixed(2);
+                    }
+                    else//if vendor ko paise dene hoi tou yahan logic aye gi
+                    {
+                    }
+                    var paid = parseFloat(paidAmount).toFixed(2);
+                    var balance = parseFloat(balanceAmount).toFixed(2);
+                    if (Number(paid) > Number(balance)) {
+                        rtrn = false;
+                        errmsg.push("Paid Amount Is Greater Than Remaining Amount!");
+                    }
+                }
+                else if (parseInt(natureType) == 2) {
+                    var expId = $('#exp_id option:selected').val();
+                    myTab.find('tr').each(function (i) {
+                        var $tds = $(this).find('td'),
+                            coaId = $tds.eq(0).text();
+
+                        if (expId == coaId) {
+                            rtrn = false;
+                            errmsg.push("Expense Already Exist!");
+                        }
+                        
+                    })
+                    if ($('#exp_id option:selected').val() == '') {
+                        rtrn = false;
+                        errmsg.push("Select Expense");
+                    }
+                }
+                else
+                {
+                    rtrn = false;
+                    errmsg.push("Select Nature Type!");
+                }
+             
+                
+                
+              
+                
+
+                return rtrn;
+            }
+             
+            else if (Id == 2)
+            {// LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+                myTab.find('tr').each(function (i) {
+                    var $tds = $(this).find('td'),
+                        productid = $tds.eq(0).text();
+
+                    if (Id == productid) {
+                        rtrn = false;
+                        errmsg.push("Product Already exist");
+                    }
+                })
+                if ($('#itemIdx option:selected').val() == '') {
+                    rtrn = false;
+                    errmsg.push("Select Product");
+                }
+                if ($('#qty').val() <= 0) {
+                    rtrn = false;
+                    errmsg.push("Qty value is zero");
+                }
+
+
+                return rtrn;
+            }
+            else
+            {
+                rtrn = false;
+                errmsg.push("Select Nature Please!");
+            }
+            
+        }
+
+        function displayerror() {
+            for (var i = 0; i < errmsg.length; i++) {
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                Command: toastr["error"](errmsg[i], "")
+            }
+        }
+
+        $('#calculateamnt').click(function (e) {
+            calculate();
+
+
+
+
+
+
+        });
+
+        //function calculate() {
+        //    $('#voucher_amount').val('0');
+        //    $('#example2 input[type="checkbox"]:checked').each(function () {
+
+
+        //        PaidAmount = $(this).closest('tr').find('.qty').val();
+
+        //        var tamt = $('#voucher_amount').val()
+        //        tamt = Number(tamt) + Number(PaidAmount);
+        //        $('#voucher_amount').val(tamt)
+        //    });
+        //}
+        
+        $('#voucher_type').on('change', function () {
+            var value = $('#voucher_type option:selected').val();
+            if (value == 1)
+            {
+                $.ajax({
+                    url: "/Payment/getCashBalance",
+                    
+                    success: function (data) {
+                        var POData = JSON.parse(data.data);
+                        PIData = POData;
+                        //console.log(POData[0].numberOfProducts);
+                        $('#cashBankBalance').val(POData[0].cashBalance);
+                        $('#paymntmethodoptions').hide();
+                        $("#paymenttype option[value='2']").attr("disabled", "disabled");
+                        $("#paymenttype option[value='3']").attr("disabled", "disabled");
+                        $("#paymenttype option[value='4']").attr("disabled", "disabled");
+
+                    }
+                });
+            }
+            else
+            {
+                $('#cashBankBalance').val("0.00");
+                $("#paymenttype option[value='2']").attr('disabled', false);
+                $("#paymenttype option[value='3']").attr("disabled", false);
+                $("#paymenttype option[value='4']").attr("disabled", false);
+                $("#paymenttype option[value='1']").attr("disabled", "disabled");
+            }
+        });
+        $('#vendor_id').on('change', function () {
+            var value = $('#vendor_id option:selected').val();
+            if (value > 0) {
+                $.ajax({
+                    url: "/Payment/getVendorBalance",
+                    data: { id: value },
+                    success: function (data) {
+                        var POData = JSON.parse(data.data);
+                        PIData = POData;
+                        //console.log(POData[0].numberOfProducts);
+                        $('#vendorBalance').val(POData[0].vendorBalance);
+                        $('#paymntmethodoptions').hide();
+
+
+                    }
+                });
+            }
+            else {
+                $('#vendorBalance').val("0.00");
+            }
+        });
+        $('#natureType').on('change', function () {
+            var value = $('#natureType option:selected').val();
+            if (value == 1) {
+                $("#exp_id")[0].selectedIndex = 0;
+                $("#exp_id").prop("disabled", true);
+                $("#vendor_id").prop("disabled", false);
+            }
+            else if (value == 2) {
+                $("#vendor_id")[0].selectedIndex = 0;
+                $("#vendor_id").prop("disabled", true);
+                $('#vendorBalance').val(0.00);
+                $("#exp_id").prop("disabled", false)
+            }
+            else
+            {
+                $("#vendor_id")[0].selectedIndex = 0;
+                $("#vendor_id").prop("disabled", false);
+                $("#exp_id")[0].selectedIndex = 0;
+                $("#exp_id").prop("disabled", false);
+            }
+        });
+
+        $('#paymenttype').on('change', function () {
+            if ($('#paymenttype option:selected').val() == 0) {
+                $('#paymntmethodoptions').hide();
+                $('#divTxtPaid').hide();
+                $('#paidAmount').val('0.00');
+                calculation();
+            }
+            if ($('#paymenttype option:selected').val() == 1) {
+                $('#paymntmethodoptions').hide();
+                $('#divTxtPaid').show();
+                $('#customerPaymentBalancediv').hide();
+                $('#customerPaymentBalance').val("0");
+
+            }
+            if ($('#paymenttype option:selected').val() == 3) {
+                $('#paymntmethodoptions').show();
+                $('#cheqno').hide();
+                $('#customerBanks').hide();
+                $('#divTxtPaid').show();
+                $('#customerPaymentBalancediv').hide();
+                $('#customerPaymentBalance').val("0");
+            }
+
+            if ($('#paymenttype option:selected').val() == 2) {
+                $('#paymntmethodoptions').show();
+                $('#cheqno').show();
+                $('#customerBanks').show();
+                $('#divTxtPaid').show();
+                $('#customerPaymentBalancediv').hide();
+                $('#customerPaymentBalance').val("0");
+            }
+            if ($('#paymenttype option:selected').val() == 4) {
+                $('#paymntmethodoptions').show();
+                $('#customerIdx').trigger("change");
+                $('#customerBanks').show();
+
+                $('#cheqno').show();
+                $('#banks').hide()
+                $("#bankIdx").prop('selectedIndex', 0);
+                $('#divTxtPaid').show();
+                $('#customerPaymentBalancediv').show();
+                $.ajax({
+                    url: "/Payment/getCustomerPaymentBalance",
+
+                    success: function (data) {
+                        var POData = JSON.parse(data.data);
+                        PIData = POData;
+                        //console.log(POData[0].numberOfProducts);
+                        $('#customerPaymentBalance').val(POData[0].customerPaymentBalance);
+                        
+
+                    }
+                });
+            }
+        });
+
+        $("#btnAddSale").click(function (e) {
+
+            e.preventDefault();
+            var form = $("#purchaseform");
+            var paymentModeIdx = $('#paymenttype option:selected').val();
+            var totalAmount = $('#voucher_amount').val();
+            var bankId = $("#bankIdx option:selected").val();
+            var cheque = $("#accorChequeNumber").val();
+            var customerPaymentBalance = $('#customerPaymentBalance').val();
+            if (paymentModeIdx > 0 && totalAmount > 0) {
+                if (paymentModeIdx == 1 || paymentModeIdx == 4) {
+                    $("#bankIdx option:selected").val("");
+                    $("#accorChequeNumber").val("");
+                    if (paymentModeIdx == 4)
+                    {
+                        if (customerPaymentBalance < totalAmount)
+                        {
+                            return false;//CustomerPayment BalanceAmount kam hai 
+                        }
+                    }
+                }
+                else if (paymentModeIdx == 2 || paymentModeIdx == 3) {
+                    if (bankId > 0) {
+                        if (paymentModeIdx == 2) {
+                            if (cheque != null) {
+                            }
+                            else {
+                                return false;//cheque number not added
+                            }
+
+                        }
+                    }
+                    else {
+                        return false;//Bank Should be Selected Error toastr
+                    }
+                }
+                else {
+                    return false;//Return Toastr For Error Due to Validation of PaymentMode
+                }
+                var datatosend = {
+                    objVoucher: {
+                        idx: $('#idx').val(),
+                        reference: $('#reference').val(),
+                        voucher_no: $('#voucher_no').val(),
+                        vendor_id: $('#vendor_id option:selected').val(),
+                        date_created: $('#date_created').val(),
+                        description: $("#description").val(),
+                        voucher_amount: $("#voucher_amount").val(),
+                        paymentModeIdx: $("#paymenttype option:selected").val(),
+                        bankIdx: $("#bankIdx option:selected").val(),
+                        accorChequeNumber: $("#accorChequeNumber").val(),
+                        AccountGJLST: [],
+
+
+                    }
+
+                }
+                var table = $("#example2 tbody");
+
+                var milestonearray = [];
+                var milestonedetails = {
+                };
+                var pomasternetamount = 0;
+                table.find('tr').each(function (i) {
+                    var $tds = $(this).find('td'),
+                        vendorIdx = $tds.eq(0).text(),
+                        invoiceNoIdx = $('#voucher_no').val();
+                    balanceAmount = $tds.eq(2).text(),
+                        paidAmount = $tds.eq(3).text()
+                        
+
+
+
+                    datatosend.objVoucher.AccountGJLST.push({
+                            vendorIdx: vendorIdx,
+                            coaIdx : vendorIdx,
+                            invoiceNo: invoiceNoIdx,
+                            debit: balanceAmount,
+                            credit: paidAmount
+                        
+
+                        })
+                        ;
+
+                });
+
+                console.log(JSON.stringify(datatosend));
+
+
+
+                var form = $("#purchaseform");
+                console.log(datatosend)
+                $(this).removeData("validator").removeData("unobtrusiveValidation");//remove the form validation
+                $.validator.unobtrusive.parse($(this));//add the form validation
+                //$.validator.unobtrusive.parse(form);
+                //if ($(form).valid()) // using not operator for a time being
+                if ($(form).valid()) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Payment/AddUpdate",
+                        data: JSON.stringify(datatosend),// JSON.stringify(milestonearray),// $(form).serialize(),
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function (res) {
+                            console.log(res);
+                            if (res.success) {
+
+                                window.location.href = "/Payment/Vouchers"
+                            }
+                            else if (res.success == false && res.msg == 'Failed') {
+
+                            }
+                        },
+                        failure: function (res) {
+                            console.log(res);
+                        },
+                        err: function (res) {
+                            console.log(res);
+                        }
+
+                    })
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                return false;
+            }
+
+
+        });
+    </script>
+}

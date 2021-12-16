@@ -1,0 +1,56 @@
+﻿
+@model SSS.Property.Setups.Bank_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Bank Name *:</label>
+                @Html.EditorFor(model => model.bankName, new { htmlAttributes = new { @placeholder = "Bank Name", @class = "form-control" } })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.bankName, "", new { @class = "text-danger" })
+        </div>
+        @*<div class="col-sm-6">
+            <div class="form-group">
+                <label>Address</label>
+                @Html.EditorFor(model => model., new { htmlAttributes = new { @placeholder = "WareHouseName", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.WareHouseName, "", new { @class = "text-danger" })
+        </div>*@
+    </div>
+    @*<div class="row">
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Vendor Name</label>
+                    @Html.EditorFor(model => model.customerName, new { htmlAttributes = new { @placeholder = "Customer Name", @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(model => model.customerName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Contact#</label>
+                    @Html.EditorFor(model => model.contact, new { htmlAttributes = new { @placeholder = "Contact", @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(model => model.contact, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>Address</label>
+                    @Html.EditorFor(model => model.address, new { htmlAttributes = new { @placeholder = "Address", @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+            </div>
+
+        </div>*@
+</form>

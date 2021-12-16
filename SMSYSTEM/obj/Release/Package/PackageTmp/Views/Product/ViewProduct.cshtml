@@ -1,0 +1,362 @@
+﻿
+@{
+    ViewBag.Title = "ViewProduct";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" id="btnaddnew">Add new Product<i class="mdi mdi-play-circle ml-1"></i></button>
+        </div>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Product List</h4>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="example1" class="table table-striped table-bordered table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                @*<th>Product Type</th>*@
+                                <th>Category</th>
+                                <th>Sub-Category</th>
+                                <th>HS-CODE</th>
+                                <th>Item Code</th>
+                                <th>Item</th>
+                                @*<th>Unit</th>*@
+                                @*<th>Description</th>*@
+                                <th>Created By</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal starts -->
+@*<div class="text-center">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Click for demo<i class="mdi mdi-play-circle ml-1"></i></button>
+    </div>*@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add New Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modelbody">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btnsubmit">Submit</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Ends -->
+
+
+@section MyScripts {
+    <script type="text/javascript">
+       
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "/Product/GetAllProducts",
+                success: function (data) {
+                    bindCustomersInDataTable(data);
+                }
+            });
+
+            //show popup
+            $("#btnaddnew").click(function () {
+                //$.post("/Customer/AddCustomer", function (data) {
+                //    $("#modal-default").html(data);
+                //});
+
+                $("#modelbody").load("/Product/AddNewProduct", function (e) {
+                    $("#modal-default").modal("show");
+
+                });
+                
+            })
+            //$("input[name='images'").change(function (evnt) {
+            //    console.log("testing");
+            //    console.log(fileinput.value);
+            //    //console.log(filelist);
+            //    console.log("testing");
+            //});
+
+            //add customer button event
+            debugger;
+            $("#btnsubmit").click(function (e) {
+                console.log("here");
+                e.preventDefault();
+                var form = $("#addnewform")[0];
+                var imagelist = $("#addnewform")
+                var formdata = new FormData(form);
+                // formdata = $('#addnewform')[0];;
+                var imagefiles = document.getElementsByName("images")
+                console.log(imagefiles)
+                let $inputImages = imagelist.find('input[name^="images"]');
+                if ($inputImages[0].files.length > 0) {
+                    for (var i = 0; i < $inputImages[0].files.length ; i++) {
+                        formdata.append("PicturePath", $inputImages[0].files[i]);
+                     
+                    }
+                }
+                console.log($inputImages);
+                debugger;
+                var uploadedImgList = $("div[data-preloaded='true']");
+                for (var j = 0; j < uploadedImgList.length ; j++) {
+                    formdata.append("ProductPictureList[" + j + "].PicturePath", $(uploadedImgList[j]).find('img').attr('src'));
+                }
+               
+                //if (!$inputImages.length) {
+                //    $inputImages = form.find('input[name^="photos"]')
+                //    alert($inputImages.length)
+                //    $inputImages.each(function (i, file) {
+                //        console.log("alif")
+                //    });
+                //}
+                //for (var i = 0; i < imagefiles.files.length; i++) {
+                //    alert("HEllo");
+                //}
+                //formdata.append("PicturePath", pic1.files[0]);
+                //formdata.append("PicturePath", pic2.files[0]);
+                //formdata.append("PicturePath", pic3.files[0]);
+               $.validator.unobtrusive.parse(form);
+                if ($(form).valid())
+                {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Product/AddUpdate",
+                        data: formdata,// $(form).serialize(),
+                        contentType: false,
+                        processData: false,
+                        success: function (res) {
+                            console.log(res);
+                            if (res.success) {
+                                Command: toastr["success"]("", "Added Successfuly")
+
+                                toastr.options = {
+                                    "closeButton": false,
+                                    "debug": false,
+                                    "newestOnTop": false,
+                                    "progressBar": true,
+                                    "positionClass": "toast-top-center",
+                                    "preventDuplicates": false,
+                                    "onclick": null,
+                                    "showDuration": "300",
+                                    "hideDuration": "1000",
+                                    "timeOut": "5000",
+                                    "extendedTimeOut": "1000",
+                                    "showEasing": "swing",
+                                    "hideEasing": "linear",
+                                    "showMethod": "fadeIn",
+                                    "hideMethod": "fadeOut"
+                                }
+                                window.location.href = "/Product/ViewProduct/"
+                            }
+                            else if (res.success == false && res.msg == 'Failed') {
+                                    Command: toastr["error"]("Invalid ", " Failed")
+
+                                toastr.options = {
+                                    "closeButton": false,
+                                    "debug": false,
+                                    "newestOnTop": false,
+                                    "progressBar": true,
+                                    "positionClass": "toast-top-center",
+                                    "preventDuplicates": false,
+                                    "onclick": null,
+                                    "showDuration": "300",
+                                    "hideDuration": "1000",
+                                    "timeOut": "5000",
+                                    "extendedTimeOut": "1000",
+                                    "showEasing": "swing",
+                                    "hideEasing": "linear",
+                                    "showMethod": "fadeIn",
+                                    "hideMethod": "fadeOut"
+                                }
+                            }
+                        },
+                        failure: function (res) {
+                            console.log(res);
+                        },
+                        err: function (res) {
+                            console.log(res);
+                        }
+
+                    })
+                }
+                else {
+                    return false;
+                }
+
+            });
+
+            function bindCustomersInDataTable(data) {
+                console.log(data);
+                console.log(JSON.parse(data.data));
+                var status = "Blocked".toString();
+                var table = $('#example1').DataTable({
+                    "order": [[4, "desc"]],
+                    data: JSON.parse(data.data),
+                    columns: [
+
+                        //{ data: 'productType' },
+                        { data: 'Category' },
+                         { data: 'subCategory' },
+                         { data: 'HSCODE' },
+                         { data: 'itemCode' },
+                         { data: 'itemName' },
+                         //{ data: 'description' },
+                         { data: 'userName' },
+                        //{ data: 'lastName' },
+                        //{ data: 'CNIC' },
+                        //{ data: 'cellNumber' },
+                        //{ data: 'loginId' },
+                        //{ data: 'createdByUserIdx' },
+                        //or { data: 'MONTH', title: 'Month' }`
+
+                        {
+                            //"data": function (data, type, dataToSet) {
+
+                            //    if (data.Is_Active) {
+
+                            //        return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + data.ID + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + data.ID + ')"><i class="fa fa-trash"></i></a>'
+                            //    }
+                            //    else {
+                            //        return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + data.ID + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + data.ID + ')"><i class="fa fa-trash-o">&#xf014;</i></a>'
+
+                            //    }
+
+                              //  return data.Status + "<br/>" + data.Name;
+                            "data": "idx",
+                            "render": function (idx, type, full, meta) {
+
+                                return '<a href="#" class="btn btn-info" onclick="ShowCustomer(' + idx + ')"><i class="fa fa-eye"></i></a> <a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + idx + ')"><i class="fa fa-trash"></i></a>'
+                                //<a href="#" class="btn btn-danger" onclick="ConfirmDelete(' + ID + ')"><i class="fa fa-trash"></i></a>
+
+                        },
+                            "orderable": true,
+                            "searchable": true,
+
+
+                        }
+                    ]
+                });
+
+            }
+
+
+        });
+
+        function ShowCustomer(CustomerID) {
+
+            console.log(CustomerID);
+            //$("#isMainBranch").attr("disabled", true);
+
+            var url = "/Product/AddNewProduct?Id=" + CustomerID;
+            $("#modelbody").load(url, function (e) {
+                var id = $('#CustomerID').val();
+                if (id > 0) {
+                    $('#btnaddnewclient').html("update ");
+
+                }
+                $("#exampleModal").modal("show");
+            });
+           // window.location.href = url;
+
+
+        }
+
+        function ConfirmDelete(CustomerID) {
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+            })
+
+
+            swalWithBootstrapButtons.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/Product/Delete?id=' + CustomerID,
+
+
+                        dataType: 'JSON',
+                        success: function (res) {
+                            if (res.success) {
+                                swalWithBootstrapButtons.fire(
+                                    'Done!',
+                                    'Blocked',
+                                    'success'
+                                )
+                                window.location.href = "/Product/ViewProduct/"
+                            }
+                        }
+                    })
+
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire(
+                        'Cancelled',
+                        'Your imaginary file is safe :)',
+                        'error'
+                    )
+                }
+            })
+        }
+
+        
+
+      
+
+
+       
+  
+        @*$("#productCatIdx").change(function () {
+            cattext = $("#productCatIdx option:selected").val();
+            if (Number(cattext) > 0)
+            {
+                var CatList =@Html.Raw(ViewBag.catLST);
+
+                for (var i = 0; i < CatList.hasOwnProperty.length; i++) {
+                    console.log[CatList[i]];
+                }
+            }
+            GenerateHSCode();
+        })
+        $("#productSubCatIdx").change(function () {
+            subcattext = $("#productSubCatIdx option:selected").text();
+            GenerateHSCode();
+        })
+
+        function GenerateHSCode() {
+
+            $("#HSCODE").val(cattext+"-"+subcattext);
+        }*@
+
+    </script>
+}

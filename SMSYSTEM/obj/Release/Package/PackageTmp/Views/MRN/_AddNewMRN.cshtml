@@ -1,0 +1,323 @@
+﻿
+@model SSS.Property.Setups.MRNVM_Property
+@{
+    Layout = null;
+}
+<div class="card-body">
+    <form role="form" id="purchaseform">
+        @Html.HiddenFor(model => model.idx, new { id = "idx", value = 0 })
+        <div class="row">
+          
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>MR Number*:</label>
+                    @Html.EditorFor(model => model.mrNumber, new { htmlAttributes = new { @placeholder = "PO Number*:", @class = "form-control", @readonly = true } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.mrNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>MRN Date*:</label>
+                    @Html.EditorFor(model => model.mrnDate, new { htmlAttributes = new { @placeholder = "Purchase Date*:", @class = "form-control" } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.mrnDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="row" id="PurchaseDetails" >
+            <div class="col-md-12">
+                <div class="card card-primary" >
+                    <div class="card-header" style="background:white;">
+                        <h3 class="card-title">MRN Details</h3>
+                        <div class="card-tools">
+                            
+                        </div>
+                       
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="inputName">Product Name</label>
+
+                                            @Html.DropDownListFor(model => model.itemIdx, new SelectList(Model.ProductList, "idx", "itemName"), "Select Product", new { @Class = "form-control font-weight-bold" })
+                                            @*<select id="itemIdx" name="itemIdx">
+                                                    <option value="">Select Item </option>
+                                                </select>*@
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="inputProjectLeader">Quantity</label>
+                                            @Html.EditorFor(model => model.qty, new { htmlAttributes = new { @placeholder = "Qty", @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    @*<div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="inputProjectLeader">Unit Price(KG)</label>
+                                            @Html.EditorFor(model => model.unitPrice, new { htmlAttributes = new { @placeholder = "Unit Price", @class = "form-control" } })
+                                        </div>
+                                    </div>*@
+                                    @*<div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="inputProjectLeader">Total Price</label>
+                                            @Html.EditorFor(model => model.amount, new { htmlAttributes = new { @placeholder = "Total Price", @class = "form-control", @readonly = true } })
+                                        </div>
+                                    </div>*@
+                                    @*<div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label for="inputProjectLeader">Due Date</label>
+                                                @Html.EditorFor(model => model.DueDate, new { htmlAttributes = new { @placeholder = "Due Date", @class = "form-control" } })
+                                            </div>
+                                        </div>*@
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="inputProjectLeader">.</label>
+                                            <input type="button" class="btn btn-primary form-control" value="Add Item" id="btnaddtogrid" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="display:block; overflow:scroll" id="milestones">
+                            <div class="col-md-12">
+                                <div class="card card-primary">
+                                    <div class="card-header" style="background-color:rgb(43, 174, 240);">
+                                        <h3 class="card-title" style=" color:white">Purchase Details</h3>
+                                        <div class="card-tools">
+
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="example2" class="table table-striped table-bordered table-condensed table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product Name</th>
+                                                    <th>Quantity</th>
+                                                    @*<th>Unit Price(KG)</th>
+                                                    <th>Total Amount</th>*@
+                                                    @*<th>Due Date</th>*@
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @{
+                                                    if (ViewBag.DetailData != null)
+                                                    {
+                                                        
+
+
+                                                        foreach (var items in ViewBag.DetailData)
+                                                        {
+                                                <tr>
+                                                    <td style="display:none">@items.itemIdx</td>
+                                                    <td>@items.itemName</td>
+                                                    <td>@items.qty</td>
+                                                    <td><input type="button" value="x" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close" /></td>
+                                                </tr>
+
+                                                        }
+                                                    }
+                                                }
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+
+
+
+
+        </div>
+        <br />
+        <div class="row">
+
+
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="inputName">Description</label>
+                    @Html.EditorFor(model => model.description, new { htmlAttributes = new { @placeholder = "Description", @class = "form-control" } })
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </form>
+</div>
+
+<script type="text/javascript">
+  
+    var errmsg;
+    //Add Project Button Event start
+    $("#qty").keyup(function () {
+        var qtyval = $(this).val();
+        //var unitpriceval = $("#unitPrice").val();
+        //var totalamount = qtyval * unitpriceval;
+
+        //$("#amount").val(totalamount);
+    });
+   
+
+
+
+    $("#btnaddtogrid").click(function (e) {
+        if (!(gridValidation($("#itemIdx option:selected").val()))) {
+           // alert("Product Alreaty Exist")
+            displayerror();
+            return;
+        }
+
+
+       // alert("hello");
+        $('#milestones').show();
+        var closebutton = '<input type="button" value="x" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close" />';
+            //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+                         //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+                         // '</button>'
+        var productname = $("#itemIdx option:selected").text();
+        var ProductID = $("#itemIdx option:selected").val();
+        var Qty = $("#qty").val();
+        //var unitprice = $("#unitPrice").val();
+        //var totalamount = $("#amount").val();
+        //var duedate = $("#DueDate").val();
+        var markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + Qty + "</td><td>" + closebutton + "</td></tr>";
+        //if (milestone == "") {
+        //    alert("Enter milestone");
+        //    return;
+        //} else {
+
+        $("#example2 tbody").append(markup);
+        var tamount = 0;
+      
+
+
+    });
+    $('#mrnDate').change(function () {
+        var date = $(this).val();
+        console.log(date, 'change')
+        var GivenDate = date;
+        var CurrentDate = new Date();
+        GivenDate = new Date(GivenDate);
+
+        if (GivenDate > CurrentDate) {
+            alert('Given date is greater than the current date.');
+            var today = moment().format('YYYY-MM-DD');
+            $('#mrnDate').val(today);
+        } else {
+           // alert('Given date is not greater than the current date.');
+        }
+    });
+    function SomeDeleteRowFunction(o) {
+        //alert(id);
+        var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+             $tds = $row.find("td:nth-child(2)");
+        console.log($tds);
+
+        $.each($tds, function () {                // Visits every single <td> element
+            console.log($(this).text());         // Prints out the text within the <td>
+        });
+
+       
+        var p = o.parentNode.parentNode;
+
+        p.parentNode.removeChild(p);
+        $(this).closest('tr').remove();
+
+
+    };
+
+    function gridValidation(Id) {
+        errmsg = [];
+        var myTab = $("#example2 tbody");
+        var rtrn = true;
+
+        // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+        myTab.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+                productid = $tds.eq(0).text();
+
+            if(Id==productid){
+                rtrn = false;
+                errmsg.push("Product Already exist");
+            }
+        })
+        if ($('#itemIdx option:selected').val() =='') {
+            rtrn = false;
+            errmsg.push("Select Product");
+        }
+        if ($('#qty').val() <= 0) {
+            rtrn = false;
+            errmsg.push("Qty value is zero");
+        }
+  
+        //if ($('#DueDate').val() < 0) {
+        //    rtrn = false;
+        //    errmsg.push("DUE date is Invalid");
+        //}
+        //var dat = $('#DueDate').val()
+        //console.log(moment((new Date())).format("DD-MM-YYYY"));
+        //var today = moment((new Date())).format("DD-MM-YYYY");
+        //var slctddte = moment(dat).format("DD-MM-YYYY");
+
+        //if ((new Date($('#DueDate').val())) == 'Invalid Date') {
+        //    rtrn = false;
+        //    errmsg.push("DUE date is invalid ");
+        //    // alert(errorarray.length);
+        //}
+        //if (slctddte < today) {
+        //    rtrn = false;
+        //    errmsg.push("DUE date is INVALID /Should be greater than current date");
+        //    // alert(errorarray.length);
+        //}
+        return rtrn;
+    }
+
+    function displayerror() {
+        for (var i = 0; i < errmsg.length; i++) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            Command: toastr["error"](errmsg[i], "")
+        }
+    }
+</script>
+

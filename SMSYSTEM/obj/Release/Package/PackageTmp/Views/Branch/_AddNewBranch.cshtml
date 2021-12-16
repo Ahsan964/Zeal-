@@ -1,0 +1,77 @@
+﻿
+
+
+@model SSS.Property.Setups.Branch_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Branch Name</label>
+                @Html.EditorFor(model => model.branchName, new { htmlAttributes = new { @placeholder = "Branch Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.branchName, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Contact Number</label>
+                @Html.EditorFor(model => model.contactNumber, new { htmlAttributes = new { @placeholder = "Contact Number", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.contactNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Address</label>
+                @Html.EditorFor(model => model.address, new { htmlAttributes = new { @placeholder = "Address", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group checking">
+                <label class="form-check-label">
+                    <input id="isMainBranch" class="check" name="IsMainBranch" value="1" type="checkbox" />
+                    Main Branch
+                </label>
+                @*<label>Main Branch</label>
+                @Html.CheckBoxFor(model => bool.Parse(model.isMainBranch.ToString()))*@
+            </div>
+            @*@Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })*@
+        </div>
+    </div>
+    
+</form>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("#isMainBranch").change(function () {
+
+            var checked = $(this).is(":checked");
+            if (checked) {
+                var form = $('#addnewform').serialize();
+                console.log(form);
+
+                //alert("123");
+            } else {
+               alert("No");
+            }
+        });
+
+    });
+
+        
+
+    
+
+</script>

@@ -1,0 +1,580 @@
+﻿@model SSS.Property.Setups.PurchaseVM_Property
+@{
+    ViewBag.Title = "AddNewPurchase";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="card-body">
+    <h3>Purchase Order</h3>
+    <br />
+    <form role="form" id="purchaseform">
+        @Html.HiddenFor(model => model.idx, new { id = "idx", value = 0 })
+
+
+        <div class="row">
+
+            @{
+                if (Model.idx > 0)
+                {
+
+                }
+                else
+                {
+                    <div class="col-sm-3">
+                        <!-- text input -->
+
+                        <div class="form-group">
+                            <label>MR#:</label>
+
+                            @Html.DropDownListFor(model => model.MRNIdx, new SelectList(Model.MRList, "idx", "mrNumber"), "Select MRN", new { @Class = "form-control font-weight-bold" })
+
+                        </div>
+                        @Html.ValidationMessageFor(model => model.MRNIdx, "", new { @class = "text-danger" })
+                    </div>
+                }
+            }
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Vendor*:</label>
+
+                    @Html.DropDownListFor(model => model.vendorIdx, new SelectList(Model.VendorLST, "idx", "vendorName"), "Select Vendor", new { @Class = "form-control font-weight-bold" })
+
+                </div>
+                @Html.ValidationMessageFor(model => model.vendorIdx, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>PO#*:</label>
+                    @Html.EditorFor(model => model.poNumber, new { htmlAttributes = new { @placeholder = "PO Number*:", @class = "form-control", @readonly = true } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.poNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Date*:</label>
+                    @Html.EditorFor(model => model.purchaseDate, new { htmlAttributes = new { @placeholder = "Purchase Date*:", @class = "form-control" } })
+                    @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.purchaseDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>Select Department*:</label>
+                    @Html.DropDownListFor(model => model.DepartmentID, new SelectList(Model.DepartmentList, "idx", "Department"), "Select Department", new { @Class = "form-control font-weight-bold" })
+                </div>
+                @Html.ValidationMessageFor(model => model.DepartmentID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+
+        <div class="row" id="PurchaseDetails">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h5>+Add Product</h5>
+                        <div class="card-tools">
+
+                        </div>
+                    </div>
+                    <div class="">
+                        <table class="table table-striped table-bordered table-condensed table-hover table-active">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Item Name</th>
+                                    <th>QTY</th>
+                                    <th>Purchase Rate</th>
+                                    <th>Sub Amount</th>
+                                    <th>Action</th>
+                                </tr>
+
+                            </thead>
+                            <tbody class="" style="background:white;">
+                                <tr>
+                                    <td>@Html.DropDownListFor(model => model.itemIdx, new SelectList(Model.ProductList, "idx", "itemName"), "Select Product", new { @Class = "form-control font-weight-bold" })</td>
+
+                                    <td>@Html.EditorFor(model => model.qty, new { htmlAttributes = new { @placeholder = "Qty", @class = "form-control" } })</td>
+                                    <td>@Html.EditorFor(model => model.unitPrice, new { htmlAttributes = new { @placeholder = "Unit Price", @class = "form-control" } })</td>
+                                    <td>@Html.EditorFor(model => model.amount, new { htmlAttributes = new { @placeholder = "Sub Amount", @class = "form-control", @readonly = true } })</td>
+
+                                    <td>
+
+
+                                        <input type="button" value="+" id="btnaddtogrid" class="btn btn-outline-primary" style="font-size: 20px " />
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div class="row" style="display:block; overflow:scroll" id="milestones">
+                            <div class="col-md-12">
+                                <div class="card card-primary">
+
+                                    <div class="">
+                                        <table id="example2" class=" table table-dark table-bordered table-hover">
+
+                                            <tbody style="background:white;color:black; ">
+
+                                                @{
+                                                    if (ViewBag.DetailData != null)
+                                                    {
+
+
+
+                                                        foreach (var items in ViewBag.DetailData)
+                                                        {
+                                                            <tr>
+                                                                <td style="display:none">@items.itemIdx</td>
+                                                                <td>@items.itemName</td>
+                                                                <td>@items.qty</td>
+                                                                <td><input type="text" placeholder="Enter Unit Price" onkeyup="changeinunitprice(this)" value="@items.unitPrice" id="unitprice" class="form-control" /></td>
+                                                               
+                                                                <td>@items.amount</td>
+                                                                <td><button id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn btn-outline-danger"><i class="fa fa-trash menu-icon"></i></button></td>
+                                                            </tr>
+
+                                                        }
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+
+
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="inputName">Description</label>
+                    @Html.EditorFor(model => model.description, new { htmlAttributes = new { @placeholder = "Description", @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="inputName">Total Amount</label>
+                    @Html.EditorFor(model => model.totalAmount, new { htmlAttributes = new { @placeholder = "Total Amount", @class = "form-control", @readonly = true } })
+                </div>
+                @Html.ValidationMessageFor(model => model.totalAmount, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="inputName"></label>
+                    @*<input type="button" class="btn btn-primary form-control" step="display:none;" id="calculate" value="Calculate Total" />*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btnAddPO">Submit</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section MyScripts
+    {
+<script type="text/javascript">
+
+    // Add To grid
+    $("#MRNIdx").on('change', function () {
+        var ddvaue = $("#MRNIdx option:selected").val();
+        if (ddvaue > 0) {
+            GetPODataSet(ddvaue)
+            $('#btnaddtogrid').attr('disabled', true);
+        }
+        else
+        {
+            $("#example2 tbody").empty();
+            $('#btnaddtogrid').attr('disabled', false);
+            $("#totalAmount").val("0");
+        }
+
+    });
+
+    function GetPODataSet(poid) {
+        $.ajax({
+            url: "/Purchase/SelectMRById",
+            data: { id: poid },
+            success: function (data) {
+                var POData = JSON.parse(data.data);
+                console.log(POData);
+
+                $("#example2 tbody").empty();
+                $('#milestones').show();
+                var markup;
+                for (var i = 0; i < POData.length; i++) {
+
+                    console.log(data[i]);
+                    var closebutton = '<input type="button" value="x" id="deleterow" disable="true" class="fa fa-window-close close" />';
+
+                    var unitPrice = '<input type="text" placeholder="Enter Unit Price" onkeyup="changeinunitprice(this)" value="0" id="unitprice" class="form-control" />';
+
+                    //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+                    //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+                    // '</button>'
+
+                    var productname = POData[i].itemName; //$("#itemIdx option:selected").text();
+                    var ProductID = POData[i].itemIdx;// $("#itemIdx option:selected").val();
+                    var Qty = POData[i].qty;// $("#qty").val();
+                    //var unitprice = POData[i].unitPrice;// $("#unitPrice").val();
+                    //var totalamount = POData[i].qty * POData[i].unitPrice;
+                    //var unitprice = $("#unitPrice").val();
+                    var totalamount = $("#amount").val();
+
+                    //var duedate = $("#DueDate").val();
+                    markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + Qty + "</td><td>" + unitPrice + "</td><td class='tamnt'>" + totalamount + "</td><td>" + closebutton + "</td></tr>";
+                    //console.log(markup);
+
+                    $("#example2 tbody").append(markup);
+
+                }
+
+                var tamount = 0;
+
+                $("#totalAmount").val(tamount);
+
+            }
+        });
+    }
+    var errmsg;
+    //Add Project Button Event start
+    $("#qty").keyup(function () {
+        var qtyval = $(this).val();
+        var unitpriceval = $("#unitPrice").val();
+        var totalamount = qtyval * unitpriceval;
+
+        $("#amount").val(totalamount);
+    });
+    $("#unitPrice").keyup(function () {
+        var unitpriceval = $(this).val();
+        var qtyval = $("#qty").val();
+        var totalamount = qtyval * unitpriceval;
+        $("#amount").val(totalamount);
+    });
+
+
+    $("#btnaddtogrid").click(function (e) {
+        if (!(gridValidation($("#itemIdx option:selected").val()))) {
+           // alert("Product Alreaty Exist")
+            displayerror();
+            return;
+        }
+
+
+       // alert("hello");
+        $('#milestones').show();
+        var closebutton = '<input type="button" value="x" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="fa fa-window-close close" />';
+            //'<button type="button" class="close" style="float:left" id="deleterow" aria-label="Close">' +
+                         //'<span aria-hidden="true" styel="color:red">&times;</span>' +
+                         // '</button>'
+        var productname = $("#itemIdx option:selected").text();
+        var ProductID = $("#itemIdx option:selected").val();
+        var Qty = $("#qty").val();
+        var unitprice = $("#unitPrice").val();
+        var totalamount = $("#amount").val();
+        //var duedate = $("#DueDate").val();
+        var markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + Qty + "</td><td>" + unitprice + "</td><td class='tamnt'>" + totalamount + "</td><td>" + closebutton + "</td></tr>";
+        //if (milestone == "") {
+        //    alert("Enter milestone");
+        //    return;
+        //} else {
+
+        $("#example2 tbody").append(markup);
+        var tamount = 0;
+        //var labourcost = $("#tax").val();
+        //var transportcost = $("#taxAount").val();
+       var tamount =parseFloat( $("#totalAmount").val());
+       tamount = parseFloat(tamount) + parseFloat(totalamount);//+ parseFloat(labourcost) + parseFloat(transportcost);
+        $("#totalAmount").val(tamount);
+
+
+
+    });
+    $('#purchaseDate').change(function () {
+        var date = $(this).val();
+        console.log(date, 'change')
+        var GivenDate = date;
+        var CurrentDate = new Date();
+        GivenDate = new Date(GivenDate);
+
+        if (GivenDate > CurrentDate) {
+            alert('Given date is greater than the current date.');
+            var today = moment().format('YYYY-MM-DD');
+            $('#purchaseDate').val(today);
+        } else {
+           // alert('Given date is not greater than the current date.');
+        }
+    });
+    function SomeDeleteRowFunction(o) {
+        //alert(id);
+        var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+             $tds = $row.find("td:nth-child(2)");
+        //console.log($tds);
+
+        $.each($tds, function () {                // Visits every single <td> element
+           // console.log($(this).text());         // Prints out the text within the <td>
+        });
+        var itmmant = o.parentNode.parentNode.children[4].innerText;
+        var tmnt = $('#totalAmount').val();
+
+        tmnt = tmnt - itmmant;
+        $('#totalAmount').val(tmnt);
+
+       // $('#balanceAmount').val(tmnt);
+        var p = o.parentNode.parentNode;
+
+        p.parentNode.removeChild(p);
+        $(this).closest('tr').remove();
+
+
+    };
+
+    function changeinunitprice(o) {
+        //alert(id);
+        var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+             $tds = $row.find("td:nth-child(2)");
+        //console.log($tds);
+
+
+        var itmqty = o.parentNode.parentNode.children[2].innerText;
+
+        var itmup = o.parentNode.parentNode.children[3].children[0].value;
+
+        itmqty = Number(itmqty);
+        itmup = Number(itmup);
+
+        var tmnt = $('.tamnt').val()
+        tmnt = Number(itmqty) * Number(itmup);
+
+        $('.tamnt').val(tmnt);
+        var totalamnt =o.parentNode.parentNode.children[4].innerText = (parseFloat(itmqty) * parseFloat(itmup));
+
+        var tmnt = $('#totalAmount').val();
+        tmnt = Number(tmnt) + (Number(itmqty) * Number(itmup))
+        $('#totalAmount').val(tmnt)
+        //alert(tmnt);
+        calculate();
+      //  $("#calculate").trigger("click");
+
+
+    };
+
+    function gridValidation(Id) {
+        errmsg = [];
+        var myTab = $("#example2 tbody");
+        var rtrn = true;
+
+        // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+        myTab.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+                productid = $tds.eq(0).text();
+
+            if(Id==productid){
+                rtrn = false;
+                errmsg.push("Product Already exist");
+            }
+        })
+        if ($('#itemIdx option:selected').val() =='') {
+            rtrn = false;
+            errmsg.push("Select Product");
+        }
+        if ($('#qty').val() <= 0) {
+            rtrn = false;
+            errmsg.push("Qty value is zero");
+        }
+        if ($('#unitPrice').val() <= 0) {
+            rtrn = false;
+            errmsg.push("unit value is zero");
+        }
+        //if ($('#DueDate').val() < 0) {
+        //    rtrn = false;
+        //    errmsg.push("DUE date is Invalid");
+        //}
+        //var dat = $('#DueDate').val()
+        //console.log(moment((new Date())).format("DD-MM-YYYY"));
+        //var today = moment((new Date())).format("DD-MM-YYYY");
+        //var slctddte = moment(dat).format("DD-MM-YYYY");
+
+        //if ((new Date($('#DueDate').val())) == 'Invalid Date') {
+        //    rtrn = false;
+        //    errmsg.push("DUE date is invalid ");
+        //    // alert(errorarray.length);
+        //}
+        //if (slctddte < today) {
+        //    rtrn = false;
+        //    errmsg.push("DUE date is INVALID /Should be greater than current date");
+        //    // alert(errorarray.length);
+        //}
+        return rtrn;
+    }
+
+    function displayerror() {
+        for (var i = 0; i < errmsg.length; i++) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            Command: toastr["error"](errmsg[i], "")
+        }
+    }
+
+    function calculate() {
+        var tmnt = $('#totalAmount').val('0');
+        var table = $("#example2 tbody");
+        table.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+              itemamount = $tds.eq(4).text();
+
+            console.log(itemamount);
+            // itemamount = itemamount + itemamount;
+
+            var tamnt = $('#totalAmount').val();
+            tamnt = Number(tamnt) + (Number(itemamount))
+            $('#totalAmount').val(tamnt)
+
+        });
+    }
+
+
+    $("#calculate").click(function (e) {
+
+
+        calculate();
+
+
+
+
+
+       
+
+    });
+
+    $("#btnAddPO").click(function (e) {
+
+        e.preventDefault();
+        var datatosend = {
+            objpurchase: {
+                idx: $('#idx').val(),
+                poNumber: $('#poNumber').val(),
+                vendorIdx: $('#vendorIdx').val(),
+                purchaseDate: $('#purchaseDate').val(),
+                description: $('#description').val(),
+                totalAmount: $('#totalAmount').val(),
+                MRNIdx: $("#MRNIdx option:selected").val(),
+                description: $("#description").val(),
+                DepartmentID: $("#DepartmentID option:selected").val(),
+                //PageList:[{ID:1},{ID:2},{ID:3}]
+                PurchaseDetailLST: []
+            }
+
+        }
+        var table = $("#example2 tbody");
+
+        var milestonearray = [];
+        var milestonedetails = {
+        };
+        var pomasternetamount = 0;
+        table.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+                productid = $tds.eq(0).text(),
+                qty = $tds.eq(2).text(),
+                unitprice = $tds.eq(3).find('#unitprice').val(),
+                itemamount = $tds.eq(4).text();
+
+            datatosend.objpurchase.PurchaseDetailLST.push({
+                itemIdx: productid,
+                qty: qty,
+                unitprice: unitprice,
+                productTypeIdx: 1,
+                amount: itemamount
+            })
+            ;
+
+        });
+
+
+
+
+        var form = $("#purchaseform");
+        console.log(datatosend)
+        $.validator.unobtrusive.parse(form);
+        //if ($(form).valid()) // using not operator for a time being
+        if (true) {
+            $.ajax({
+                type: "POST",
+                url: "/Purchase/AddUpdate",
+                data: JSON.stringify(datatosend),// JSON.stringify(milestonearray),// $(form).serialize(),
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    if (res.success) {
+
+                        window.location.href = "/Purchase/ViewPurchase"
+                    }
+                    else if (res.success == false && res.msg == 'Failed') {
+
+                    }
+                },
+                failure: function (res) {
+                    console.log(res);
+                },
+                err: function (res) {
+                    console.log(res);
+                }
+
+            })
+        }
+        else {
+            return false;
+        }
+
+    });
+</script>
+    }
+
+
+
+

@@ -1,0 +1,37 @@
+﻿
+
+@model SSS.Property.Setups.Accounts.fourthTier_Property
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<form id="addnewform">
+    @Html.HiddenFor(model => model.idx, new { id = "natureOfVisitField", value = 0 })
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- text input -->
+            <div class="form-group">
+                <label>Sub Head*:</label>
+                @Html.DropDownListFor(model => model.subHeadIdx, new SelectList(Model.headLST, "idx", "subHeadName"), "Select Sub-Head", new { @Class = "select2 form-control font-weight-bold" })
+                @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+            </div>
+            @Html.ValidationMessageFor(model => model.subHeadIdx, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Sub Head Name</label>
+                @Html.EditorFor(model => model.childHeadName, new { htmlAttributes = new { @placeholder = "Child Head Name", @class = "form-control" } })
+            </div>
+            @Html.ValidationMessageFor(model => model.childHeadName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+</form>
+
+<script>
+    $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true, dropdownParent: $('#modelbody') });
+
+</script>

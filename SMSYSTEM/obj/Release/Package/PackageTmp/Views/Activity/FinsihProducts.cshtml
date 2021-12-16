@@ -1,0 +1,771 @@
+﻿@model SSS.Property.Transactions.LP_FinsihProduct_Property
+@{
+    ViewBag.Title = "FinsihProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card-body">
+    <h3>Finish Product (GRN)</h3>
+    <br />
+    <form role="form" id="purchaseform">
+        
+       @* Added By Ahsan*@
+       <div class="row">
+           <div class="col-sm-3">
+               <!-- text input -->
+               <div class="form-group">
+                   <label>Reference:</label>
+                   @{
+                       
+                           @Html.DropDownListFor(model => model.typeIdx, new List<SelectListItem>
+                           {
+                               new SelectListItem {Text="Select Type",Value="0" },
+                               new SelectListItem {Text=" Sales Order",Value="1" },
+                               new SelectListItem {Text="Display Order",Value="2" }
+                           }, new { @class = "select2 form-control" })
+                       
+                       
+                   }
+                   
+               </div>
+               @Html.ValidationMessageFor(model => model.typeIdx, "", new { @class = "text-danger" })
+           </div>
+       </div>
+       
+       <div class="col-sm-3 " id="ddlOrder">
+           <!-- text input -->
+           <div class="form-group">
+               <label>Order#:</label>
+
+               @Html.DropDownListFor(m => m.orderIdx,
+                   new SelectList(Enumerable.Empty<SelectListItem>(), "idx", "soNumber"),
+                   "Select Order",
+                   new { @class = "select2 form-control" })
+
+
+
+               @Html.ValidationMessageFor(m => m.orderIdx, "", new { @class = "text-danger" })
+           </div>
+
+       </div>
+       
+
+        
+
+
+       <div class="row">
+
+            @*<div class="col-sm-4">*@
+                <!-- text input -->
+                @*<div class="form-group">*@
+                  @*  <label>Order#:</label>*@
+                 @*   @Html.DropDownListFor(model => model.orderIdx, new SelectList(Model.salesOrderLST, "idx", "soNumber"), "Select Order", new { @Class = "form-control font-weight-bold" })*@
+             @*</div>*@
+              @*  @Html.ValidationMessageFor(model => model.orderIdx, "", new { @class = "text-danger" })*@
+            @*</div>*@
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Branch*:</label>
+                    @Html.DropDownListFor(model => model.branchIdx, new SelectList(Model.BranchList, "idx", "branchName"), "Select Branch", new { @Class = "select2 form-control font-weight-bold" })
+                </div>
+                @Html.ValidationMessageFor(model => model.branchIdx, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>From WareHouse*:</label>
+                    <select id="FromWareHouseId" class=" form-control font-weight-bold">
+                        @{
+                            <option value="0" data-hscode="0">Select WareHouse</option>
+
+                            foreach (var item in Model.WareHouseList)
+                            {
+                                <option value="@item.Idx" data-val="@item.BranchIdx">@item.WareHouseName</option>
+                            }
+
+                        }
+                    </select>
+                </div>
+                @Html.ValidationMessageFor(model => model.warehouseIdx, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Total Amount:</label>
+                    <input type="text" id="totalAmount" readonly="readonly" class="form-control" />
+                </div>
+                @*@Html.ValidationMessageFor(model => model.orderIdx, "", new { @class = "text-danger" })*@
+            </div>
+
+        </div>
+        <div class="row" id="PurchaseDetails">
+            <div class="row">
+                <div class="card card-primary">
+                    @*<div class="card-header" style="background-color:black;color:white">
+                            <h5>+Add Product</h5>
+                            <div class="card-tools">
+
+                            </div>
+                        </div>*@
+                    <div class="">
+
+                        <table id="example2" class="table table-striped table-bordered  table-hover table-active">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th style="display:none"></th>
+                                    <th>Product Name</th>
+                                    <th>Ordered QTY</th>
+                                    <th>Unit Price</th>
+                                    <th>Sub Amount</th>
+                                    @*<th>Additional Cost</th>*@
+                                </tr>
+                            </thead>
+                            <tbody class="" style="background:white;">
+                                @{
+                                    if (Model.ActivityLST != null && Model.ActivityLST.Count > 0)
+                                    {
+
+
+
+                                        foreach (var items in Model.ActivityLST)
+                                        {
+                                            <tr>
+                                                <td style="display:none">@items.productIdx</td>
+                                                @{
+                                                    string Productname = "";
+                                                    for (int i = 0; i < Model.ProductLST.Count; i++)
+                                                    {
+                                                        if (Model.ProductLST[i].idx == items.productIdx)
+                                                        {
+                                                            Productname = @Model.ProductLST[i].itemName;
+                                                        }
+                                                    }
+                                                    <td>@Productname</td>
+                                                }
+                                                <td>@items.qty</td>
+                                                <td>@items.activityPrice</td>
+                                                <td>@items.</td>
+                                            </tr>
+
+                                                        }
+                                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+
+
+        </div>
+
+        <hr />
+
+
+        <br />
+        @*<div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="inputName">Description</label>
+                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @placeholder = "Description", @class = "form-control" } })
+                    </div>
+                </div>
+            </div>*@
+
+        <div class="row">
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-success" id="btnsubmit">Submit</button>
+
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+@section MyScripts {
+    <script type="text/javascript">
+        //$('#branchIdx').change(function() {
+        //    var warehouseID = $('#FromWareHouseId':selectedOptions).val();
+        //    if (warehouseID == '') {
+        //        alert('Select Warehouse');
+        //        $('#btnsubmit').attr('disabled', true);
+        //    }
+        //});
+       
+        // Added By Ahsan
+        $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true });
+        $("#typeIdx").on('change', function () {
+            var value = $("#typeIdx option:selected").val();
+            if (value == 1)
+            {
+                $.getJSON("@Url.Action("getSalesOrders", "Activity")", null,
+                       function (data) {
+
+                           $("#orderIdx").empty();
+                           $("#ddlOrder").show();
+                           $('#orderIdx').append($('<option>',
+                                {
+                                    value: "",
+                                    text: "Select Order"
+                                }));
+                           for (var i = 0; i < data.data.length; i++) {
+
+                            
+
+
+                               // }else{
+                               $('#orderIdx').append($('<option>',
+                                       {
+                                           value: data.data[i].idx,
+                                           text: data.data[i].soNumber
+                                       }));
+                               //}
+
+                           }
+
+
+
+
+                       });
+            }
+            else if (value == 2) {
+                $.getJSON("@Url.Action("getDisplayOrder", "Activity")", null,
+                       function (data) {
+
+                           $("#orderIdx").empty();
+                           $("#ddlOrder").show();
+                           $('#orderIdx').append($('<option>',
+                                {
+                                    value: "",
+                                    text: "Select Order"
+                                }));
+                           for (var i = 0; i < data.data.length; i++) {
+                               
+                               
+                               // }
+                               // else{
+                           $('#orderIdx').append($('<option>',
+                                   {
+                                       value: data.data[i].idx,
+                                       text: data.data[i].doNumber
+                                   }));
+                               //}
+                           }
+
+
+
+
+                       });
+            }
+            else
+            {
+                $("#orderIdx").html("");
+
+                $('#orderIdx').append($('<option>',
+                                {
+                                    value: "",
+                                    text: "Select Order"
+                                }));
+                $('#ddlOrder').hide();
+            }
+
+        });
+
+        $('#branchIdx').change(function() {
+
+            $('#FromWareHouseId').attr('display', 'block')
+            // get optios of second dropdown and cache it
+            var $options = $('#FromWareHouseId')
+                // update the dropdown value if necessary
+                .val('')
+                // get options
+                .find('option')
+                // show all of the initially
+                .show();
+            console.log($options);
+            // check current value is not 0
+            if (this.value != '0')
+                $options
+                    // filter out options which is not corresponds to the first option
+                    .not('[data-val="' + this.value + '"],[data-val=""]')
+                    // hide them
+                    .hide();
+        })
+
+        // Submit Button
+        $("#btnsubmit").click(function(e) {
+            //console.log("here");
+            e.preventDefault();
+
+
+            var datatosend = {
+                objPI: {
+                    idx: $('#idx').val(),
+                    orderIdx: $('#orderIdx').val(),
+                    typeIdx: $('#typeIdx').val(),
+                    TotalAmount: $('#totalAmount').val(),
+                    branchIdx: $('#branchIdx').val(),
+                    warehouseIdx: $('#FromWareHouseId').val(),
+
+                    InventoryDetails: []
+                }
+
+            }
+
+
+            var table = $("#example2 tbody");
+            table.find('tr').each(function(i) {
+                var orderIdx = $("#orderIdx option:selected").val();
+                var $tds = $(this).find('td'),
+                    productIdx = $tds.eq(0).text(),
+                    stock = $tds.eq(2).text(),
+                    unitPrice = $tds.eq(3).text(),
+                    //additionalAmount = $tds.eq(5).find('#additionalAmount').val(),
+                    totalAmount = Number($tds.eq(4).text()); //+ Number($tds.eq(5).eq(0).val())
+                // $tds.eq(4).text(),
+
+
+                datatosend.objPI.InventoryDetails.push({
+                    productIdx: $tds.eq(0).text(),
+                    stock: $tds.eq(2).text(),
+                    unitPrice: $tds.eq(3).text(),
+                    totalAmount: stock * unitPrice,
+                    TransactionTypeID: 1,
+                    MasterID: orderIdx,
+                    //additionalAmount: additionalAmount,
+                    BRANCHID: $('#branchIdx').val(),
+                    wareHouseIdx: $('#FromWareHouseId').val()
+
+                });
+
+
+            });
+            console.log(datatosend);
+            var form = $("#purchaseform");
+
+            // $.validator.unobtrusive.parse(form);
+            // if ($(form).valid()){
+            console.log("here1");
+            if (true) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Activity/AddUpdateFP",
+                    data: JSON.stringify(datatosend), // $(form).serialize(),
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function(res) {
+                        console.log(res);
+                        if (res.success) {
+
+                            window.location.href = "/Activity/FinsihProducts"
+                        } else if (res.success == false && res.msg == 'Failed') {
+
+
+                        }
+                    },
+                    failure: function(res) {
+                        console.log(res);
+                    },
+                    err: function(res) {
+                        console.log(res);
+                    }
+
+                })
+            } else {
+                return false;
+            }
+
+        });
+        // Add To grid
+        $("#orderIdx").on('change',
+            function() {
+                var ddvaue = $("#orderIdx option:selected").val();
+
+                if (ddvaue > 0) {
+
+                    $.ajax({
+                        url: "/Activity/GetAllAcitvityBYOrderId",
+                        data: { id: ddvaue },
+                        success: function(data) {
+                            var POData = JSON.parse(data.data);
+                            console.log(POData);
+                            //$('#orderIdx').val(POData[0].vendorIdx);
+                            //$('#ParentDocID').val(POData[0].idx);
+                            $("#example2 tbody").empty();
+                            $('#milestones').show();
+                            var markup;
+                            var tamount = 0;
+                            for (var i = 0; i < POData.length; i++) {
+
+                                //console.log(data[i]);
+                                var productname = POData[i].itemName; //$("#itemIdx option:selected").text();
+                                var ProductID = POData[i].productIdx; // $("#itemIdx option:selected").val();
+                                var OrderdQty = parseFloat(POData[i].qty).toFixed(2); // $("#qty").val();
+                                var activityPrice = parseFloat(POData[i].averagePrice).toFixed(2);
+                                var subAmount = parseFloat(POData[i].subAmount).toFixed(2);
+                                var additionalCost = '<input type="number" id="additionalAmount" name=' + ProductID + ' onkeyup="calculate(this)" class="form-control"    value="0.00" />';
+                                tamount = Number(tamount) + Number(subAmount);
+                                $("#TotalAmount").val(tamount);
+                                $("#NetAmount").val(tamount);
+                                $("#BalanceAmount").val(tamount);
+                                //var duedate = $("#DueDate").val();
+                                markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + OrderdQty + "</td><td>" + activityPrice + "</td><td class='tamnt'>" + subAmount + "</td></tr>";
+                                //console.log(markup);
+
+                                $("#example2 tbody").append(markup);
+
+                            }
+
+                            //var tamount = 0;
+
+                            $("#totalAmount").val(parseFloat(tamount).toFixed(2));
+
+                        }
+                    });
+                } else {
+                    $("#example2 tbody").empty();
+                    //$('#btnaddtogrid').attr('disabled', false);
+                    $("#totalAmount").val("0");
+                }
+
+            });
+
+        function calculate(o) {
+            var $row = $(this).closest("tr"), // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            //console.log($tds);
+
+
+            var subAmount = o.parentNode.parentNode.children[4].children[0].value;
+
+            var additionalCost = o.parentNode.parentNode.children[5].children[0].value;
+
+            subAmount = Number(subAmount);
+            additionalCost = Number(additionalCost);
+
+            var tmnt = $('.tamnt').val()
+            tmnt = subAmount + additionalCost;
+
+            $('.tamnt').val(tmnt);
+            //var totalamnt = o.parentNode.parentNode.children[4].innerText = (parseFloat(itmqty) * parseFloat(itmup));
+
+            //var tmnt = $('#totalAmount').val();
+            //tmnt = Number(tmnt) + (Number(itmqty) * Number(itmup))
+            //$('#totalAmount').val(tmnt)
+        }
+
+        function GetPODataSet(poid) {
+            $.ajax({
+                url: "/PInvoice/SelectPOById",
+                data: { id: poid },
+                success: function(data) {
+                    var POData = JSON.parse(data.data);
+                    console.log(POData);
+                    $('#VendorID').val(POData[0].vendorIdx);
+                    $('#ParentDocID').val(POData[0].idx);
+                    $("#example2 tbody").empty();
+                    $('#milestones').show();
+                    var markup;
+                    var tamount = 0;
+                    for (var i = 0; i < POData.length; i++) {
+
+                        console.log(data[i]);
+                        var productname = POData[i].itemName; //$("#itemIdx option:selected").text();
+                        var ProductID = POData[i].itemIdx; // $("#itemIdx option:selected").val();
+                        var OrderdQty = POData[i].qty; // $("#qty").val();
+                        var recievedqty = OrderdQty - POData[i].openItem;
+                        var unitprice = POData[i].unitPrice;
+                        var totalamount = unitprice * recievedqty;
+
+                        tamount = tamount + totalamount
+                        $("#TotalAmount").val(tamount);
+                        $("#NetAmount").val(tamount);
+                        $("#BalanceAmount").val(tamount);
+                        //var duedate = $("#DueDate").val();
+                        markup = "<tr><td style='display:none;'>" + ProductID + "</td><td>" + productname + "</td><td>" + OrderdQty + "</td><td>" + recievedqty + "</td><td>" + unitprice + "</td><td class='tamnt'>" + totalamount + "</td></tr>";
+                        //console.log(markup);
+
+                        $("#example2 tbody").append(markup);
+
+                    }
+
+                    var tamount = 0;
+
+                    $("#totalAmount").val(tamount);
+
+                }
+            });
+        }
+
+        var errmsg;
+        //Add Project Button Event start
+        $("#qty").keyup(function() {
+            var qtyval = $(this).val();
+            var unitpriceval = $("#unitPrice").val();
+            var totalamount = qtyval * unitpriceval;
+
+            $("#amount").val(totalamount);
+        });
+        $("#unitPrice").keyup(function() {
+            var unitpriceval = $(this).val();
+            var qtyval = $("#qty").val();
+            var totalamount = qtyval * unitpriceval;
+            $("#amount").val(totalamount);
+        });
+        $("#ddlTax").on('change',
+            function() {
+                var ddlvalue = $("#ddlTax option:selected").val();
+
+                if (ddlvalue == 1) {
+                    $('#checkboxdiv').show();
+                    //CreateAndbindCheckBox(taxlist)
+
+                } else {
+                    $('#checkboxdiv').hide();
+                    // RemoveCheckBox(taxlist)
+                }
+                //}
+
+
+            });
+
+
+        function SomeDeleteRowFunction(o) {
+            //alert(id);
+            var $row = $(this).closest("tr"), // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            //console.log($tds);
+
+            $.each($tds,
+                function() { // Visits every single <td> element
+                    // console.log($(this).text());         // Prints out the text within the <td>
+                });
+            var itmmant = o.parentNode.parentNode.children[4].innerText;
+            var tmnt = $('#totalAmount').val();
+
+            tmnt = tmnt - itmmant;
+            $('#totalAmount').val(tmnt);
+
+            // $('#balanceAmount').val(tmnt);
+            var p = o.parentNode.parentNode;
+
+            p.parentNode.removeChild(p);
+            $(this).closest('tr').remove();
+
+
+        };
+
+        function changeinunitprice(o) {
+            //alert(id);
+            var $row = $(this).closest("tr"), // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(2)");
+            //console.log($tds);
+
+
+            var itmqty = o.parentNode.parentNode.children[2].innerText;
+
+            var itmup = o.parentNode.parentNode.children[3].children[0].value;
+
+            itmqty = Number(itmqty);
+            itmup = Number(itmup);
+
+            var tmnt = $('.tamnt').val()
+            tmnt = Number(itmqty) * Number(itmup);
+
+            $('.tamnt').val(tmnt);
+            var totalamnt = o.parentNode.parentNode.children[4].innerText = (parseFloat(itmqty) * parseFloat(itmup));
+
+            var tmnt = $('#totalAmount').val();
+            tmnt = Number(tmnt) + (Number(itmqty) * Number(itmup))
+            $('#totalAmount').val(tmnt)
+            //alert(tmnt);
+
+
+        };
+
+        function gridValidation(Id) {
+            errmsg = [];
+            var myTab = $("#example2 tbody");
+            var rtrn = true;
+
+            // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+            myTab.find('tr').each(function(i) {
+                var $tds = $(this).find('td'),
+                    productid = $tds.eq(0).text();
+
+                if (Id == productid) {
+                    rtrn = false;
+                    errmsg.push("Product Already exist");
+                }
+            })
+            if ($('#itemIdx option:selected').val() == '') {
+                rtrn = false;
+                errmsg.push("Select Product");
+            }
+            if ($('#qty').val() <= 0) {
+                rtrn = false;
+                errmsg.push("Qty value is zero");
+            }
+            if ($('#unitPrice').val() <= 0) {
+                rtrn = false;
+                errmsg.push("unit value is zero");
+            }
+            //if ($('#DueDate').val() < 0) {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is Invalid");
+            //}
+            //var dat = $('#DueDate').val()
+            //console.log(moment((new Date())).format("DD-MM-YYYY"));
+            //var today = moment((new Date())).format("DD-MM-YYYY");
+            //var slctddte = moment(dat).format("DD-MM-YYYY");
+
+            //if ((new Date($('#DueDate').val())) == 'Invalid Date') {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is invalid ");
+            //    // alert(errorarray.length);
+            //}
+            //if (slctddte < today) {
+            //    rtrn = false;
+            //    errmsg.push("DUE date is INVALID /Should be greater than current date");
+            //    // alert(errorarray.length);
+            //}
+            return rtrn;
+        }
+
+        function displayerror() {
+            for (var i = 0; i < errmsg.length; i++) {
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                Command: toastr["error"](errmsg[i], "")
+            }
+        }
+
+        $("#calcfinal").click(function() {
+            calculate();
+
+        });
+
+        function percentage(num, per) {
+            console.log(num)
+            var totalpercntage = (num / 100) * per;
+            // console.log(totalpercntage)
+            return totalpercntage
+        }
+
+        function calculate() {
+
+            $('#TotalAmount').val($('#NetAmount').val());
+            var count = 0;
+            // alert("d")
+            var totaltaxAmount = Number(0);
+            $("#purchaseform input:checkbox:checked").each(function() {
+                // alert($(this).val())
+
+                if (($(this).val()) > 0) {
+
+                    var taxpercent = $(this).attr('data-id');
+
+                    var NetAmount = $('#NetAmount').val();
+                    var currentAmount = (Number(NetAmount) / Number(100)) * Number(taxpercent)
+                    totaltaxAmount = parseFloat(Number(currentAmount) + Number(totaltaxAmount)).toFixed(2)
+                    //var NetAmntTaxValue = percentage(NetAmount, taxpercent);
+                    //var totalamount = parseFloat($('#TotalAmount').val()) + parseFloat(NetAmntTaxValue);
+                    //$('#TotalAmount').val(totalamount.toFixed(2));
+                    //$('#TaxAmount').val(parseFloat($('#TaxAmount').val()) + parseFloat(NetAmntTaxValue));
+                    count++;
+                }
+
+
+                // add $(this).val() to your array
+            });
+            $('#TaxAmount').val(totaltaxAmount);
+            $('#TotalAmount').val(Number(totaltaxAmount) + Number($('#NetAmount').val()));
+            $('#BalanceAmount').val($('#TotalAmount').val());
+            if (count <= 0) {
+                $('#TaxAmount').val('0.00');
+                $('#TotalAmount').val($('#NetAmount').val());
+            }
+        }
+
+        $('#PaymentType').on('change',
+            function() {
+                if ($('#PaymentType option:selected').val() == 0) {
+                    $('#paymntmethodoptions').hide();
+                    $('#divTxtPaid').hide();
+                    $('#PaidAmount').val('0.00');
+                }
+                if ($('#PaymentType option:selected').val() == 1) {
+                    $('#paymntmethodoptions').hide();
+                    $('#divTxtPaid').show();
+                }
+                if ($('#PaymentType option:selected').val() == 2) {
+                    $('#paymntmethodoptions').show();
+                    $('#cheqno').hide();
+                    $('#divTxtPaid').show();
+                }
+
+                if ($('#PaymentType option:selected').val() == 3) {
+                    $('#paymntmethodoptions').show();
+                    $('#cheqno').show();
+                    $('#divTxtPaid').show();
+                }
+            });
+        if ($('#PaymentType').val() == 0) {
+            $('#divTxtPaid').hide();
+            $('#paidAmount').val('0.00');
+        }
+        $('#PaidAmount').keyup(function() {
+            //var paidAmount = Number($('#PaidAmount').val());
+            //var balanceAmount = Number($('#BalanceAmount').val());
+            //var netAmount = Number($('#NetAmount').val());
+            //if (paidAmount > 0) {
+            //    balanceAmount = balanceAmount - paidAmount;
+            //    $('#BalanceAmount').val(balanceAmount)
+            //}
+            //else if (paidAmount > balanceAmount) {
+            //    $('#BalanceAmount').val(netAmount);
+            //    alert("Paid Amount Cannot Be Greater Than Balance Amount");
+            //}
+            //else {
+            //    $('#BalanceAmount').val(netAmount);
+            //    alert("Please Enter a Valid Number");
+            //}
+
+            var paidAmount = Number($('#PaidAmount').val());
+            var balanceAmount = Number($('#BalanceAmount').val());
+            var totalAmount = Number($('#TotalAmount').val());
+            if (paidAmount > 0) {
+                if (paidAmount > totalAmount) {
+                    $('#BalanceAmount').val(totalAmount);
+                    $('#PaidAmount').val('0');
+                    alert("Paid Amount Cannot Be Greater Than Balance Amount");
+                } else {
+                    var remaingAmount = totalAmount - paidAmount;
+                    $('#BalanceAmount').val(remaingAmount)
+                }
+
+            } else {
+                $('#BalanceAmount').val(totalAmount);
+                alert("Please Enter a Valid Number");
+            }
+        });
+    </script>
+}
+

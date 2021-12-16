@@ -1,0 +1,912 @@
+﻿@model SSS.Property.Transactions.LP_GeneralVoucher_Property
+@{
+    ViewBag.Title = "GeneralVoucher";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="card-body">
+    <h3>General Voucher</h3>
+    <br />
+    <form role="form" id="purchaseform">
+        @Html.HiddenFor(model => model.idx, new { id = "idx", value = 0 })
+
+        <div class="row">
+            @{
+                if (Model.idx > 0)
+                {
+
+                }
+                else
+                {
+                    @*<div class="col-sm-3">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>Quotation#:</label>
+                            @Html.DropDownListFor(model => model.qsIdx, new SelectList(Model.QSList, "idx", "qsNumber"), "Select Quotation", new { @Class = "form-control font-weight-bold" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.qsIdx, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-3">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>Customer*:</label>
+                            @Html.DropDownListFor(model => model.customerIdx, new SelectList(Model.CustomerLST, "idx", "customerName"), "Select Customers", new { @Class = "form-control font-weight-bold" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.customerIdx, "", new { @class = "text-danger" })
+                    </div>*@
+                    <div class="col-sm-3">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>GV Number*:</label>
+                            @Html.EditorFor(model => model.voucherNo, new { htmlAttributes = new { @placeholder = "SO Number*:", @class = "form-control", @readonly = true } })
+                            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                        </div>
+                        @Html.ValidationMessageFor(model => model.voucherNo, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-3">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>Date*:</label>
+                            @Html.EditorFor(model => model.voucherDate, new { htmlAttributes = new { @placeholder = "Sales Order Date*:", @class = "form-control" } })
+                            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                        </div>
+                        @Html.ValidationMessageFor(model => model.voucherDate, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-6">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>Memo:</label>
+                            @Html.EditorFor(model => model.memo, new { htmlAttributes = new { @placeholder = "Memo:", @class = "form-control" } })
+                            @*<input type="text"  class="form-control" placeholder="@ViewBag.CustomerCode" disabled>*@
+                        </div>
+                        @Html.ValidationMessageFor(model => model.memo, "", new { @class = "text-danger" })
+                    </div>
+                }
+            }
+        </div>
+        
+        <hr />
+        <div class="row" id="PurchaseDetails">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    @*<div class="card-header" style="background-color:black;color:white" >*@
+                    <h5>+Add </h5>
+                    @*<div class="card-tools">
+
+                        </div>*@
+                </div>
+                <div class="">
+                    <table class="table table-striped table-bordered table-condensed table-hover table-active">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Account</th>
+                                <th>Debit/Credit</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+                        <tbody class="" style="background:white;">
+                            <tr>
+                                <td>@Html.DropDownListFor(model => model.accountIdx, new SelectList(Model.AccountLST, "idx", "childHeadName"), "Select Account", new { @Class = "select2 form-control font-weight-bold" })</td>
+                                <td>@Html.CheckBoxFor(model => model.isChecked, new { htmlAttributes = new { @class = "form-control" } })</td>
+                                
+                                <td>@Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @placeholder = "Amount", @class = "form-control"} })</td>
+
+                                <td>
+
+
+                                    <input type="button" value="+" id="btnaddtogrid" class="btn btn-outline-primary" style="font-size: 20px " />
+
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row" style="display:block; overflow:scroll" id="milestones">
+                        <div class="col-md-12">
+                            <div class="card card-primary">
+
+                                <div class="">
+                                    <table id="example2" class=" table table-dark table-bordered table-hover">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>Account</th>
+                                                <th>Debit</th>
+                                                <th>Credit</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="background:white;color:black; ">
+                                            @{
+                                                if (ViewBag.DetailData != null)
+                                                {
+
+
+
+                                                    foreach (var items in ViewBag.DetailData)
+                                                    {
+                                                        <tr>
+                                                            <td style="display:none">@items.itemIdx</td>
+                                                            <td>@items.itemName</td>
+                                                            <td>@items.qty</td>
+                                                            <td><input type="text" placeholder="Enter Sales Price" onkeyup="changeinunitprice(this)" value="@items.salePrice" id="salePrice" class="form-control" /></td>
+                                                            @*<td id="unitprice"></td>*@
+                                                            <td>@items.amount</td>
+                                                            @*<td><i class="icon-trash menu-icon" id="btnaddtogrid"><input type="button" id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn-danger" /></i></td>*@
+                                                            <td><button id="deleterow" onclick="SomeDeleteRowFunction(this)" class="close btn btn-outline-danger"><i class="fa fa-trash menu-icon"></i></button></td>
+                                                        </tr>
+
+                                                    }
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+
+
+
+
+
+ 
+
+
+
+
+
+<div class="row">
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="btnAddSale">Submit</button>
+        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+    </div>
+</div>
+    </form>
+</div>
+
+
+
+@section MyScripts
+    {
+    <script type="text/javascript">
+    $(".select2").select2({ width: '100%', placeholder: "Select an Option", allowClear: true });
+
+    $("#btnaddnew").click(function () {
+        //$.post("/Customer/AddCustomer", function (data) {
+        //    $("#modal-default").html(data);
+        //});
+
+        $("#modelbody").load("/Customer/AddNewCustomer", function (e) {
+            $("#modal-default").modal("show");
+
+
+        });
+
+    })
+    var taxlist;
+    $(document).ready(function () {
+        taxlist=@Html.Raw(Json.Encode(ViewBag.TaxList));
+
+    });
+    $("#ddlTax").on('change', function () {
+        var ddlvalue = $("#ddlTax option:selected").val();
+
+            if (ddlvalue ==1 ) {
+                CreateAndbindCheckBox(taxlist)
+                calculation();
+
+            }
+            else {
+
+                RemoveCheckBox(taxlist)
+                calculation();
+            }
+        //}
+
+
+    });
+
+    $("#itemIdx").on('change', function () {
+        var ddvaue = $("#itemIdx option:selected").val();
+        if (ddvaue > 0) {
+            $.ajax({
+                url: "/SalesOrder/SelectProductStockAndUpById",
+                data: { id: ddvaue },
+                success: function (data) {
+                    var stockAndPrice = JSON.parse(data.data);
+                    //console.log(data1)
+                    $('#stock').val(stockAndPrice[0].STOCK);
+                    $('#costPrice').val(parseFloat(stockAndPrice[0].rate).toFixed(2));
+
+
+                }
+                ,err: function (data) {
+
+                    $('#stock').val('0.00');
+                    $('#costPrice').val('0.00');
+
+
+                }
+            });
+        }
+        else
+        {
+            $('#stock').val('0.00');
+            $('#costPrice').val('0.00');
+
+        }
+
+    });
+    function CreateAndbindCheckBox(pagelistdata) {
+        //console.log(pagelistdata);
+        for (var i = 0; i < pagelistdata.length; i++) {
+            var divopen = '<div class="col-sm-2"><div class="form-check">';
+            var createcheckbox = '<input class="form-check-input"  onclick="calculation();" value='+pagelistdata[i].taxPercent+' data-Id=' + pagelistdata[i].idx + ' type="checkbox" name="tax">';
+            var checkboxlabel = '<label class="form-check-label">' + pagelistdata[i].taxName + '</label>';
+            var divclose = '</div></div>';
+            var dictoappend = divopen + createcheckbox + checkboxlabel + divclose;
+            $('#checkboxdiv').append(dictoappend);
+            $('#checkboxdiv').show();
+
+        }
+
+
+    }
+    function RemoveCheckBox(pagelistdata) {
+        console.log(pagelistdata);
+        for (var i = 0; i < pagelistdata.length; i++) {
+            var divopen = '<div class="col-sm-2"><div class="form-check">';
+            var createcheckbox = '<input class="form-check-input" data-Id=' + pagelistdata[i].idx + ' type="checkbox">';
+            var checkboxlabel = '<label class="form-check-label">' + pagelistdata[i].taxName + '</label>';
+            var divclose = '</div></div>';
+            //var dictoappend = divopen + createcheckbox + checkboxlabel + divclose;
+            //$('#checkboxdiv').append(dictoappend)
+            $('#checkboxdiv').empty();
+            $('#checkboxdiv').hide();
+            //$('#mydiv').empty();
+        }
+
+
+    }
+    // Add To grid
+    $("#qsIdx").on('change', function () {
+        var ddvaue = $("#qsIdx option:selected").val();
+        if (ddvaue > 0) {
+            GetPODataSet(ddvaue)
+            calculation();
+            //$('#btnaddtogrid').attr('disabled', true);
+        }
+        else
+        {
+            $("#example2 tbody").empty();
+            $('#btnaddtogrid').attr('disabled', false);
+            $("#totalAmount").val("0");
+            $("#netAmount").val("0");
+            $("#discount").val("0");
+            $("#shippingCost").val("0");
+            $("#taxAount").val("0");
+            $("#balanceAmount").val("0");
+            $("#paidAmount").val("0");
+            $("#customerIdx").val("");
+            $("#ddlTax").val('0');
+            $('#checkboxdiv').empty();
+            $('#checkboxdiv').hide();
+            calculation();
+
+        }
+
+    });
+
+    function GetPODataSet(poid) {
+        $.ajax({
+            url: "/SalesOrder/SelectQSById",
+            data: { id: poid },
+            success: function (data) {
+                var POData = JSON.parse(data.data);
+                //data from quotation
+                var customerId =POData[0].customerIdx;
+                var reference =POData[0].reference;
+                var discount = POData[0].discount;
+                var shipping= POData[0].shippingCost;
+                var grossAmount = POData[0].netAmount;
+                var totalAmount = POData[0].totalAmount;
+                var taxAmount = POData[0].taxAount;
+                var balanceAmount = POData[0].balanceAmount;
+                var taxData = JSON.parse(data.taxdat);
+                //Adding in  to dropDown and TextBoxes
+
+
+                $("#ddlTax").val('1');
+                if(taxData!=null)
+                {
+                    $("#ddlTax").val('1');
+                    //$("#ddlTax option:selected").val()
+                    RemoveCheckBox(taxlist)
+                    CreateAndbindCheckBox(taxlist);//populate krdega taxes
+                    var check =  $('input[name="tax"]');
+                    for(var i=0 ;i< Number(taxData.length);i++){
+
+                        var taxIdx = taxData[i].taxIdx;
+
+                        check.each(function(){
+                            var taxid = $(this).attr('data-id');
+                            if(taxIdx==taxid)
+                            {
+                                $(this).attr('checked', true)
+                            }
+                        });
+                    }
+                    console.log(check);
+
+                }
+
+                $("#example2 tbody").empty();
+                $('#milestones').show();
+                var markup;
+                for (var i = 0; i < POData.length; i++) {
+                    var actualSalePrice   = POData[i].salePrice;
+                    var actualQty   =POData[i].qty;
+                    console.log(data[i]);
+
+                    var closbutton ='<button id="deleterow" onclick="SomeDeleteRowFunction(this)"  class="close btn btn-outline-danger"><i class="fa fa-trash menu-icon"></i></button>';
+
+
+
+                    var Qty = '<input type="text" placeholder="Enter Sales Price" onkeyup="changeinunitprice(this)" value="'+actualQty+'"  id="qty" class="form-control" />';
+                    //onkeyup="changeinunitprice(this)"
+                    var salePrice = '<input type="text" placeholder="Enter Sales Price" onkeyup="changeinunitprice(this)" value="'+actualSalePrice+'"  id="salePrice" class="form-control" />';
+                    var accountName = POData[i].itemName; //$("#itemIdx option:selected").text();
+                    var accountid = POData[i].itemIdx;// $("#itemIdx option:selected").val();
+
+                    var totalamount = (parseFloat(actualQty) * parseFloat(actualSalePrice)).toFixed(2);
+                    //var duedate = $("#DueDate").val();
+                    markup = "<tr><td style='display:none;'>" + accountid + "</td><td>" + accountName + "</td><td>" + Qty + "</td><td>" + salePrice + "</td><td class='tamnt'>" + totalamount + "</td><td>" + closbutton + "</td></tr>";
+                    //console.log(markup);
+
+                    $("#example2 tbody").append(markup);
+
+                }
+
+                var tamount = 0;
+
+                $("#totalAmount").val(tamount);
+                $("#netAmount").val(tamount);
+                //From Quotation
+                $("#customerIdx").val(customerId);
+                $("#reference").val(reference);
+                $("#discount").val(discount);
+                $("#shippingCost").val(shipping);
+                $("#totalAmount").val(totalAmount);
+                $("#netAmount").val(grossAmount);
+                $("#taxAount").val(taxAmount);
+                $("#balanceAmount").val(totalAmount);
+
+            }
+        });
+    }
+    var errmsg;
+    //Add Project Button Event start
+    function sumqty()
+    {
+        $("#qty").keyup(function () {
+            var qtyval = $(this).val();
+            var salePriceval = $("#salePrice").val();
+            var totalamount = qtyval * salePriceval;
+
+            $("#amount").val(totalamount);
+        });
+        calculation();
+    }
+    $("#discount").keyup(function () {
+
+        calculation();
+    });
+    $("#shippingCost").keyup(function () {
+
+        calculation();
+    });
+
+
+    $("#qty").keyup(function () {
+        var qtyval = $(this).val();
+        var salePriceval = $("#salePrice").val();
+        var totalamount = qtyval * salePriceval;
+
+        $("#amount").val(totalamount);
+        calculation();
+    });
+    $("#salePrice").keyup(function () {
+        var salePriceval = $(this).val();
+        var qtyval = $("#qty").val();
+        var totalamount = qtyval * salePriceval;
+        $("#amount").val(totalamount);
+        calculation();
+    });
+
+
+    $("#btnaddtogrid").click(function (e) {
+        if (!(gridValidation($("#accountIdx option:selected").val()))) {
+           // alert("Product Alreaty Exist")
+            displayerror();
+            return;
+        }
+
+
+       // alert("hello");
+        $('#milestones').show();
+       
+      
+        var closebutton = '<button id="deleterow" onclick="SomeDeleteRowFunction(this)"  class="close btn "><i class="fa fa-trash menu-icon"></i></button>';
+        var accountName = $("#accountIdx option:selected").text();
+        var accountid = $("#accountIdx option:selected").val();
+        var amount   =$("#Amount").val();
+        var debit,credit;
+        if($("#isChecked").prop('checked') == true){
+            debit=amount;
+            credit=Number("0.00");
+        }
+        else
+        {
+            credit=amount;
+            debit=Number("0.00");
+        }
+        var markup = "<tr><td style='display:none;'>" + accountid + "</td><td>" + accountName + "</td><td>" + debit + "</td><td>" + credit + "</td><td>" + closebutton + "</td></tr>";
+        //if (milestone == "") {
+        //    alert("Enter milestone");
+        //    return;
+        //} else {
+
+        $("#example2 tbody").append(markup);
+  
+       //var tamount =parseFloat( $("#totalAmount").val());
+       //tamount = parseFloat(tamount) + parseFloat(totalamount);
+       //$("#totalAmount").val(tamount);
+       //$("#netAmount").val(tamount);
+
+       //calculation();
+
+    });
+    $('#salesorderDate').change(function () {
+        var date = $(this).val();
+        console.log(date, 'change')
+        var GivenDate = date;
+        var CurrentDate = new Date();
+        GivenDate = new Date(GivenDate);
+
+        if (GivenDate > CurrentDate) {
+            alert('Given date is greater than the current date.');
+            var today = moment().format('YYYY-MM-DD');
+            $('#salesorderDate').val(today);
+        } else {
+           // alert('Given date is not greater than the current date.');
+        }
+    });
+    function SomeDeleteRowFunction(o) {
+        //alert(id);
+        var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+             $tds = $row.find("td:nth-child(2)");
+        //console.log($tds);
+
+        $.each($tds, function () {                // Visits every single <td> element
+           // console.log($(this).text());         // Prints out the text within the <td>
+        });
+        var itmmant = o.parentNode.parentNode.children[4].innerText;
+        var tmnt = $('#totalAmount').val();
+
+        tmnt = tmnt - itmmant;
+        $('#totalAmount').val(tmnt);
+        $('#netAmount').val(tmnt);
+       // $('#balanceAmount').val(tmnt);
+        var p = o.parentNode.parentNode;
+
+        p.parentNode.removeChild(p);
+        $(this).closest('tr').remove();
+        calculation();
+
+    };
+
+    function changeinunitprice(o) {
+        //alert(id);
+        var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+             $tds = $row.find("td:nth-child(2)");
+        //console.log($tds);
+
+
+        var itmqty = o.parentNode.parentNode.children[2].children[0].value;
+
+        var itmup = o.parentNode.parentNode.children[3].children[0].value;
+
+        itmqty = Number(itmqty);
+        itmup = Number(itmup);
+
+        var tmnt = $('.tamnt').val()
+        tmnt = Number(itmqty) * Number(itmup);
+
+        $('.tamnt').val(tmnt);
+        var totalamnt =o.parentNode.parentNode.children[4].innerText = (parseFloat(itmqty) * parseFloat(itmup));
+
+        var tmnt = $('#totalAmount').val();
+        tmnt = Number(tmnt) + (Number(itmqty) * Number(itmup))
+        $('#totalAmount').val(tmnt)
+        //alert(tmnt);
+        calculation();
+
+
+
+    };
+
+    function gridValidation(Id) {
+        errmsg = [];
+        var myTab = $("#example2 tbody");
+        var rtrn = true;
+
+        // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+        myTab.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+                accountid = $tds.eq(0).text();
+
+            //if(Id==accountid){
+            //    rtrn = false;
+            //    errmsg.push("Product Already exist");
+            //}
+        })
+        if ($('#accountIdx option:selected').val() =='') {
+            rtrn = false;
+            errmsg.push("Select Account");
+        }
+        if (Number($('#Amount').val())<= 0) {
+            rtrn = false;
+            errmsg.push("Amount Should Be Greater Than Zero");
+        }
+       
+
+
+        return rtrn;
+    }
+
+    function displayerror() {
+        for (var i = 0; i < errmsg.length; i++) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            Command: toastr["error"](errmsg[i], "")
+        }
+    }
+    function calculation()
+    {
+        var tmnt = $('#totalAmount').val('0');
+        var table = $("#example2 tbody");
+        var calculateNetAmount=0;
+        var totalTaxAmount=0;
+        var tamnt = $('#netAmount').val('0');
+        var grossAmountinInvoice=Number('0');
+        table.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+              itemamount = $tds.eq(4).text();
+
+            //console.log(itemamount);
+            // itemamount = itemamount + itemamount;
+
+
+            tamnt = Number(tamnt) + (Number(itemamount))
+            grossAmountinInvoice = Number(grossAmountinInvoice) + (Number(itemamount))
+
+        });
+        $('#netAmount').val(grossAmountinInvoice);//Gross Amount Filled
+        $('#totalAmount').val(grossAmountinInvoice);
+        var result = $('input[name="tax"]:checked');
+
+        if (result.length > 0) {
+            result.each(function () {
+                var amount = parseFloat(parseFloat(calculateNetAmount).toFixed(2));
+                var currentPercentage=$(this).val();
+                //alert(currentPercentage)
+                var currentAmountOnCheckBox =(Number(grossAmountinInvoice)/Number(100))*Number(currentPercentage);
+                totalTaxAmount=parseFloat(Number(currentAmountOnCheckBox)+Number(totalTaxAmount)).toFixed(2);
+                //alert(currentAmountOnCheckBox);
+                calculateNetAmount= parseFloat(parseFloat(amount)+parseFloat(currentAmountOnCheckBox)).toFixed(2) ;
+                //alert(calculateNetAmount);
+            });
+            //console.log(calculateNetAmount);
+            console.log(totalTaxAmount);
+
+            $('#totalAmount').val(Number(grossAmountinInvoice)+ Number(totalTaxAmount));
+            $('#taxAount').val(totalTaxAmount);
+        }
+        else
+        {
+            $('#taxAount').val('0');
+        }
+
+        var totalAmount =$('#totalAmount').val();
+        var shippingCost = $('#shippingCost').val();
+        var discount = $('#discount').val();
+        $('#totalAmount').val(Number($('#totalAmount').val()) +Number(shippingCost)-Number(discount));
+        var paidAmount= $('#paidAmount').val();
+        $('#balanceAmount').val($('#totalAmount').val());
+        var balanceAmount = $('#balanceAmount').val();
+        if(Number(paidAmount)>0 && Number(paidAmount)<=Number(balanceAmount))
+        {
+            var blnceamt = Number(balanceAmount)- Number(paidAmount);
+            $('#balanceAmount').val(blnceamt);
+            $('#paidAmount').val(paidAmount);
+        }
+        else
+        {
+            $('#paidAmount').val('0');
+            $('#balanceAmount').val(balanceAmount);
+        }
+    }
+
+    $("#calculate").click(function (e) {
+        var tmnt = $('#totalAmount').val('0');
+        var table = $("#example2 tbody");
+        var calculateNetAmount=0;
+        var totalTaxAmount=0;
+        var tamnt = $('#netAmount').val('0');
+        var grossAmountinInvoice=Number('0');
+        table.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+              itemamount = $tds.eq(4).text();
+
+            //console.log(itemamount);
+            // itemamount = itemamount + itemamount;
+
+
+            tamnt = Number(tamnt) + (Number(itemamount))
+            grossAmountinInvoice = Number(grossAmountinInvoice) + (Number(itemamount))
+
+        });
+        $('#netAmount').val(grossAmountinInvoice);//Gross Amount Filled
+        $('#totalAmount').val(grossAmountinInvoice);
+        var result = $('input[name="tax"]:checked');
+
+        if (result.length > 0) {
+            result.each(function () {
+                var amount = parseFloat(parseFloat(calculateNetAmount).toFixed(2));
+                var currentPercentage=$(this).val();
+                //alert(currentPercentage)
+                var currentAmountOnCheckBox =(Number(grossAmountinInvoice)/Number(100))*Number(currentPercentage);
+                totalTaxAmount=parseFloat(Number(currentAmountOnCheckBox)+Number(totalTaxAmount)).toFixed(2);
+                //alert(currentAmountOnCheckBox);
+                calculateNetAmount= parseFloat(parseFloat(amount)+parseFloat(currentAmountOnCheckBox)).toFixed(2) ;
+                //alert(calculateNetAmount);
+            });
+            //console.log(calculateNetAmount);
+            console.log(totalTaxAmount);
+
+            $('#totalAmount').val(Number(grossAmountinInvoice)+ Number(totalTaxAmount));
+            $('#taxAount').val(totalTaxAmount);
+        }
+        else
+        {
+            $('#taxAount').val('0');
+        }
+
+        var totalAmount =$('#totalAmount').val();
+        var shippingCost = $('#shippingCost').val();
+        var discount = $('#discount').val();
+        $('#totalAmount').val(Number($('#totalAmount').val()) +Number(shippingCost)-Number(discount));
+        var paidAmount= $('#paidAmount').val();
+        $('#balanceAmount').val(totalAmount);
+        var balanceAmount = $('#balanceAmount');
+        if(Number(paidAmount)>0 && Number(paidAmount)>Number(balanceAmount))
+        {
+            var result = Number(balanceAmount)- Number(paidAmount);
+            $('#balanceAmount').val(result);
+            $('#paidAmount').val(paidAmount);
+        }
+        else
+        {
+            $('#paidAmount').val('0');
+            $('#balanceAmount').val(balanceAmount);
+        }
+
+    });
+
+
+    $("#btnAddSale").click(function (e) {
+        e.preventDefault();
+        var sumDebit=0,sumCredit=0;
+        //var sumDebit = $('#example2').DataTable().column(2).data().sum();
+        //var sumCredit = $('#example2').DataTable().column(3).data().sum();      
+        
+        var datatosend = {
+            objGVProperty: {
+                idx:$('#idx').val(),
+                voucherDate : $('#voucherDate').val(),
+                voucherNo : $('#voucherNo').val(),
+                memo: $('#memo').val(),
+                AccountGJLST: [],
+                totalAmount:""
+                      }
+
+        }
+        var table = $("#example2 tbody");
+
+        var milestonearray = [];
+        var milestonedetails = {
+        };
+        var pomasternetamount = 0;
+        table.find('tr').each(function (i) {
+            var $tds = $(this).find('td'),
+                accountid = $tds.eq(0).text(),
+                debit = $tds.eq(2).text(),
+                credit = $tds.eq(3).text(),
+               
+            sumDebit=Number(debit)+Number(sumDebit),
+            sumCredit=Number(credit)+Number(sumCredit)
+
+            datatosend.objGVProperty.AccountGJLST.push({
+                coaIdx: accountid,
+                debit: debit,
+                credit: credit
+                
+            });
+           
+        });
+        if(sumDebit!=sumCredit)
+        {
+            return false;
+        }
+        datatosend.objGVProperty.totalAmount=sumDebit;
+
+        WriteTax(datatosend);
+        console.log(datatosend);
+
+
+
+
+        var form = $("#purchaseform");
+        console.log(datatosend)
+        e.preventDefault();
+        $(this).removeData("validator").removeData("unobtrusiveValidation");//remove the form validation
+        $.validator.unobtrusive.parse($(this));//add the form validation
+        //if ($(form).valid()) // using not operator for a time being
+        if ($(form).valid())
+        {
+            $.ajax({
+                type : "POST",
+                url: "/Finance/AddUpdate",
+                data:JSON.stringify(datatosend),// JSON.stringify(milestonearray),// $(form).serialize(),
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    if (res.success) {
+
+                        window.location.href = "/Finance/GeneralVoucher"
+                    }
+                    else if (res.success == false && res.msg == 'Failed') {
+
+                    }
+                },
+                failure: function (res) {
+                    console.log(res);
+                },
+                err: function (res) {
+                    console.log(res);
+                }
+
+            })
+        }
+        else {
+            return false;
+        }
+
+    });
+
+    function WriteTax(data) {
+
+
+        var result = $('input[name="tax"]:checked');
+        console.log(result);
+        if (result.length > 0) {
+            result.each(function () {
+
+                var taxid = $(this).attr('data-id');
+                var taxPercent = $(this).val();
+
+                data.objSalesOrder.salesTaxesLST.push(
+                    {
+                        taxIdx: taxid,
+                        taxpercent:taxPercent
+                    }
+                    )
+                console.log(data)
+
+            });
+
+        }
+
+
+    }
+
+    $('#paymenttype').on('change', function () {
+        if ( $('#paymenttype option:selected').val()==0) {
+            $('#paymntmethodoptions').hide();
+            $('#divTxtPaid').hide();
+            $('#paidAmount').val('0.00');
+            calculation();
+        }
+        if ($('#paymenttype option:selected').val() == 1 ) {
+            $('#paymntmethodoptions').hide();
+            $('#divTxtPaid').show();
+        }
+        if ($('#paymenttype option:selected').val() == 2) {
+            $('#paymntmethodoptions').show();
+            $('#cheqno').hide();
+            $('#divTxtPaid').show();
+        }
+
+        if ($('#paymenttype option:selected').val() == 3) {
+            $('#paymntmethodoptions').show();
+            $('#cheqno').show();
+            $('#divTxtPaid').show();
+        }
+    });
+    if($('#paymenttype').val()==0)
+    {
+        $('#divTxtPaid').hide();
+        $('#paidAmount').val('0.00');
+    }
+    $('#paidAmount').on('keyup', function (){
+        var paidAmount = Number($('#paidAmount').val());
+        var balanceAmount = Number($('#balanceAmount').val());
+        var totalAmount = Number($('#totalAmount').val());
+        if(paidAmount>0)
+        {
+            if(paidAmount > totalAmount)
+            {   $('#balanceAmount').val(totalAmount);
+                $('#paidAmount').val('0');
+                alert("Paid Amount Cannot Be Greater Than Balance Amount");
+            }
+            else
+            {
+                var remaingAmount = totalAmount-paidAmount;
+                $('#balanceAmount').val(remaingAmount)
+            }
+
+        }
+
+        else
+        {   $('#balanceAmount').val(totalAmount);
+            alert("Please Enter a Valid Number");
+        }
+
+    });
+    </script>
+}
+
+
+
+
+
+
